@@ -7,8 +7,19 @@ namespace ConsoleApplication1
 
     public class DeviceSettingsJSON
         {
-            [DataMember]
-// ReSharper disable InconsistentNaming
+            
+			public bool isValid ()
+			{
+				if (seqNum != null)
+				{
+					return true;
+				}
+
+				return false;
+			}
+
+			[DataMember]
+			// ReSharper disable InconsistentNaming
             public string startURL;
             [DataMember]
             public string reportURL;

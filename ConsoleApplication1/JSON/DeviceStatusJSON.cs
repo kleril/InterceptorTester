@@ -121,10 +121,12 @@ namespace ConsoleApplication1
 		/// </summary>
 		public string ssid { get; set; }*/
 
-		/*public override string ToString()
+		/*
+		public override string ToString()
 		{
 			return string.Format("[DeviceStatus bkupURL: {0}, callHomeTimeoutData: {1}, callHomeTimeoutMode: {2}, capture: {3}, captureMode: {4}, cmdChkInt: {5}, cmdURL: {6}, dynCodeFormat: {7}, errorLog: {8}, intSerial: {9}, reportURL: {10}, requestTimeoutValue: {11}, revId: {12}, scanURL: {13},  ssid: {14}, startURL: {15}, wpaPSK: {16} ]", bkupURL, callHomeTimeoutData, callHomeTimeoutMode, capture, captureMode, cmdChkInt, cmdURL, dynCodeFormat, errorLog, intSerial, reportURL, requestTimeoutValue, revId, scanURL,  ssid, startURL, "*");
-		}*/
+		}
+		*/
 	}
 }
 

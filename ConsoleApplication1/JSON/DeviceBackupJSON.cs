@@ -7,7 +7,13 @@ namespace ConsoleApplication1
 	/// Used to parse the Json of the b element of the DeviceBackup class
 	/// </summary>
 	public class BackupItem
-	{
+    {
+        public String d;
+        public int s;
+
+        public DateTime t;
+
+        public bool? c;
         public bool isValid()
         {
             if (d != null && s != null && t != null && c != null)
@@ -19,30 +25,31 @@ namespace ConsoleApplication1
                 return false;
             }
         }
-
-		public String d;
-		public int s;
-
-		public DateTime t;
-
-		public bool? c;
-
 	}
 
 	public class DeviceBackupJSON
 	{
         public bool isValid()
         {
-			if (a != null && ValidSerialNumbers.isValid (i) && s != null) {
-				foreach (BackupItem item in b) {
-					if (!item.isValid ()) {
-						return false;
-					}
+			if (ValidSerialNumbers.isValid (i) && s != null) {
+                try
+                {
+                    foreach (BackupItem item in b)
+                    {
+                        if (!item.isValid())
+                        {
+                            return false;
+                        }
+                    }
 				}
+                catch(Exception e)
+                {
+                    return true;
+                }
 				return true;
 			} else
 				return false;
-            if (a != null && ValidSerialNumbers.isValid(i) && s != null)
+            if (ValidSerialNumbers.isValid(i) && s != null)
             {
                 foreach (BackupItem item in b)
                 {
@@ -55,11 +62,6 @@ namespace ConsoleApplication1
             }
             return false;
         }
-
-		/// <summary>
-		/// Gets or sets a
-		/// </summary>
-		public string a { get; set; }
 
 		/// <summary>
 		/// Gets or sets i
@@ -75,7 +77,7 @@ namespace ConsoleApplication1
 
 		public override string ToString()
 		{
-			return string.Format("[DeviceBackup s: {0}, i: {1}, b: {2}, a: {3} ]", s, i, b, a);
+			return string.Format("[DeviceBackup s: {0}, i: {1}, b: {2}]", s, i, b);
 		}
 	}
 

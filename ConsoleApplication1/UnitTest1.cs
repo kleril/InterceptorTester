@@ -42,23 +42,23 @@ namespace ConsoleApplication1
         public async Task DeviceBackupTest()
         {
             //BackupItems
-            DeviceBackupItemJSON item1 = new DeviceBackupItemJSON();
+            BackupItem item1 = new BackupItem();
             item1.d = "12566132";
-            item1.s = "442";
+            item1.s = 442;
             item1.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
             item1.c = false;
-            DeviceBackupItemJSON item2 = new DeviceBackupItemJSON();
+            BackupItem item2 = new BackupItem();
             item2.d = "534235721";
-            item2.s = "442";
+            item2.s = 442;
             item2.t = new DateTime(2015, 5, 11, 2, 4, 28, 216);
             item2.c = false;
-            DeviceBackupItemJSON item3 = new DeviceBackupItemJSON();
+            BackupItem item3 = new BackupItem();
             item3.d = "892535";
-            item3.s = "442";
+            item3.s = 442;
             item3.t = new DateTime(2015, 5, 11, 2, 4, 25, 142);
             item3.c = false;
 
-            DeviceBackupItemJSON[] items = new DeviceBackupItemJSON[3];
+            BackupItem[] items = new BackupItem[3];
             items[0] = item1;
             items[1] = item2;
             items[2] = item3;
@@ -77,11 +77,11 @@ namespace ConsoleApplication1
 
             //Failing Test
             //BackupItems
-            DeviceBackupItemJSON failItem = new DeviceBackupItemJSON();
+            BackupItem failItem = new BackupItem();
             //failItem.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
             //failItem.c = true;
 
-            DeviceBackupItemJSON[] failItems = new DeviceBackupItemJSON[4];
+            BackupItem[] failItems = new BackupItem[4];
             failItems[0] = item1;
             failItems[1] = item2;
             failItems[2] = failItem;
@@ -118,7 +118,7 @@ namespace ConsoleApplication1
             List<Test> tests = new List<Test>();
             tests.Add(backupTest);
             tests.Add(serialTest);
-            tests.Add(emptyTest);
+            //tests.Add(emptyTest);
             tests.Add(failingTest);
 
             await Program.buildTests(tests);
@@ -126,7 +126,7 @@ namespace ConsoleApplication1
             foreach (Test nextTest in Program.getTests())
             {
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-            }   
+            }
         }
 
         //Do this

@@ -36,7 +36,7 @@ namespace ConsoleApplication1
 
         public override Uri getUri()
         {
-            return new Uri(opHost, "/api/DeviceStatus/" + opQuery.ToString());
+            return new Uri(opHost, "/api/DeviceStatus/");
         }
 
         public override object getJson()

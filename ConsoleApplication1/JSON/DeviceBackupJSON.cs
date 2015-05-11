@@ -33,6 +33,7 @@ namespace ConsoleApplication1
 	{
         public bool isValid()
         {
+<<<<<<< HEAD
 			if (a != null && ValidSerialNumbers.isValid (i) && s != null) {
 				foreach (BackupItem item in b) {
 					if (!item.isValid ()) {
@@ -42,6 +43,20 @@ namespace ConsoleApplication1
 				return true;
 			} else
 				return false;
+=======
+            if (a != null && ValidSerialNumbers.isValid(i) && s != null)
+            {
+                foreach (BackupItem item in b)
+                {
+                    if (!item.isValid())
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+>>>>>>> origin/master
         }
 
 		/// <summary>

@@ -2,16 +2,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-    //[TestClass]
+    [TestClass]
     public class UnitTest1
     {
         static Uri testServer = ServerUris.getLatest();
 
-        //[TestMethod]
+        [TestMethod]
         public async Task ICmdTest()
         {
             //Valid
@@ -39,7 +38,7 @@ namespace ConsoleApplication1
         }
 
         //Do this
-        //[TestMethod]
+        [TestMethod]
         public async Task DeviceBackupTest()
         {
             //BackupItems
@@ -123,7 +122,7 @@ namespace ConsoleApplication1
         }
 
         //Do this
-        //[TestMethod]
+        [TestMethod]
         public async Task DeviceScanTest()
         {
 
@@ -146,7 +145,7 @@ namespace ConsoleApplication1
             }            
         }
 
-        //[TestMethod]
+        [TestMethod]
         public async Task DeviceSettingTest()
         {
             // Valid Serial
@@ -177,7 +176,7 @@ namespace ConsoleApplication1
 			}
     	}
 
-        //[TestMethod]
+        [TestMethod]
         public async Task DeviceStatusTest()
         {
             // Valid Serial

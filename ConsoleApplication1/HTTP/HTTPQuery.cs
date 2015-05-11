@@ -8,7 +8,6 @@ namespace ConsoleApplication1
     //Handles URL queries
     class HTTPQuery
     {
-        //TODO: maybe change these to be of better types?
         QueryParameter param;
         string value;
 
@@ -49,14 +48,6 @@ namespace ConsoleApplication1
                     return false;
 
                 case QueryParameter.orgId:
-                    Console.WriteLine("You didn't set this query type up yet...");
-                    return false;
-
-                case QueryParameter.startDate:
-                    Console.WriteLine("You didn't set this query type up yet...");
-                    return false;
-
-                case QueryParameter.stopDate:
                     Console.WriteLine("You didn't set this query type up yet...");
                     return false;
 

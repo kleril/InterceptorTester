@@ -28,5 +28,11 @@ namespace ConsoleApplication1
         }
 
 
+
+        internal static bool isValid(string i)
+        {
+            populateList();
+            return fullList.Contains(i);
+        }
     }
 }

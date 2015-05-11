@@ -19,7 +19,14 @@ namespace ConsoleApplication1
         //TODO: Code this
 		public override string getExpectedResult()
 		{
-            return "201";
+            if (json.isValid())
+            {
+                return "201";
+            }
+            else
+            {
+                return "400";
+            }
 		}
 
 		public override string ToString()

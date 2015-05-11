@@ -6,6 +6,18 @@ namespace ConsoleApplication1 {
     [DataContract]
     public class DeviceScanJSON
     {
+        public bool isValid()
+        {
+            if (i != null && s != null)
+            {
+                if (b != null || d != null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /// <summary>
         /// Interceptor Serial number
         /// </summary>

@@ -44,9 +44,6 @@ namespace ConsoleApplication1{
             
             //Setup vars
             seconds = 0;
-            
-            //Init tasks / asynchronous magic
-            Task t;
 
             //Timer ticks once every decisecond (100 miliseconds)
             time = new Timer(100);
@@ -66,8 +63,6 @@ namespace ConsoleApplication1{
 
             //Shut 'er down!
             Console.WriteLine("Tests complete!");
-            //Hold up at the end so console output can actually be read. Also not crash everything because async is balls
-            //Console.ReadLine();
             Console.WriteLine("Closing writer...");
             results.Close();
             Console.WriteLine("Writer closed!");
@@ -104,11 +99,6 @@ namespace ConsoleApplication1{
                 results.Write(currentTest.result());
                 //Carriage return (set up next line)
                 results.WriteLine();
-            }
-            else
-            {
-                //TODOIF: Set this to something that doesn't print out all the goddamn time
-                Console.WriteLine("Results file writer not initialized, cancelling output logging...");
             }
         }
 
@@ -149,7 +139,6 @@ namespace ConsoleApplication1{
             }
         }
 
-        //TODO: Go over HTTP methods, clean 'em up and make them not broken - return tasks, what have you.
         //GET call
         static async Task<KeyValuePair<JObject, string>> RunGetAsync(Uri qUri)
         {

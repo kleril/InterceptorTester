@@ -3,12 +3,23 @@
 namespace ConsoleApplication1
 {
 
-
 	/// <summary>
 	/// Used to parse the Json of the b element of the DeviceBackup class
 	/// </summary>
 	public class BackupItem
 	{
+        public bool isValid()
+        {
+            if (d != null && s != null && t != null && c != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 		public String d;
 		public int s;
 
@@ -20,6 +31,21 @@ namespace ConsoleApplication1
 
 	public class DeviceBackupJSON
 	{
+        public bool isValid()
+        {
+            if (a != null && ValidSerialNumbers.isValid(i) && s != null)
+            {
+                foreach (BackupItem item in b)
+                {
+                    if (!item.isValid())
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
 		/// <summary>
 		/// Gets or sets a
 		/// </summary>

@@ -18,7 +18,14 @@ namespace ConsoleApplication1
         //TODO: Implement expected result calculation
         public override string getExpectedResult()
         {
-            return "200";
+            if (opQuery.isValid())
+            {
+                return "200";
+            }
+            else
+            {
+                return "400";
+            }
         }
 
         public override string ToString()

@@ -11,6 +11,17 @@ namespace ConsoleApplication1
 	/// </summary>
 	public class DeviceStatusJSON
 	{
+        public bool isValid ()
+        {
+            if (ValidSerialNumbers.isValid(intSerial) && seqNum != null)
+            {
+                return true;
+            }
+
+
+
+            return false;
+        }
 
 		/// <summary>
 		/// Gets or sets intSerial

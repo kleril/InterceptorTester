@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -97,6 +97,64 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>..\packages\nuget-bot.Microsoft.VisualStudio.Services.Common.12.0.21005.1\lib\net45\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Client">
+      <HintPath>..\packages\nuget-bot.Microsoft.VisualStudio.Services.Client.12.0.21005.1\lib\net45\Microsoft.VisualStudio.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>..\packages\nuget-bot.Microsoft.VisualStudio.Services.WebApi.12.0.21005.1\lib\net45\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.UnitTests.MSTest">
+      <HintPath>..\packages\AsyncUnitTests-MSTest.1.0.1\lib\net40-client\Nito.AsyncEx.UnitTests.MSTest.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UnitTestFramework.Extensions">
+      <HintPath>..\packages\Microsoft.UnitTestFramework.Extensions.1.0.0.3\lib\net40\Microsoft.UnitTestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Language.Intellisense.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Language.StandardClassification">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Language.StandardClassification.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Platform.VSEditor">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Platform.VSEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Platform.VSEditor.Interop">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Platform.VSEditor.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Text.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Internal">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Text.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Logic">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Text.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.UI">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.Text.UI.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.UI.Text.Wpf.KeyProcessor.Implementation">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\Microsoft.VisualStudio.UI.Text.Wpf.KeyProcessor.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="StandaloneUndo">
+      <HintPath>..\packages\Microsoft.VisualStudio.VSEditor.Standalone.10.1.0.0\lib\net40\StandaloneUndo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Project">
+      <HintPath>..\packages\Microsoft.VisualStudio.Project.1.0.0.0\lib\net40\Microsoft.VisualStudio.Project.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API Operations\APIOperation.cs" />
@@ -147,6 +205,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
     <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />

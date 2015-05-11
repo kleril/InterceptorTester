@@ -33,17 +33,15 @@ namespace ConsoleApplication1
 	{
         public bool isValid()
         {
-            if (a != null && ValidSerialNumbers.isValid(i) && s != null)
-            {
-                foreach (BackupItem item in b)
-                {
-                    if (!item.isValid())
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
+			if (a != null && ValidSerialNumbers.isValid (i) && s != null) {
+				foreach (BackupItem item in b) {
+					if (!item.isValid ()) {
+						return false;
+					}
+				}
+				return true;
+			} else
+				return false;
         }
 
 		/// <summary>

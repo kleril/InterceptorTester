@@ -219,3 +219,4 @@ pip-log.txt
 #Don't upload a million test results
 ####################################
 *.csv
+*.userprefs

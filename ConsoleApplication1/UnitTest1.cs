@@ -78,8 +78,8 @@ namespace ConsoleApplication1
             //Failing Test
             //BackupItems
             DeviceBackupItemJSON failItem = new DeviceBackupItemJSON();
-            failItem.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
-            failItem.c = true;
+            //failItem.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
+            //failItem.c = true;
 
             DeviceBackupItemJSON[] failItems = new DeviceBackupItemJSON[4];
             failItems[0] = item1;
@@ -108,10 +108,18 @@ namespace ConsoleApplication1
             //Test
             Test failingTest = new Test(failOperation);
 
+            DeviceBackupJSON emptyJson = new DeviceBackupJSON();
+            emptyJson.i = ValidSerialNumbers.getAll()[0];
+            emptyJson.s = 8;
+
+            DeviceBackup emptyOperation = new DeviceBackup(testServer, emptyJson);
+            Test emptyTest = new Test(emptyOperation);
+
             List<Test> tests = new List<Test>();
             tests.Add(backupTest);
-            tests.Add(failingTest);
             tests.Add(serialTest);
+            tests.Add(emptyTest);
+            tests.Add(failingTest);
 
             await Program.buildTests(tests);
 

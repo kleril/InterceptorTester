@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
 namespace ConsoleApplication1
@@ -133,7 +132,7 @@ namespace ConsoleApplication1
             }
         }
 
-        [TestMethod]
+        [Test]
         public async Task NoSerial()
         {
             BackupItem[] items = new BackupItem[3];

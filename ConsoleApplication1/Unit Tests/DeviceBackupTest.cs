@@ -133,7 +133,8 @@ namespace ConsoleApplication1
             }
         }
 
-        [TestMethod]
+        // [TestMethod]
+		[Test]
         public async Task NoSerial()
         {
             BackupItem[] items = new BackupItem[3];

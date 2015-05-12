@@ -1,137 +1,17 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleApplication1
 {
-    //[TestClass]
+    [TestClass]
     public class UnitTest1
     {
         static Uri testServer = ServerUris.getLatest();
 
-       // [TestMethod]
-        public async Task ICmdTest()
-        {
-            //Valid
-            ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
-            //Invalid
-            ICmd invalidICmd = new ICmd(testServer, "No beef like dead beef");
-            //Missing
-            ICmd missingICmd = new ICmd(testServer, null);
-
-            Test validTest = new Test(validICmd);
-            Test invalidTest = new Test(invalidICmd);
-            Test missingTest = new Test(missingICmd);
-
-            List<Test> tests = new List<Test>();
-            tests.Add(validTest);
-            tests.Add(invalidTest);
-            tests.Add(missingTest);
-
-            await Program.buildTests(tests);
-
-            foreach (Test nextTest in Program.getTests())
-            {
-                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-            }
-        }
-
         //Do this
-        //[TestMethod]
-        public async Task DeviceBackupTest()
-        {
-            //BackupItems
-            BackupItem item1 = new BackupItem();
-            item1.d = "12566132";
-            item1.s = 442;
-            item1.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
-            item1.c = false;
-            BackupItem item2 = new BackupItem();
-            item2.d = "534235721";
-            item2.s = 442;
-            item2.t = new DateTime(2015, 5, 11, 2, 4, 28, 216);
-            item2.c = false;
-            BackupItem item3 = new BackupItem();
-            item3.d = "892535";
-            item3.s = 442;
-            item3.t = new DateTime(2015, 5, 11, 2, 4, 25, 142);
-            item3.c = false;
-
-            BackupItem[] items = new BackupItem[3];
-            items[0] = item1;
-            items[1] = item2;
-            items[2] = item3;
-
-            //BackupJSon
-            DeviceBackupJSON json = new DeviceBackupJSON();
-            json.i = ValidSerialNumbers.getAll()[1];
-            json.s = 4;
-            json.b = items;
-
-            //BackupOperation
-            DeviceBackup operation = new DeviceBackup(testServer, json);
-
-            //Test
-            Test backupTest = new Test(operation);
-
-            //Failing Test
-            //BackupItems
-            BackupItem failItem = new BackupItem();
-            //failItem.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
-            //failItem.c = true;
-
-            BackupItem[] failItems = new BackupItem[4];
-            failItems[0] = item1;
-            failItems[1] = item2;
-            failItems[2] = failItem;
-            failItems[3] = item3;
-
-            //BackupJSon
-            DeviceBackupJSON failJson = new DeviceBackupJSON();
-            failJson.i = ValidSerialNumbers.getAll()[1];
-            failJson.s = 5;
-            failJson.b = failItems;
-
-            //BackupOperation
-            DeviceBackup failOperation = new DeviceBackup(testServer, failJson);
-
-            DeviceBackupJSON serialJson = new DeviceBackupJSON();
-            serialJson.i = "INVALIDSERIAL";
-            serialJson.s = 6;
-            serialJson.b = items;
-
-            DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
-
-            Test serialTest = new Test(serialOperation);
-
-            //Test
-            Test failingTest = new Test(failOperation);
-
-            DeviceBackupJSON emptyJson = new DeviceBackupJSON();
-            emptyJson.i = ValidSerialNumbers.getAll()[0];
-            emptyJson.s = 8;
-
-            DeviceBackup emptyOperation = new DeviceBackup(testServer, emptyJson);
-            Test emptyTest = new Test(emptyOperation);
-
-            List<Test> tests = new List<Test>();
-            tests.Add(backupTest);
-            tests.Add(serialTest);
-            //tests.Add(emptyTest);
-            tests.Add(failingTest);
-
-            await Program.buildTests(tests);
-
-            foreach (Test nextTest in Program.getTests())
-            {
-                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-            }
-        }
-
-        //Do this
-        //[TestMethod]
+        [TestMethod]
         public async Task DeviceScanTest()
         {
 
@@ -154,7 +34,7 @@ namespace ConsoleApplication1
             }            
         }
 
-       // [TestMethod]
+        [TestMethod]
         public async Task DeviceSettingTest()
         {
             // Valid Serial
@@ -185,7 +65,7 @@ namespace ConsoleApplication1
 			}
     	}
 
-       // [TestMethod]
+       [TestMethod]
         public async Task DeviceStatusTest()
         {
             // Valid Serial

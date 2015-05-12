@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace ConsoleApplication1
+{
+    [TestClass]
+    public class ICmdTest
+    {
+        static Uri testServer = ServerUris.getLatest();
+
+        [TestMethod]
+        public async Task ValidSerial()
+        {
+            //Valid
+            ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
+
+            Test validTest = new Test(validICmd);
+
+            List<Test> tests = new List<Test>();
+            tests.Add(validTest);
+
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            }
+        }
+        [TestMethod]
+        public async Task InvalidSerial()
+        {
+            //Invalid
+            ICmd invalidICmd = new ICmd(testServer, "BORSHT");
+            Test invalidTest = new Test(invalidICmd);
+            List<Test> tests = new List<Test>();
+            tests.Add(invalidTest);
+            
+            await Program.buildTests(tests);
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            }
+        }
+        [TestMethod]
+        public async Task MissingSerial()
+        {
+            //Missing
+            ICmd missingICmd = new ICmd(testServer, null);
+            Test missingTest = new Test(missingICmd);
+
+            List<Test> tests = new List<Test>();
+            tests.Add(missingTest);
+
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            }
+        }
+    }
+}

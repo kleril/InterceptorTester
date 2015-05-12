@@ -106,17 +106,11 @@ namespace ConsoleApplication1
         [TestMethod]
         public async Task NoBackupItems()
         {
-            BackupItem[] items = new BackupItem[3];
-            items[0] = getBackupItem(1);
-            items[1] = getBackupItem(2);
-            items[2] = getBackupItem(3);
+            BackupItem[] items = new BackupItem[0];
 
             DeviceBackupJSON emptyJson = new DeviceBackupJSON();
             emptyJson.i = ValidSerialNumbers.getAll()[0];
             emptyJson.s = 8;
-            items[0] = null;
-            items[1] = null;
-            items[2] = null;
             emptyJson.b = items;
 
             DeviceBackup emptyOperation = new DeviceBackup(testServer, emptyJson);
@@ -125,6 +119,32 @@ namespace ConsoleApplication1
 
             List<Test> tests = new List<Test>();
             tests.Add(emptyTest);
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            }
+        }
+
+        [TestMethod]
+        public async Task NoSerial()
+        {
+            BackupItem[] items = new BackupItem[3];
+            items[0] = getBackupItem(1);
+            items[1] = getBackupItem(2);
+            items[2] = getBackupItem(3);
+
+            DeviceBackupJSON serialJson = new DeviceBackupJSON();
+            serialJson.s = 6;
+            serialJson.b = items;
+
+            DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
+
+            Test serialTest = new Test(serialOperation);
+
+            List<Test> tests = new List<Test>();
+            tests.Add(serialTest);
             await Program.buildTests(tests);
 
             foreach (Test nextTest in Program.getTests())

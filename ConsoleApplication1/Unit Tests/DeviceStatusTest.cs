@@ -10,56 +10,82 @@ namespace ConsoleApplication1
     {
         static Uri testServer = ServerUris.getLatest();
 
-       [TestMethod]
-        public async Task Test()
+        [TestMethod]
+        public async Task ValidSerial()
         {
             // Valid Serial
-			DeviceStatusJSON testJson1 = new DeviceStatusJSON ();
-			testJson1.intSerial = ValidSerialNumbers.getAll()[1];
-			testJson1.seqNum = "4";
-			testJson1.capture = "1";
-			testJson1.captureMode = "1";
-			testJson1.callHomeTimeoutMode = "0";
-			testJson1.callHomeTimeoutData = null;
-			testJson1.dynCodeFormat = new string[2];
-			testJson1.dynCodeFormat[0] = "[\"~*[1,12]/*[1,63]\"";
-			testJson1.dynCodeFormat[1] = "\"~server/redemption\"]";
-			testJson1.errorLog = new string[0];
-			testJson1.startURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting";
-			testJson1.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
-			testJson1.scanURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceScan";
-			testJson1.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
-			testJson1.requestTimeoutValue = "8000";
-			testJson1.cmdChkInt = "1";
-			testJson1.cmdURL = "http://www.cozumo.com:80/callhome";
-			testJson1.revId = "ITCMM15-SBTC-0515-E001";
-			DeviceStatus testDStatus1 = new DeviceStatus(testServer, testJson1);
-			Test ValidSerial = new Test(testDStatus1);
+            DeviceStatusJSON testJson1 = new DeviceStatusJSON();
+            testJson1.intSerial = ValidSerialNumbers.getAll()[1];
+            testJson1.seqNum = "4";
+            testJson1.capture = "1";
+            testJson1.captureMode = "1";
+            testJson1.callHomeTimeoutMode = "0";
+            testJson1.callHomeTimeoutData = null;
+            testJson1.dynCodeFormat = new string[2];
+            testJson1.dynCodeFormat[0] = "[\"~*[1,12]/*[1,63]\"";
+            testJson1.dynCodeFormat[1] = "\"~server/redemption\"]";
+            testJson1.errorLog = new string[0];
+            testJson1.startURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting";
+            testJson1.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
+            testJson1.scanURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceScan";
+            testJson1.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            testJson1.requestTimeoutValue = "8000";
+            testJson1.cmdChkInt = "1";
+            testJson1.cmdURL = "http://www.cozumo.com:80/callhome";
+            testJson1.revId = "ITCMM15-SBTC-0515-E001";
+            DeviceStatus testDStatus1 = new DeviceStatus(testServer, testJson1);
+            Test ValidSerial = new Test(testDStatus1);
 
-			// Bad Serial
-			DeviceStatusJSON testJson2 = new DeviceStatusJSON ();
-			testJson2.intSerial = "BADSERIAL";
-			testJson2.seqNum = "4";
-			testJson2.capture = "1";
-			testJson2.captureMode = "1";
-			testJson2.callHomeTimeoutMode = "0";
-			testJson2.callHomeTimeoutData = null;
-			testJson2.dynCodeFormat = new string[2];
-			testJson2.dynCodeFormat[0] = "[\"~*[1,12]/*[1,63]\"";
-			testJson2.dynCodeFormat[1] = "\"~server/redemption\"]";
-			testJson2.errorLog = new string[0];
-			testJson2.startURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting";
-			testJson2.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
-			testJson2.scanURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceScan";
-			testJson2.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
-			testJson2.requestTimeoutValue = "8000";
-			testJson2.cmdChkInt = "1";
-			testJson2.cmdURL = "http://www.cozumo.com:80/callhome";
-			testJson2.revId = "ITCMM15-SBTC-0515-E001";
-			DeviceStatus testDStatus2 = new DeviceStatus(testServer, testJson2);
-			Test BadSerial = new Test(testDStatus2);
+            List<Test> tests = new List<Test>();
+            tests.Add(ValidSerial);
 
-			// No Serial
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            } 
+        }
+
+        [TestMethod]
+        public async Task BadSerial()
+        {
+            DeviceStatusJSON testJson2 = new DeviceStatusJSON();
+            testJson2.intSerial = "BADSERIAL";
+            testJson2.seqNum = "4";
+            testJson2.capture = "1";
+            testJson2.captureMode = "1";
+            testJson2.callHomeTimeoutMode = "0";
+            testJson2.callHomeTimeoutData = null;
+            testJson2.dynCodeFormat = new string[2];
+            testJson2.dynCodeFormat[0] = "[\"~*[1,12]/*[1,63]\"";
+            testJson2.dynCodeFormat[1] = "\"~server/redemption\"]";
+            testJson2.errorLog = new string[0];
+            testJson2.startURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting";
+            testJson2.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
+            testJson2.scanURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceScan";
+            testJson2.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            testJson2.requestTimeoutValue = "8000";
+            testJson2.cmdChkInt = "1";
+            testJson2.cmdURL = "http://www.cozumo.com:80/callhome";
+            testJson2.revId = "ITCMM15-SBTC-0515-E001";
+            DeviceStatus testDStatus2 = new DeviceStatus(testServer, testJson2);
+            Test BadSerial = new Test(testDStatus2);
+
+            List<Test> tests = new List<Test>();
+            tests.Add(BadSerial);
+
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            } 
+        }
+
+       [TestMethod]
+        public async Task NoSerial()
+        {
 			DeviceStatusJSON testJson3 = new DeviceStatusJSON();
 			testJson3.intSerial = null;
 			testJson3.seqNum = "4";
@@ -84,8 +110,6 @@ namespace ConsoleApplication1
 
 
 			List<Test> tests = new List<Test>();
-			tests.Add(ValidSerial);
-			tests.Add(BadSerial);
 			tests.Add(NoSerial);
 
 			await Program.buildTests(tests);

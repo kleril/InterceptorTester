@@ -7,6 +7,8 @@ using System.Runtime.Serialization;
 
 namespace ConsoleApplication1
 {
+    //TODO: This Class is redundant, either remove it or the one in DeviceBackupJSON
+
     [DataContract]
     class DeviceBackupItemJSON
     {

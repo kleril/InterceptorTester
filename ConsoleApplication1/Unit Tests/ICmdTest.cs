@@ -7,13 +7,11 @@ using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-    //[TestClass]
 	[TestFixture]
     public class ICmdTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        //[TestMethod]
 		[Test]
         public async Task ValidSerial()
         {
@@ -32,7 +30,7 @@ namespace ConsoleApplication1
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }
-        //[TestMethod]
+
 		[Test]
         public async Task InvalidSerial()
         {
@@ -48,7 +46,7 @@ namespace ConsoleApplication1
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }
-        //[TestMethod]
+
 		[Test]
         public async Task MissingSerial()
         {

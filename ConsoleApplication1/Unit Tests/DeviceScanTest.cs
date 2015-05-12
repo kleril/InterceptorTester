@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-	// [TestClass]
 	[TestFixture]
 	public class DeviceScanTest
 	{
@@ -17,7 +15,6 @@ namespace ConsoleApplication1
 
 		// simple scan code
 
-		// [TestMethod]
 		[Test]
 		// Valid Single Scan
 		public async Task ValidSingleScanSimple()
@@ -43,7 +40,6 @@ namespace ConsoleApplication1
 			}            
 		}
 
-		// [TestMethod]
 		[Test]
 		// Invalid Single Scan
 		public async Task InvalidSingleScanSimple()
@@ -68,7 +64,6 @@ namespace ConsoleApplication1
 			}     
 		}
 
-		// [TestMethod]
 		[Test]
 		// Bad Serial
 		public async Task InvalidSerialSimple()
@@ -93,7 +88,6 @@ namespace ConsoleApplication1
 			}  
 		}
 
-		// [TestMethod]
 		[Test]
 		// No Serial
 		public async Task NoSerialSimple()
@@ -118,7 +112,6 @@ namespace ConsoleApplication1
 			}  
 		}
 
-		// [TestMethod]
 		[Test]
 		// List of Valid Scans
 		public async Task LOValidScansSimple()
@@ -148,7 +141,6 @@ namespace ConsoleApplication1
 			}            
 		}
 
-		// [TestMethod]
 		[Test]
 		// Mixed of Valid/Invalid Scans
 		public async Task ValInvalScansSimple()
@@ -178,12 +170,8 @@ namespace ConsoleApplication1
 			}            
 		}
 
-			
+        //Dynamic
 
-
-		// dynamic scan code
-
-		// [TestMethod]
 		[Test]
 		// Valid Single Scan
 		public async Task ValidSingleScanDyn()
@@ -208,7 +196,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// Valid Call Home Scan
 		public async Task ValidCH()
@@ -232,7 +219,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// Invalid Scan Data
 		public async Task InvalidSingleScanDyn()
@@ -256,7 +242,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// Bad Serial
 		public async Task InvalidSerialDyn()
@@ -280,7 +265,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// No Serial
 		public async Task NoSerialDyn()
@@ -304,7 +288,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// List of Valid Scans
 		public async Task LOValidScansDyn()
@@ -333,7 +316,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// Mixed of Valid/Invalid Scans
 		public async Task ValInvalScansDyn()
@@ -366,7 +348,6 @@ namespace ConsoleApplication1
 
 		// Combined
 
-		// [TestMethod]
 		[Test]
 		// List of Valid Simple and Dynamic Code Scans 
 		public async Task ValidScansSimDyn()
@@ -395,7 +376,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-		// [TestMethod]
 		[Test]
 		// Mixed of Valid and Invalid Scans
 		public async Task ValInvalScansSimDyn()

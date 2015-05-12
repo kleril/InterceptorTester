@@ -7,13 +7,11 @@ using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-    //[TestClass]
 	[TestFixture]
     public class DeviceBackupTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        //[TestMethod]
 		[Test]
         public async Task ValidSerial()
         {
@@ -43,15 +41,10 @@ namespace ConsoleApplication1
             }
         }
 
-        //[TestMethod]
 		[Test]
         public async Task InvalidBackupItems()
         {
-            //Failing Test
-            //BackupItems
             BackupItem failItem = new BackupItem();
-            //failItem.t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
-            //failItem.c = true;
 
             BackupItem[] failItems = new BackupItem[4];
             failItems[0] = getBackupItem(1);
@@ -59,13 +52,11 @@ namespace ConsoleApplication1
             failItems[2] = failItem;
             failItems[3] = getBackupItem(3);
 
-            //BackupJSon
             DeviceBackupJSON failJson = new DeviceBackupJSON();
             failJson.i = ValidSerialNumbers.getAll()[1];
             failJson.s = 5;
             failJson.b = failItems;
 
-            //BackupOperation
             DeviceBackup failOperation = new DeviceBackup(testServer, failJson);
             Test failingTest = new Test(failOperation);
 
@@ -79,7 +70,6 @@ namespace ConsoleApplication1
             }
         }
 
-        //[TestMethod]
 		[Test]
         public async Task BadSerial()
         {
@@ -107,7 +97,6 @@ namespace ConsoleApplication1
             }
         }
 
-        //[TestMethod]
 		[Test]
         public async Task NoBackupItems()
         {

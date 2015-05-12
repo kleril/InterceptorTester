@@ -7,14 +7,11 @@ using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-	//[TestClass]
 	[TestFixture]
 	public class DeviceSettingsTest
 	{
 		static Uri testServer = ServerUris.getLatest();
 
-
-		// [TestMethod]
 		[Test]
 		// Valid Serial
 		public async Task ValidSerial() 
@@ -34,8 +31,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-
-		// [TestMethod]
 		[Test]
 		// Invalid Serial
 		public async Task InvalidSerial() 
@@ -55,8 +50,6 @@ namespace ConsoleApplication1
 			}
 		}
 
-
-		// [TestMethod]
 		[Test]
 		// No Serial
 		public async Task NoSerial() 

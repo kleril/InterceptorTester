@@ -153,7 +153,7 @@ namespace ConsoleApplication1{
                     return new KeyValuePair<JObject, string>(jResponse, content);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("GET request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
@@ -187,7 +187,7 @@ namespace ConsoleApplication1{
                 }
                 return new KeyValuePair<JObject, string>(null, null);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("POST request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
@@ -211,7 +211,7 @@ namespace ConsoleApplication1{
                 }
                 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("PUT request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
@@ -234,7 +234,7 @@ namespace ConsoleApplication1{
                     return new KeyValuePair<JObject, string>(jResponse, content);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("DELETE request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());

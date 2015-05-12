@@ -6,67 +6,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ConsoleApplication1
 {
     [TestClass]
-    public class UnitTest1
+    public class DeviceStatusTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        //Do this
-        [TestMethod]
-        public async Task DeviceScanTest()
-        {
-
-            DeviceScanJSON testJson = new DeviceScanJSON ();
-            testJson.i = ValidSerialNumbers.getAll()[1];
-            testJson.d = "1289472198573";
-            testJson.s = 4;
-            DeviceScan testDScan = new DeviceScan(testServer, testJson);
-
-            Test scanTest = new Test(testDScan);
-
-            List<Test> tests = new List<Test>();
-            tests.Add(scanTest);
-
-            await Program.buildTests(tests);
-
-            foreach (Test nextTest in Program.getTests())
-            {
-                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-            }            
-        }
-
-        [TestMethod]
-        public async Task DeviceSettingTest()
-        {
-            // Valid Serial
-			DeviceSetting dSetting1 = new DeviceSetting(testServer, ValidSerialNumbers.getAll()[0]);
-
-			Test ValidSerial = new Test(dSetting1);
-
-			// Bad Serial
-			DeviceSetting dSetting2 = new DeviceSetting(testServer, "BADSERIAL");
-
-			Test BadSerial = new Test(dSetting2);
-
-			// No Serial
-			DeviceSetting dSetting3 = new DeviceSetting(testServer, null);
-	
-			Test NoSerial = new Test(dSetting3);
-
-			List<Test> tests = new List<Test>();
-			tests.Add(ValidSerial);
-			tests.Add(BadSerial);
-			tests.Add(NoSerial);
-
-			await Program.buildTests(tests);
-
-			foreach (Test nextTest in Program.getTests())
-			{
-				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-			}
-    	}
-
        [TestMethod]
-        public async Task DeviceStatusTest()
+        public async Task Test()
         {
             // Valid Serial
 			DeviceStatusJSON testJson1 = new DeviceStatusJSON ();

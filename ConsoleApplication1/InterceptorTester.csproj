@@ -168,6 +168,8 @@
     <Compile Include="API Operations\ICmd.cs" />
     <Compile Include="Data\Scan.cs" />
     <Compile Include="Unit Tests\DeviceBackupTest.cs" />
+    <Compile Include="Unit Tests\DeviceScanTest.cs" />
+    <Compile Include="Unit Tests\DeviceSettingTest.cs" />
     <Compile Include="Unit Tests\ICmdTest.cs" />
     <Compile Include="JSON\DeviceBackupItemJSON.cs" />
     <Compile Include="JSON\DeviceBackupJSON.cs" />
@@ -182,7 +184,7 @@
     <Compile Include="HTTP\QueryParameter.cs" />
     <Compile Include="Data\ServerUris.cs" />
     <Compile Include="Test.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Unit Tests\DeviceStatusTest.cs" />
     <Compile Include="Data\ValidSerialNumbers.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -15,16 +15,17 @@ namespace ConsoleApplication1
 		{
             DeviceStatusJSON status = new DeviceStatusJSON();
             status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
-            status.callHomeTimeoutData = null;
+            status.callHomeTimeoutData = "";
             status.callHomeTimeoutMode = "0";
             status.capture = "1";
             status.captureMode = "1";
             status.cmdChkInt = "1";
-            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/iCmd";
             string[] err = new string[3];
             err[0] = "asdf";
             err[1] = "wasd";
             err[2] = "qwerty";
+            status.dynCodeFormat = err;
             status.errorLog = err;
             status.intSerial = ValidSerialNumbers.getAll()[0];
             status.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
@@ -58,7 +59,7 @@ namespace ConsoleApplication1
             status.capture = "1";
             status.captureMode = "1";
             status.cmdChkInt = "1";
-            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/iCmd";
             string[] err = new string[3];
             err[0] = "asdf";
             err[1] = "wasd";
@@ -96,7 +97,7 @@ namespace ConsoleApplication1
             status.capture = "1";
             status.captureMode = "1";
             status.cmdChkInt = "1";
-            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/iCmd";
             string[] err = new string[3];
             err[0] = "asdf";
             err[1] = "wasd";
@@ -133,7 +134,7 @@ namespace ConsoleApplication1
             status.capture = "1";
             status.captureMode = "1";
             status.cmdChkInt = "1";
-            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
+            status.cmdURL = "http://cozumotesttls.cloudapp.net:80/api/iCmd";
             string[] err = new string[3];
             err[0] = "<timestamp>///900///bypassmode";
             err[1] = "wasd";

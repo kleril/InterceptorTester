@@ -229,6 +229,58 @@ namespace ConsoleApplication1
             }
         }
 
+		[Test]
+		public async Task SpecialDynCode()
+		{
+			BackupItem[] items = new BackupItem[1];
+			items [0].d = "~123/status=ssid|";
+
+			DeviceBackupJSON serialJson = new DeviceBackupJSON();
+			serialJson.s = 6;
+			serialJson.b = items;
+			serialJson.i = null;
+
+			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
+
+			Test serialTest = new Test(serialOperation);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(serialTest);
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
+
+		[Test]
+		public async Task NotSpecialDynCode()
+		{
+			BackupItem[] items = new BackupItem[1];
+			items [0].d = "~20/12345|";
+
+			DeviceBackupJSON serialJson = new DeviceBackupJSON();
+			serialJson.s = 6;
+			serialJson.b = items;
+			serialJson.i = null;
+
+			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
+
+			Test serialTest = new Test(serialOperation);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(serialTest);
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
+
         //TODO: Do this in a cleaner way
         public BackupItem getBackupItem(int i)
         {

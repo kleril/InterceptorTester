@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
-
-
 namespace ConsoleApplication1
 {
 	// [TestClass]
@@ -15,6 +13,7 @@ namespace ConsoleApplication1
 	public class DeviceScanTest
 	{
 		static Uri testServer = ServerUris.getLatest();
+
 
 		// simple scan code
 
@@ -363,6 +362,67 @@ namespace ConsoleApplication1
 			}
 		}
 
+
+
+		// Combined
+
+		// [TestMethod]
+		[Test]
+		// List of Valid Simple and Dynamic Code Scans 
+		public async Task ValidScansSimDyn()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.d = null;
+			string[] scanData = new string[4];
+			scanData [0] = "~20/0|";
+			scanData [1] = "123456789";
+			scanData [2] = "~20/2|";
+			scanData [3] = "987654321";
+			testJson.b = scanData;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan (testServer, testJson);
+
+			Test scanTest = new Test (testDScan);
+
+			List<Test> tests = new List<Test> ();
+			tests.Add (scanTest);
+
+			await Program.buildTests (tests);
+
+			foreach (Test nextTest in Program.getTests()) {
+				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
+			}
+		}
+
+		// [TestMethod]
+		[Test]
+		// Mixed of Valid and Invalid Scans
+		public async Task ValInvalScansSimDyn()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.d = null;
+			string[] scanData = new string[4];
+			scanData [0] = "~20/0|";
+			scanData [1] = "123456789";
+			scanData [2] = "~20/noendingbar";
+			scanData [3] = "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm";;
+			testJson.b = scanData;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan (testServer, testJson);
+
+			Test scanTest = new Test (testDScan);
+
+			List<Test> tests = new List<Test> ();
+			tests.Add (scanTest);
+
+			await Program.buildTests (tests);
+
+			foreach (Test nextTest in Program.getTests()) {
+				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
+			}
+		}
 	}
 }
 

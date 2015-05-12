@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
 namespace ConsoleApplication1
@@ -27,7 +31,7 @@ namespace ConsoleApplication1
             err[2] = "qwerty";
             status.dynCodeFormat = err;
             status.errorLog = err;
-            status.intSerial = ValidSerialNumbers.getAll()[0];
+            status.intSerial = ValidSerialNumbers.getAll()[1];
             status.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
             status.requestTimeoutValue = "8000";
             status.revId = "52987";
@@ -153,14 +157,7 @@ namespace ConsoleApplication1
 
             List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
-			
-			await Program.buildTests(tests);
 
-			foreach (Test nextTest in Program.getTests())
-			{
-				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-			}
 		}
 	}
 }
-

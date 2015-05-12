@@ -74,7 +74,7 @@ namespace ConsoleApplication1
 		public async Task InvalidSerialSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = "BADSERIAL";
+			testJson.i = "BAD SERIAL";
 			testJson.d = "1289472198573";
 			testJson.b = null;
 			testJson.s = 4;
@@ -215,7 +215,7 @@ namespace ConsoleApplication1
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
-			testJson.d = "~21/*CH*055577520928|";
+			testJson.d = "~21/*CH*055577520928";
 			testJson.b = null;
 			testJson.s = 4;
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ConsoleApplication1.HTTP;
 
 namespace ConsoleApplication1
 {
@@ -17,13 +18,13 @@ namespace ConsoleApplication1
             value = queryValue;
         }
 
-        //TODO: set up all param types
         //Unimplemented types will fail
         //Maybe make this throw an error of some sort if false?
         public bool isValid()
         {
             switch (param)
             {
+                //TODO: Find out a better way to determine IDs - existence != validity
                 case QueryParameter.i:
                     foreach (string nextSerialNumber in ValidSerialNumbers.getAll())
                     {
@@ -40,15 +41,45 @@ namespace ConsoleApplication1
                     return false;
 
                 case QueryParameter.intId:
-                    Console.WriteLine("You didn't set this query type up yet...");
+                    foreach(string nextId in ValidIntIds.getAll())
+                    {
+                        if (value == null)
+                        {
+                            return false;
+                        }
+                        if (value.Equals(nextId))
+                        {
+                            return true;
+                        }
+                    }
                     return false;
 
                 case QueryParameter.locId:
-                    Console.WriteLine("You didn't set this query type up yet...");
+                    foreach (string nextId in ValidLocIds.getAll())
+                    {
+                        if (value == null)
+                        {
+                            return false;
+                        }
+                        if (value.Equals(nextId))
+                        {
+                            return true;
+                        }
+                    }
                     return false;
 
                 case QueryParameter.orgId:
-                    Console.WriteLine("You didn't set this query type up yet...");
+                    foreach (string nextId in ValidOrgIds.getAll())
+                    {
+                        if (value == null)
+                        {
+                            return false;
+                        }
+                        if (value.Equals(nextId))
+                        {
+                            return true;
+                        }
+                    }
                     return false;
 
                 default:

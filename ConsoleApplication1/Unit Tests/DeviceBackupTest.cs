@@ -233,7 +233,7 @@ namespace ConsoleApplication1
 		public async Task SpecialDynCode()
 		{
 			BackupItem[] items = new BackupItem[1];
-			items [0].d = "~123/status=ssid|";
+			items [0].d = "~123~status=ssid|";
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
 			serialJson.s = 6;

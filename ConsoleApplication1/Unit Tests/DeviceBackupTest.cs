@@ -42,6 +42,59 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		public async Task ValidSingleBackupItem()
+		{
+			BackupItem[] items = new BackupItem[1];
+			items[0] = getBackupItem(1);
+
+			//BackupJSon
+			DeviceBackupJSON json = new DeviceBackupJSON();
+			json.i = ValidSerialNumbers.getAll()[1];
+			json.s = 4;
+			json.b = items;
+
+			//BackupOperation
+			DeviceBackup operation = new DeviceBackup(testServer, json);
+
+			//Test
+			Test backupTest = new Test(operation);
+			List<Test> tests = new List<Test>();
+			tests.Add(backupTest);
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
+		[Test]
+		public async Task InvalidSingleBackupItem()
+		{
+			BackupItem failItem = new BackupItem();
+
+			BackupItem[] failItems = new BackupItem[1];
+			failItems[0] = failItem;
+
+			DeviceBackupJSON failJson = new DeviceBackupJSON();
+			failJson.i = ValidSerialNumbers.getAll()[1];
+			failJson.s = 5;
+			failJson.b = failItems;
+
+			DeviceBackup failOperation = new DeviceBackup(testServer, failJson);
+			Test failingTest = new Test(failOperation);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(failingTest);
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
+		[Test]
         public async Task InvalidBackupItems()
         {
             BackupItem failItem = new BackupItem();

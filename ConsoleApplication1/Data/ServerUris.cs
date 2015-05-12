@@ -35,6 +35,7 @@ namespace ConsoleApplication1
             UriList = new List<Uri>();
             UriList.Add(new Uri("http://c1c735b6e41a4325897fb74bf2f8927c.cloudapp.net/"));
             UriList.Add(new Uri("http://c1c735b6e41a4325897fb74bf2f8927c.cloudapp.net/"));
+			UriList.Add(new Uri("http://c1c735b6e41a4325897fb74bf2f8927c.cloudapp.net/"));
             UriList.Add(new Uri("http://cozumotesttls.cloudapp.net"));
         }
     }

@@ -32,7 +32,7 @@ namespace ConsoleApplication1{
         public static void Main()
         {
             Console.WriteLine("Try giving the program some actual tests to run.");
-            buildTests(null);
+			buildTests(tests);
         }
 
         public static async Task buildTests(List<Test> uTests)

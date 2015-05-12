@@ -4,15 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-    [TestClass]
+    //[TestClass]
+	[TestFixture]
     public class ICmdTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task ValidSerial()
         {
             //Valid
@@ -30,7 +33,8 @@ namespace ConsoleApplication1
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task InvalidSerial()
         {
             //Invalid
@@ -45,7 +49,8 @@ namespace ConsoleApplication1
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task MissingSerial()
         {
             //Missing

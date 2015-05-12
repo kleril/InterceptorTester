@@ -44,6 +44,143 @@ namespace ConsoleApplication1
 			}            
 		}
 
+		// [TestMethod]
+		[Test]
+		// Invalid Single Scan
+		public async Task InvalidSingleScanSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = ValidSerialNumbers.getAll()[1];
+			testJson.d = "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}     
+		}
+
+		// [TestMethod]
+		[Test]
+		// Bad Serial
+		public async Task InvalidSerialSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = "BADSERIAL";
+			testJson.d = "1289472198573";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}  
+		}
+
+		// [TestMethod]
+		[Test]
+		// No Serial
+		public async Task NoSerialSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = null;
+			testJson.d = "1289472198573";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}  
+		}
+
+		// [TestMethod]
+		[Test]
+		// List of Valid Scans
+		public async Task LOValidScansSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = ValidSerialNumbers.getAll()[1];
+			testJson.d = null;
+			string[] scanData = new string[4];
+			scanData [0] = "0";
+			scanData [1] = "1";
+			scanData [2] = "2";
+			scanData [3] = "3";
+			testJson.b = scanData;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}            
+		}
+
+		// [TestMethod]
+		[Test]
+		// Mixed of Valid/Invalid Scans
+		public async Task ValInvalScansSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = ValidSerialNumbers.getAll()[1];
+			testJson.d = null;
+			string[] scanData = new string[4];
+			scanData [0] = "0";
+			scanData [1] = "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm";
+			scanData [2] = "2";
+			scanData [3] = "3";
+			testJson.b = scanData;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}            
+		}
+
+			
+
 
 		// dynamic scan code
 
@@ -102,8 +239,8 @@ namespace ConsoleApplication1
 		public async Task InvalidSingleScanDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = "BADSERIAL";
-			testJson.d = "~20|90210/";
+			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.d = "~20|noendingbar";
 			testJson.b = null;
 			testJson.s = 4;
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
@@ -127,7 +264,7 @@ namespace ConsoleApplication1
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = "BADSERIAL";
-			testJson.d = "~20|noendingbar";
+			testJson.d = "~20/90210|";
 			testJson.b = null;
 			testJson.s = 4;
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
@@ -174,7 +311,7 @@ namespace ConsoleApplication1
 		public async Task LOValidScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = null;
+			testJson.i = ValidSerialNumbers.getAll () [1];
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData[0] = "~20/0|";
@@ -203,7 +340,7 @@ namespace ConsoleApplication1
 		public async Task ValInvalScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = null;
+			testJson.i = ValidSerialNumbers.getAll () [1];
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "~20/0|";

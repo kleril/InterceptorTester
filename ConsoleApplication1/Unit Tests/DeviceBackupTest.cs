@@ -121,8 +121,36 @@ namespace ConsoleApplication1
             }
         }
 
+		[Test]
+		public async Task EmptySerial()
+		{
+			BackupItem[] items = new BackupItem[3];
+			items[0] = getBackupItem(1);
+			items[1] = getBackupItem(2);
+			items[2] = getBackupItem(3);
+
+			DeviceBackupJSON serialJson = new DeviceBackupJSON();
+			serialJson.s = 6;
+			serialJson.b = items;
+			serialJson.i = "";
+
+			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
+
+			Test serialTest = new Test(serialOperation);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(serialTest);
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
+
         [Test]
-        public async Task NoSerial()
+        public async Task NullSerial()
         {
             BackupItem[] items = new BackupItem[3];
             items[0] = getBackupItem(1);
@@ -132,6 +160,7 @@ namespace ConsoleApplication1
             DeviceBackupJSON serialJson = new DeviceBackupJSON();
             serialJson.s = 6;
             serialJson.b = items;
+			serialJson.i = null;
 
             DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 

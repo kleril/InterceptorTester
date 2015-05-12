@@ -89,8 +89,34 @@ namespace ConsoleApplication1
 		}
 
 		[Test]
-		// No Serial
-		public async Task NoSerialSimple()
+		// No Serial(Empty String)
+		public async Task EmptySerialSimple()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = "";
+			testJson.d = "1289472198573";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}  
+		}
+
+
+
+		[Test]
+		// No Serial(Null)
+		public async Task NullSerialSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = null;
@@ -265,9 +291,33 @@ namespace ConsoleApplication1
 			}
 		}
 
+
 		[Test]
-		// No Serial
-		public async Task NoSerialDyn()
+		// No Serial (Empty Sting)
+		public async Task EmptySerialDyn()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = "";
+			testJson.d = "~20/90210|";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan (testServer, testJson);
+
+			Test scanTest = new Test (testDScan);
+
+			List<Test> tests = new List<Test> ();
+			tests.Add (scanTest);
+
+			await Program.buildTests (tests);
+
+			foreach (Test nextTest in Program.getTests()) {
+				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
+			}
+		}
+
+		[Test]
+		// No Serial (Null)
+		public async Task NullSerialDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = null;

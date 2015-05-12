@@ -8,12 +8,14 @@ using NUnit.Framework;
 
 namespace ConsoleApplication1.Unit_Tests
 {
-    [TestClass]
+    // [TestClass]
+	[TestFixture]
     public class DeviceSettingTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        [TestMethod]
+        // [TestMethod]
+		[Test]
         public async Task SettingTest()
         {
             // Valid Serial

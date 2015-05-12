@@ -4,15 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ConsoleApplication1.Unit_Tests
 {
-    [TestClass]
+    //[TestClass]
+	[TestFixture]
     public class DeviceScanTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task ScanTest()
         {
 

@@ -187,7 +187,6 @@
     <Compile Include="Unit Tests\DeviceStatusTest.cs" />
     <Compile Include="Data\ValidSerialNumbers.cs" />
     <Compile Include="Unit Tests\DeviceSettingsTest.cs" />
-    <Compile Include="Unit Tests\DeviceStatusTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

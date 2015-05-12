@@ -43,6 +43,7 @@ namespace ConsoleApplication1
             await Program.buildTests(tests);
             foreach (Test nextTest in Program.getTests())
             {
+                Console.WriteLine(nextTest.getOperation().getUri());
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }
@@ -61,6 +62,7 @@ namespace ConsoleApplication1
 
             foreach (Test nextTest in Program.getTests())
             {
+                Console.WriteLine(nextTest.getOperation().getUri());
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
         }

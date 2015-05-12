@@ -148,6 +148,9 @@
     <Compile Include="API Operations\DeviceStatus.cs" />
     <Compile Include="API Operations\ICmd.cs" />
     <Compile Include="Data\Scan.cs" />
+    <Compile Include="Data\ValidIntIds.cs" />
+    <Compile Include="Data\ValidLocIds.cs" />
+    <Compile Include="Data\ValidOrgIds.cs" />
     <Compile Include="Unit Tests\DeviceBackupTest.cs" />
     <Compile Include="Unit Tests\ICmdTest.cs" />
     <Compile Include="JSON\DeviceBackupItemJSON.cs" />

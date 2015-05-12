@@ -25,7 +25,7 @@ namespace ConsoleApplication1.HTTP
             fullList.Add("34");
         }
 
-        internal static bool isValid(int i)
+        internal static bool isValid(string i)
         {
             populateList();
             return fullList.Contains(i);

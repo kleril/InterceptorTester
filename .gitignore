@@ -225,3 +225,7 @@ pip-log.txt
 *.exe
 ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
 ConsoleApplication1/obj/Debug/ConsoleApplication1.exe
+ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
+ConsoleApplication1/obj/Debug/ConsoleApplication1.exe
+ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
+ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb

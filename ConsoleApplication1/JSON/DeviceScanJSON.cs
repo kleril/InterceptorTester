@@ -8,7 +8,7 @@ namespace ConsoleApplication1 {
     {
         public bool isValid()
         {
-            if (i != null && s != null)
+            if (ValidSerialNumbers.isValid(i) && s != null)
             {
                 if (b != null || d != null)
                 {

@@ -4,15 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ConsoleApplication1
 {
-    [TestClass]
+    //[TestClass]
+	[TestFixture]
     public class DeviceBackupTest
     {
         static Uri testServer = ServerUris.getLatest();
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task ValidSerial()
         {
             BackupItem[] items = new BackupItem[3];
@@ -41,7 +44,8 @@ namespace ConsoleApplication1
             }
         }
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task InvalidBackupItems()
         {
             //Failing Test
@@ -76,7 +80,8 @@ namespace ConsoleApplication1
             }
         }
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task BadSerial()
         {
             BackupItem[] items = new BackupItem[3];
@@ -103,7 +108,8 @@ namespace ConsoleApplication1
             }
         }
 
-        [TestMethod]
+        //[TestMethod]
+		[Test]
         public async Task NoBackupItems()
         {
             BackupItem[] items = new BackupItem[3];

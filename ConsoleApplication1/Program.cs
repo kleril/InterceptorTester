@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -29,6 +30,8 @@ namespace ConsoleApplication1{
         //Pass/Fail
         static string outputFile = "testResults.txt";
 
+        static X509Certificate cert;
+
         public static void Main()
         {
             Console.WriteLine("Try giving the program some actual tests to run.");
@@ -43,7 +46,8 @@ namespace ConsoleApplication1{
             tests = new List<Test>();
             serialNumbers = ValidSerialNumbers.getAll();
             results.WriteLine("Starting Tests! Current time:" + DateTime.Now.ToString());
-            
+            try {cert = X509Certificate.CreateFromCertFile("C../../Data/mycert.cer");}
+            catch (Exception e) { Console.WriteLine("Failed to load SSL Cert"); }
             //Setup vars
             seconds = 0;
 
@@ -166,6 +170,12 @@ namespace ConsoleApplication1{
             // ... Use HttpClient.
             try
             {
+                //TODOIF: If http does not allow inclusion of certificates, create secure versions of all calls
+                //TODO: Implement client certificate behaviour (for https)
+                //WebRequestHandler handler = new WebRequestHandler();
+                //handler.ClientCertificates.Add(cert);
+                
+                //For https add handler to client constructor
                 using (HttpClient client = new HttpClient())
                 using (HttpResponseMessage response = await client.GetAsync(qUri.AbsoluteUri))
                 {

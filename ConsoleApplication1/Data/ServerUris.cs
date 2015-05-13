@@ -30,6 +30,22 @@ namespace ConsoleApplication1
             return UriList[0];
         }
 
+        internal static Uri getLatestSecure()
+        {
+            if (UriList == null)
+            {
+                buildList();
+            }
+            foreach (Uri next in UriList)
+            {
+                if (next.ToString().Contains("https"))
+                {
+                    return next;
+                }
+            }
+            return null;
+        }
+
         //Add new servers here, new ones at the top
         private static void buildList()
         {

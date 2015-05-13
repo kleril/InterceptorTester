@@ -19,7 +19,7 @@ namespace ConsoleApplication1{
 
         static StreamWriter results;
 
-        static string outputFile = "testResults.txt";
+		static string outputFile = "testResults" + DateTime.Now.ToString() + ".txt";
 
         public static void Main()
         {
@@ -87,7 +87,7 @@ namespace ConsoleApplication1{
 					results.WriteLine("Input JSON:");
 					results.WriteLine(currentTest.getOperation().getJson().ToString());
 				}
-				catch (Exception e)
+				catch (Exception)
 				{
 					results.WriteLine("No JSON attached to this operation");
 				}

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -30,8 +29,6 @@ namespace ConsoleApplication1{
         //Pass/Fail
         static string outputFile = "testResults.txt";
 
-        static X509Certificate cert;
-
         public static void Main()
         {
             Console.WriteLine("Try giving the program some actual tests to run.");
@@ -42,12 +39,12 @@ namespace ConsoleApplication1{
         {
             //Init globals
             FileStream append = File.Open(outputFile, FileMode.Append);
-            results = new StreamWriter(append);
+			//File.WriteAllText(outputFile, String.Empty);
+			results = new StreamWriter(append);
             tests = new List<Test>();
             serialNumbers = ValidSerialNumbers.getAll();
             results.WriteLine("Starting Tests! Current time:" + DateTime.Now.ToString());
-            try {cert = X509Certificate.CreateFromCertFile("C../../Data/mycert.cer");}
-            catch (Exception e) { Console.WriteLine("Failed to load SSL Cert"); }
+            
             //Setup vars
             seconds = 0;
 
@@ -91,33 +88,52 @@ namespace ConsoleApplication1{
             {
                 //Output results
                 //Test
-                results.Write(currentTest.ToString());
-                clm();
+				results.WriteLine("Summary:");
+                results.WriteLine("Current test: " + currentTest.ToString());
+                //clm();
+
+				try
+				{
+					results.WriteLine("Input JSON:");
+					results.WriteLine(currentTest.getOperation().getJson().ToString());
+				}
+				catch (Exception e)
+				{
+					results.WriteLine("No JSON attached to this operation");
+				}
+
+				results.WriteLine("Input URI: " + currentTest.getOperation().getUri());
+
                 //Expected value
-                results.Write(currentTest.getExpectedResult());
-                clm();
+                results.WriteLine("Expected result: " + currentTest.getExpectedResult());
+                //clm();
                 //Actual value
-                results.Write(currentTest.getActualResult());
-                clm();
+                results.WriteLine("Actual result: " + currentTest.getActualResult());
+                //clm();
                 //Time elapsed (in seconds)
-                results.Write(timeDelta);
-                clm();
+                results.WriteLine("Time elapsed: " + timeDelta + "s");
+                //clm();
                 //Pass/Fail
-                results.Write(currentTest.result());
+                results.WriteLine("Test result: " + currentTest.result());
+				results.WriteLine ();
                 //Carriage return (set up next line)
-                results.WriteLine();
-                results.WriteLine("Input URI");
-                results.WriteLine(currentTest.getOperation().getUri());
-                results.WriteLine("Expected result: " + currentTest.getOperation().getExpectedResult());
+                //results.WriteLine();
+				//results.WriteLine("Input URI: " + currentTest.getOperation().getUri());
+                //results.WriteLine(currentTest.getOperation().getUri());
+                //results.WriteLine("Expected result: " + currentTest.getOperation().getExpectedResult());
+				/*
                 try
                 {
-                    results.WriteLine("Input JSON");
+                    results.WriteLine("Input JSON:");
                     results.WriteLine(currentTest.getOperation().getJson().ToString());
+					results.WriteLine();
                 }
                 catch (Exception e)
                 {
                     results.WriteLine("No JSON attached to this operation");
+					results.WriteLine();
                 }
+                */
             }
         }
 
@@ -170,12 +186,6 @@ namespace ConsoleApplication1{
             // ... Use HttpClient.
             try
             {
-                //TODOIF: If http does not allow inclusion of certificates, create secure versions of all calls
-                //TODO: Implement client certificate behaviour (for https)
-                //WebRequestHandler handler = new WebRequestHandler();
-                //handler.ClientCertificates.Add(cert);
-                
-                //For https add handler to client constructor
                 using (HttpClient client = new HttpClient())
                 using (HttpResponseMessage response = await client.GetAsync(qUri.AbsoluteUri))
                 {

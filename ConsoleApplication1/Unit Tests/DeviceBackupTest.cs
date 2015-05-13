@@ -13,6 +13,7 @@ namespace ConsoleApplication1
         static Uri testServer = ServerUris.getLatest();
 
 		[Test]
+		// Valid Serial
         public async Task ValidSerial()
         {
             BackupItem[] items = new BackupItem[3];
@@ -42,6 +43,7 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		// Valid Single Backup Item
 		public async Task ValidSingleBackupItem()
 		{
 			BackupItem[] items = new BackupItem[1];
@@ -69,6 +71,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test]
+		// Invalid Single Backup Item
 		public async Task InvalidSingleBackupItem()
 		{
 			BackupItem failItem = new BackupItem();
@@ -95,6 +98,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test]
+		// Muliple Backup Items with Invalid Backup Item in Them
         public async Task InvalidBackupItems()
         {
             BackupItem failItem = new BackupItem();
@@ -124,6 +128,7 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		// Invalid Serial Number
         public async Task BadSerial()
         {
             BackupItem[] items = new BackupItem[3];
@@ -151,6 +156,7 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		// No Backup Items
         public async Task NoBackupItems()
         {
             BackupItem[] items = new BackupItem[0];
@@ -175,6 +181,7 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		// Input with Serial Number as ""
 		public async Task EmptySerial()
 		{
 			BackupItem[] items = new BackupItem[3];
@@ -203,6 +210,7 @@ namespace ConsoleApplication1
 
 
         [Test]
+		// Input with Null Serial Number
         public async Task NullSerial()
         {
             BackupItem[] items = new BackupItem[3];
@@ -230,6 +238,7 @@ namespace ConsoleApplication1
         }
 
 		[Test]
+		// Scan Code being a Special Dynamic Code
 		public async Task SpecialDynCode()
 		{
             BackupItem[] items = new BackupItem[1];
@@ -257,6 +266,7 @@ namespace ConsoleApplication1
 
 
 		[Test]
+		// Scan Code being a Dynamic Code and Not Special
 		public async Task NotSpecialDynCode()
 		{
 			BackupItem[] items = new BackupItem[1];

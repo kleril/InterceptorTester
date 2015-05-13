@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace ConsoleApplication1
 {
@@ -40,7 +41,8 @@ namespace ConsoleApplication1
 
         public override object getJson()
         {
-            return json;
+			var jsonSTATUS = JObject.FromObject(json);
+			return jsonSTATUS;
         }
     }
 }

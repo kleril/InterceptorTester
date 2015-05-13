@@ -253,12 +253,15 @@ namespace ConsoleApplication1
 		{
             BackupItem[] items = new BackupItem[1];
             items[0] = new BackupItem();
-			items [0].d = "~123~status=ssid|";
+			items[0].d = "~123~status=ssid|";
+			items[0].s = 442;
+			items[0].t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
+			items[0].c = false;
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
 			serialJson.s = 6;
 			serialJson.b = items;
-			serialJson.i = null;
+			serialJson.i = ValidSerialNumbers.getAll()[1];
 
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
@@ -282,12 +285,15 @@ namespace ConsoleApplication1
 		{
 			BackupItem[] items = new BackupItem[1];
             items[0] = new BackupItem();
-			items [0].d = "~20/12345|";
+			items[0].d = "~20/12345|";
+			items[0].s = 442;
+			items[0].t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
+			items[0].c = false;
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
 			serialJson.s = 6;
 			serialJson.b = items;
-			serialJson.i = null;
+			serialJson.i = ValidSerialNumbers.getAll()[1];
 
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 

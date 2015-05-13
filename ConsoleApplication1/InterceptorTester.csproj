@@ -161,7 +161,6 @@
     <Compile Include="Data\ValidOrgIds.cs" />
     <Compile Include="Unit Tests\DeviceBackupTest.cs" />
     <Compile Include="Unit Tests\ICmdTest.cs" />
-    <Compile Include="JSON\DeviceBackupItemJSON.cs" />
     <Compile Include="JSON\DeviceBackupJSON.cs" />
     <Compile Include="JSON\DeviceScanJSON.cs" />
     <Compile Include="JSON\DeviceScanRequestJSON.cs" />

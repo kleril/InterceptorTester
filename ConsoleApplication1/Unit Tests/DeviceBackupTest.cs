@@ -16,7 +16,7 @@ namespace ConsoleApplication1
 		// Valid Serial
         public async Task ValidSerial()
         {
-            BackupItem[] items = new BackupItem[3];
+			BackupItem[] items = new BackupItem[3];
             items[0] = getBackupItem(1);
             items[1] = getBackupItem(2);
             items[2] = getBackupItem(3);
@@ -32,6 +32,7 @@ namespace ConsoleApplication1
 
             //Test
             Test backupTest = new Test(operation);
+			backupTest.setTestName("ValidSerial");
             List<Test> tests = new List<Test>();
             tests.Add(backupTest);
             await Program.buildTests(tests);
@@ -60,6 +61,7 @@ namespace ConsoleApplication1
 
 			//Test
 			Test backupTest = new Test(operation);
+			backupTest.setTestName("ValidSingleBackupItem");
 			List<Test> tests = new List<Test>();
 			tests.Add(backupTest);
 			await Program.buildTests(tests);
@@ -74,6 +76,8 @@ namespace ConsoleApplication1
 		// Invalid Single Backup Item
 		public async Task InvalidSingleBackupItem()
 		{
+
+
 			BackupItem failItem = new BackupItem();
 
 			BackupItem[] failItems = new BackupItem[1];
@@ -86,6 +90,7 @@ namespace ConsoleApplication1
 
 			DeviceBackup failOperation = new DeviceBackup(testServer, failJson);
 			Test failingTest = new Test(failOperation);
+			failingTest.setTestName("InvalidSingleBackupItem");
 
 			List<Test> tests = new List<Test>();
 			tests.Add(failingTest);
@@ -116,6 +121,7 @@ namespace ConsoleApplication1
 
             DeviceBackup failOperation = new DeviceBackup(testServer, failJson);
             Test failingTest = new Test(failOperation);
+			failingTest.setTestName("InvalidBackupItems");
 
             List<Test> tests = new List<Test>();
             tests.Add(failingTest);
@@ -144,6 +150,7 @@ namespace ConsoleApplication1
             DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
             Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("BadSerial");
 
             List<Test> tests = new List<Test>();
             tests.Add(serialTest);
@@ -168,6 +175,7 @@ namespace ConsoleApplication1
 
             DeviceBackup emptyOperation = new DeviceBackup(testServer, emptyJson);
             Test emptyTest = new Test(emptyOperation);
+			emptyTest.setTestName("NoBackupItems");
 
 
             List<Test> tests = new List<Test>();
@@ -197,6 +205,7 @@ namespace ConsoleApplication1
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
 			Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("EmptySerial");
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
@@ -226,6 +235,7 @@ namespace ConsoleApplication1
             DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
             Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("NullSerial");
 
             List<Test> tests = new List<Test>();
             tests.Add(serialTest);
@@ -253,6 +263,7 @@ namespace ConsoleApplication1
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
 			Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("SpecialDynCode");
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
@@ -281,6 +292,7 @@ namespace ConsoleApplication1
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
 			Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("NotSpecialDynCode");
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);

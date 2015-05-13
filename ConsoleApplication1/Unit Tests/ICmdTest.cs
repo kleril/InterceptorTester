@@ -19,6 +19,8 @@ namespace ConsoleApplication1
             ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
 
             Test validTest = new Test(validICmd);
+			validTest.setTestName("ValidSerial");
+
 
             List<Test> tests = new List<Test>();
             tests.Add(validTest);
@@ -37,6 +39,8 @@ namespace ConsoleApplication1
             //Invalid
             ICmd invalidICmd = new ICmd(testServer, "BORSHT");
             Test invalidTest = new Test(invalidICmd);
+			invalidTest.setTestName("BadSerial");
+
             List<Test> tests = new List<Test>();
             tests.Add(invalidTest);
             
@@ -54,6 +58,8 @@ namespace ConsoleApplication1
             //Missing
             ICmd missingICmd = new ICmd(testServer, null);
             Test missingTest = new Test(missingICmd);
+			missingTest.setTestName("EmptySerial");
+
 
             List<Test> tests = new List<Test>();
             tests.Add(missingTest);
@@ -74,6 +80,8 @@ namespace ConsoleApplication1
             ICmd missingICmd = new ICmd(testServer, null);
             missingICmd.noQuery = true;
             Test missingTest = new Test(missingICmd);
+			missingTest.setTestName("NoQuery");
+
 
             List<Test> tests = new List<Test>();
             tests.Add(missingTest);

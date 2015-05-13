@@ -11,6 +11,7 @@ namespace ConsoleApplication1
         APIOperation operation;
         String expectedResult;
         String actualResult;
+		String testName;
 
         public Test(APIOperation nOperation)
         {
@@ -54,6 +55,16 @@ namespace ConsoleApplication1
         {
             return actualResult;
         }
+
+		public void setTestName(string name)
+		{
+			testName = name;
+		}
+
+		public String getTestName()
+		{
+			return testName;
+		}
 
         //Pass/Fail
         public String result()

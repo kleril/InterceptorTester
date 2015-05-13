@@ -19,6 +19,8 @@ namespace ConsoleApplication1
 			DeviceSetting dSetting1 = new DeviceSetting(testServer, ValidSerialNumbers.getAll()[0]);
 
 			Test ValidSerial = new Test(dSetting1);
+			ValidSerial.setTestName("ValidSerial");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(ValidSerial);
@@ -38,6 +40,8 @@ namespace ConsoleApplication1
 			DeviceSetting dSetting2 = new DeviceSetting(testServer, "BADSERIAL");
 
 			Test BadSerial = new Test(dSetting2);
+			BadSerial.setTestName("BadSerial");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(BadSerial);
@@ -57,6 +61,8 @@ namespace ConsoleApplication1
 			DeviceSetting dSetting3 = new DeviceSetting(testServer, null);
 
 			Test NoSerial = new Test(dSetting3);
+			NoSerial.setTestName("NoSerial");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(NoSerial);

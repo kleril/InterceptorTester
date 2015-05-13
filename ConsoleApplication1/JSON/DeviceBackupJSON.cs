@@ -14,9 +14,10 @@ namespace ConsoleApplication1
         public DateTime t;
 
         public bool? c;
+
         public bool isValid()
         {
-            if (d != null && s != null && t != null && c != null)
+            if (d != null && s != null && t != null)
             {
                 return true;
             }

@@ -12,8 +12,6 @@ namespace ConsoleApplication1{
 
     class Program
     {
-        static List<string> serialNumbers;
-
         static List<Test> tests;
 
         static Timer time;
@@ -21,12 +19,6 @@ namespace ConsoleApplication1{
 
         static StreamWriter results;
 
-        //Output format (by column):
-        //Test
-        //Expected value
-        //Actual value
-        //Time elapsed (in deciseconds)
-        //Pass/Fail
         static string outputFile = "testResults.txt";
 
         public static void Main()
@@ -39,10 +31,8 @@ namespace ConsoleApplication1{
         {
             //Init globals
             FileStream append = File.Open(outputFile, FileMode.Append);
-			//File.WriteAllText(outputFile, String.Empty);
 			results = new StreamWriter(append);
             tests = new List<Test>();
-            serialNumbers = ValidSerialNumbers.getAll();
             results.WriteLine("Starting Tests! Current time:" + DateTime.Now.ToString());
             
             //Setup vars
@@ -116,31 +106,13 @@ namespace ConsoleApplication1{
                 //Pass/Fail
                 results.WriteLine("Test result: " + currentTest.result());
 				results.WriteLine ();
-                //Carriage return (set up next line)
-                //results.WriteLine();
-				//results.WriteLine("Input URI: " + currentTest.getOperation().getUri());
-                //results.WriteLine(currentTest.getOperation().getUri());
-                //results.WriteLine("Expected result: " + currentTest.getOperation().getExpectedResult());
-				/*
-                try
-                {
-                    results.WriteLine("Input JSON:");
-                    results.WriteLine(currentTest.getOperation().getJson().ToString());
-					results.WriteLine();
-                }
-                catch (Exception e)
-                {
-                    results.WriteLine("No JSON attached to this operation");
-					results.WriteLine();
-                }
-                */
             }
         }
 
         static async Task testType (Test currentTest)
         {
             KeyValuePair<JObject, string> result;
-            results.WriteLine("Test results:");
+            results.WriteLine("Raw test results:");
             switch (currentTest.ToString())
             {
                 case "iCmd":

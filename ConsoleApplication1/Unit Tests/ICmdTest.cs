@@ -48,11 +48,31 @@ namespace ConsoleApplication1
             }
         }
 
-		[Test]
+        [Test]
         public async Task MissingSerial()
         {
             //Missing
             ICmd missingICmd = new ICmd(testServer, null);
+            Test missingTest = new Test(missingICmd);
+
+            List<Test> tests = new List<Test>();
+            tests.Add(missingTest);
+
+            await Program.buildTests(tests);
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Console.WriteLine(nextTest.getOperation().getUri());
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+            }
+        }
+
+        [Test]
+        public async Task NoQuery()
+        {
+            //Missing
+            ICmd missingICmd = new ICmd(testServer, null);
+            missingICmd.noQuery = true;
             Test missingTest = new Test(missingICmd);
 
             List<Test> tests = new List<Test>();

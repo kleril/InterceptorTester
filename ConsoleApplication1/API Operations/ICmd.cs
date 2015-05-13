@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
     class ICmd : APIOperation
     {
-
+        public bool noQuery;
         public ICmd(Uri server, string serialNum)
         {
             opHost = server;
@@ -19,6 +19,10 @@ namespace ConsoleApplication1
         //TODO: Clean this up, find out proper responses.
         public override string getExpectedResult()
         {
+            if (this.noQuery)
+            {
+                return "404";
+            }
             if (this.opQuery.isValid())
             {
                 return "200";
@@ -33,7 +37,16 @@ namespace ConsoleApplication1
         
         public override Uri getUri()
         {
+            if (noQuery)
+            {
+                return getUriNoQuery();
+            }
             return new Uri(opHost, "/api/iCmd/" + opQuery.ToString());
+        }
+
+        public Uri getUriNoQuery()
+        {
+            return new Uri(opHost, "/api/iCmd");
         }
 
         public override object getJson()

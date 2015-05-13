@@ -232,7 +232,8 @@ namespace ConsoleApplication1
 		[Test]
 		public async Task SpecialDynCode()
 		{
-			BackupItem[] items = new BackupItem[1];
+            BackupItem[] items = new BackupItem[1];
+            items[0] = new BackupItem();
 			items [0].d = "~123~status=ssid|";
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
@@ -259,6 +260,7 @@ namespace ConsoleApplication1
 		public async Task NotSpecialDynCode()
 		{
 			BackupItem[] items = new BackupItem[1];
+            items[0] = new BackupItem();
 			items [0].d = "~20/12345|";
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();

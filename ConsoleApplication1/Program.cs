@@ -22,7 +22,7 @@ namespace ConsoleApplication1{
 		static string path = @"Results";
 
 
-		static string outputFile = "testResults" + DateTime.Now.ToString() + ".txt";
+        static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
 
         public static void Main()
         {
@@ -38,8 +38,18 @@ namespace ConsoleApplication1{
 			{
 				Directory.CreateDirectory(path);
 			}
-            FileStream append = File.Open(path + "/" + outputFile, FileMode.Append);
-			results = new StreamWriter(append);
+
+            FileStream stream;
+
+            if (File.Exists(outputFile))
+            {
+                stream = File.Open(outputFile, FileMode.Append);
+            }
+            else
+            {
+                stream = File.Open(outputFile, FileMode.CreateNew);
+            }
+            results = new StreamWriter(stream);
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
             

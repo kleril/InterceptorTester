@@ -17,7 +17,6 @@ namespace ConsoleApplication1
             json = scan;
         }
 
-        //TODO: Implement this in a non-shitty way
         public override string getExpectedResult()
         {
             if (json.isValid())

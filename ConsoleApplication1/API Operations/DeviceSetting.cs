@@ -15,7 +15,6 @@ namespace ConsoleApplication1
             opQuery = new HTTPQuery(QueryParameter.i, serialNum);
         }
 
-        //TODO: Implement expected result calculation
         public override string getExpectedResult()
         {
             if (opQuery.isValid())

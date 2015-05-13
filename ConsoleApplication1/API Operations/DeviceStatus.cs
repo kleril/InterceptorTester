@@ -16,7 +16,6 @@ namespace ConsoleApplication1
             json = status;
 		}
 
-        //TODO: Code this
 		public override string getExpectedResult()
 		{
             if (json.isValid())

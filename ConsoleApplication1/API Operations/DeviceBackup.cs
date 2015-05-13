@@ -17,7 +17,6 @@ namespace ConsoleApplication1
             json = backup;
 		}
 
-        //TODO: Code this
 		public override string getExpectedResult()
 		{
             if (json.isValid())

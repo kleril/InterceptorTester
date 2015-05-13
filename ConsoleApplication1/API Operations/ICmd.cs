@@ -16,7 +16,6 @@ namespace ConsoleApplication1
             opQuery = new HTTPQuery(QueryParameter.i, serialNum);
         }
 
-        //TODO: Clean this up, find out proper responses.
         public override string getExpectedResult()
         {
             if (this.noQuery)

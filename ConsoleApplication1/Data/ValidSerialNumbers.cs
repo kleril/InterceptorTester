@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -14,17 +15,21 @@ namespace ConsoleApplication1
             return fullList;
         }
 
-        //TODO: Change this so it gets serial numbers from ???
-        //i.e. anything but hardcoded
         private static void populateList()
         {
-           fullList = new List<string>();
-           fullList.Add("D05FB84F1606");
-           fullList.Add("2A2A2A2A2A2A");
-           fullList.Add("DEADDEADBEEF");
-           fullList.Add("D05FB84F2A31");
-           fullList.Add("D05FB84F2F8E");
-           fullList.Add("D05FB84F2C4B");
+            try
+            {
+                StreamReader reader = new StreamReader("../../Data/ValidSerialNumbers.txt");
+                fullList = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    fullList.Add(reader.ReadLine());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Failed to load serial numbers!");
+            }
         }
 
 

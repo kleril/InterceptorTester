@@ -8,6 +8,10 @@ namespace ConsoleApplication1
 {
     class Scan
     {
+        /// <summary>
+        /// Returns a (probably) random static scan code.
+        /// </summary>
+        /// <returns></returns>
         public static string staticScan()
         {
             return "8913759823752;";

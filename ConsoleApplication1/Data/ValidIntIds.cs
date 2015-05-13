@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,19 @@ namespace ConsoleApplication1.HTTP
 
         private static void populateList()
         {
-            fullList = new List<string>();
-            fullList.Add("45");
-            fullList.Add("44");
-            fullList.Add("43");
-            fullList.Add("42");
-            fullList.Add("36");
-            fullList.Add("34");
+            try
+            {
+                StreamReader reader = new StreamReader("../../Data/ValidIntIds.txt");
+                fullList = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    fullList.Add(reader.ReadLine());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Failed to load IntIds!");
+            }
         }
 
         internal static bool isValid(string i)

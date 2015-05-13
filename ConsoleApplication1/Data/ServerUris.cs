@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -32,10 +33,19 @@ namespace ConsoleApplication1
         //Add new servers here, new ones at the top
         private static void buildList()
         {
-            UriList = new List<Uri>();
-            UriList.Add(new Uri("http://03fb817764e54af1b96fbafcd93362e2.cloudapp.net/"));
-			UriList.Add(new Uri("http://c1c735b6e41a4325897fb74bf2f8927c.cloudapp.net/"));
-            UriList.Add(new Uri("http://cozumotesttls.cloudapp.net"));
+            try
+            {
+                StreamReader reader = new StreamReader("../../Data/ServerUris.txt");
+                UriList = new List<Uri>();
+                while (!reader.EndOfStream)
+                {
+                    UriList.Add(new Uri(reader.ReadLine()));
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Failed to load server Uris!");
+            }
         }
     }
 }

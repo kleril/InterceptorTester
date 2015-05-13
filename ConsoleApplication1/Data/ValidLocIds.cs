@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace ConsoleApplication1.HTTP
 {
@@ -16,8 +17,19 @@ namespace ConsoleApplication1.HTTP
 
         private static void populateList()
         {
-            fullList = new List<string>();
-            fullList.Add("32");
+            try
+            {
+                StreamReader reader = new StreamReader("../../Data/ValidLocIds.txt");
+                fullList = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    fullList.Add(reader.ReadLine());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Failed to load LocIds!");
+            }
         }
 
         internal static bool isValid(string i)

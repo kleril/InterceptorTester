@@ -19,6 +19,9 @@ namespace ConsoleApplication1{
 
         static StreamWriter results;
 
+		static string path = @"Results";
+
+
 		static string outputFile = "testResults" + DateTime.Now.ToString() + ".txt";
 
         public static void Main()
@@ -30,7 +33,12 @@ namespace ConsoleApplication1{
         public static async Task buildTests(List<Test> uTests)
         {
             //Init globals
-            FileStream append = File.Open(outputFile, FileMode.Append);
+
+			if (!Directory.Exists(path)) 
+			{
+				Directory.CreateDirectory(path);
+			}
+            FileStream append = File.Open(path + "/" + outputFile, FileMode.Append);
 			results = new StreamWriter(append);
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
@@ -49,7 +57,7 @@ namespace ConsoleApplication1{
 
             foreach (Test nextTest in tests)
             {
-				results.WriteLine(nextTest.ToString() + " " + nextTest.getTestName());
+				results.WriteLine("Test: " + nextTest.ToString() + " " + nextTest.getTestName());
                 await runTest(nextTest);
 
 

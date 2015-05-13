@@ -28,6 +28,7 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("ValidSingleScanSimple");
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -52,6 +53,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("InvalidSingleScanSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -76,6 +79,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("InvalidSerialSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -100,6 +105,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("EmptySerialSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -126,6 +133,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("NullSerialSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -155,6 +164,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("LOValidScansSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -184,6 +195,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan(testServer, testJson);
 
 			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("ValInvalScansSimple");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
@@ -210,6 +223,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("ValidSingleScanDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -234,6 +249,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("ValidCH");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -257,6 +274,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("InvalidSingleScanDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -280,6 +299,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("InvalidSerialDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -304,6 +325,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("EmptySerialDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -327,6 +350,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("NullSerialDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -355,6 +380,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("LOValidScansDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -383,6 +410,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("ValInvalScansDyn");
+
 		
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -415,6 +444,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("ValidScansSimDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
@@ -443,6 +474,8 @@ namespace ConsoleApplication1
 			DeviceScan testDScan = new DeviceScan (testServer, testJson);
 
 			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("ValInvalScansSimDyn");
+
 
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);

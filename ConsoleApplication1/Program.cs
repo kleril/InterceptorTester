@@ -43,7 +43,7 @@ namespace ConsoleApplication1{
 			results = new StreamWriter(append);
             tests = new List<Test>();
             serialNumbers = ValidSerialNumbers.getAll();
-            results.WriteLine("Starting Tests! Current time:" + DateTime.Now.ToString());
+            results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
             
             //Setup vars
             seconds = 0;
@@ -59,7 +59,7 @@ namespace ConsoleApplication1{
 
             foreach (Test nextTest in tests)
             {
-                results.WriteLine(nextTest.ToString());
+				results.WriteLine(nextTest.ToString() + " " + nextTest.getTestName());
                 await runTest(nextTest);
 
 
@@ -89,7 +89,7 @@ namespace ConsoleApplication1{
                 //Output results
                 //Test
 				results.WriteLine("Summary:");
-                results.WriteLine("Current test: " + currentTest.ToString());
+				results.WriteLine("Current test: " + currentTest.ToString() + " " + currentTest.getTestName());
                 //clm();
 
 				try

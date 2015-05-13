@@ -39,6 +39,8 @@ namespace ConsoleApplication1
 
             DeviceStatus operation = new DeviceStatus(server, status);
             Test statusTest = new Test(operation);
+			statusTest.setTestName("ValidSerial");
+
 
             List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
@@ -77,6 +79,8 @@ namespace ConsoleApplication1
 
             DeviceStatus operation = new DeviceStatus(server, status);
             Test statusTest = new Test(operation);
+			statusTest.setTestName("BadSerial");
+
 
             List<Test> tests = new List<Test>();
             tests.Add(statusTest);
@@ -114,6 +118,8 @@ namespace ConsoleApplication1
 
 			DeviceStatus operation = new DeviceStatus(server, status);
 			Test statusTest = new Test(operation);
+			statusTest.setTestName("EmptySerial");
+
 
 			List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
@@ -151,6 +157,8 @@ namespace ConsoleApplication1
 
             DeviceStatus operation = new DeviceStatus(server, status);
             Test statusTest = new Test(operation);
+			statusTest.setTestName("NullSerial");
+
 
             List<Test> tests = new List<Test>();
             tests.Add(statusTest);
@@ -189,6 +197,8 @@ namespace ConsoleApplication1
 
             DeviceStatus operation = new DeviceStatus(server, status);
             Test statusTest = new Test(operation);
+			statusTest.setTestName("AlertDataStore");
+
 
             List<Test> tests = new List<Test>();
 			tests.Add(statusTest);

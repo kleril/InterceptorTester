@@ -38,7 +38,7 @@ namespace ConsoleApplication1
             }
             foreach (Uri next in UriList)
             {
-                if (next.ToString().Contains("https"))
+                if (isSecure(next))
                 {
                     return next;
                 }
@@ -46,7 +46,11 @@ namespace ConsoleApplication1
             return null;
         }
 
-        //Add new servers here, new ones at the top
+        public static bool isSecure(Uri checkThis)
+        {
+            return checkThis.ToString().Contains("https");
+        }
+
         private static void buildList()
         {
             try

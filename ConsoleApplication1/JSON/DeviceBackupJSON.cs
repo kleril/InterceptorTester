@@ -26,6 +26,11 @@ namespace ConsoleApplication1
                 return false;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("[BackupItem d: {0}, s: {1}, t: {2}, c: {3}]", d,s,t,c);
+        }
 	}
 
 	public class DeviceBackupJSON
@@ -63,7 +68,7 @@ namespace ConsoleApplication1
 
 		public override string ToString()
 		{
-			return string.Format("[DeviceBackup s: {0}, i: {1}, b: {2}]", s, i, b);
+			return string.Format("[DeviceBackup s: {0}, i: {1}, b: {2}]", s, i, b.ToString());
 		}
 	}
 

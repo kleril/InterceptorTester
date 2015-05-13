@@ -27,7 +27,7 @@ namespace ConsoleApplication1{
         //Actual value
         //Time elapsed (in deciseconds)
         //Pass/Fail
-        static string outputFile = "testResults" + System.DateTime.Now.ToFileTime() + ".csv";
+        static string outputFile = "testResults.txt";
 
         public static void Main()
         {
@@ -38,9 +38,11 @@ namespace ConsoleApplication1{
         public static async Task buildTests(List<Test> uTests)
         {
             //Init globals
-            results = new StreamWriter(outputFile);
+            FileStream append = File.Open(outputFile, FileMode.Append);
+            results = new StreamWriter(append);
             tests = new List<Test>();
             serialNumbers = ValidSerialNumbers.getAll();
+            results.WriteLine("Starting Tests! Current time:" + DateTime.Now.ToString());
             
             //Setup vars
             seconds = 0;
@@ -56,9 +58,10 @@ namespace ConsoleApplication1{
 
             foreach (Test nextTest in tests)
             {
-                Console.WriteLine("Test #" + tests.IndexOf(nextTest) + ":");
-                //results.WriteLine("Test #" + tests.IndexOf(nextTest) + ":");
+                results.WriteLine(nextTest.ToString());
                 await runTest(nextTest);
+
+
             }
 
             //Shut 'er down!
@@ -99,40 +102,58 @@ namespace ConsoleApplication1{
                 results.Write(currentTest.result());
                 //Carriage return (set up next line)
                 results.WriteLine();
+                results.WriteLine("Input URI");
+                results.WriteLine(currentTest.getOperation().getUri());
+                results.WriteLine("Expected result: " + currentTest.getOperation().getExpectedResult());
+                try
+                {
+                    results.WriteLine("Input JSON");
+                    results.WriteLine(currentTest.getOperation().getJson().ToString());
+                }
+                catch (Exception e)
+                {
+                    results.WriteLine("No JSON attached to this operation");
+                }
             }
         }
 
         static async Task testType (Test currentTest)
         {
-            KeyValuePair<JObject,string> result;
+            KeyValuePair<JObject, string> result;
+            results.WriteLine("Test results:");
             switch (currentTest.ToString())
             {
                 case "iCmd":
                     result = await RunGetAsync(currentTest.getOperation().getUri());
                     currentTest.setActualResult(result.Key.GetValue("StatusCode").ToString());
                     Console.WriteLine(result.Value + " Is the result of the iCmd test");
+                    results.WriteLine(result.ToString());
                     break;
                 case "DeviceScan":
                     result = await RunPostAsync(currentTest.getOperation().getUri(), currentTest.getOperation().getJson());
                     currentTest.setActualResult(result.Key.GetValue("StatusCode").ToString());
                     Console.WriteLine(result.Value + "Is the result of the DeviceScan test");
+                    results.WriteLine(result.ToString());
                     break;
                 case "DeviceSetting":
                     result = await RunGetAsync(currentTest.getOperation().getUri());
                     currentTest.setActualResult(result.Key.GetValue("StatusCode").ToString());
                     Console.WriteLine(result.Value + " Is the result of the DeviceSetting test");
+                    results.WriteLine(result.ToString());
                     break;
                 case "DeviceBackup":
                     result = await RunPostAsync(currentTest.getOperation().getUri(), currentTest.getOperation().getJson());
                     currentTest.setActualResult(result.Key.GetValue("StatusCode").ToString());
                     Console.WriteLine(result.Value + "Is the result of the DeviceBackup test");
+                    results.WriteLine(result.ToString());
                     break;
                 case "DeviceStatus":
                     result = await RunPostAsync(currentTest.getOperation().getUri(), currentTest.getOperation().getJson());
                     currentTest.setActualResult(result.Key.GetValue("StatusCode").ToString());
                     Console.WriteLine(result.Value + "Is the result of the DeviceStatus test");
+                    results.WriteLine(result.ToString());
                     break;
-                default:
+               default:
                     Console.WriteLine("Unrecognized test type!");
                     Console.WriteLine(currentTest.ToString());
                     break;

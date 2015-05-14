@@ -18,9 +18,6 @@ namespace ConsoleApplication1{
 
         // Create a collection object and populate it using the PFX file
         static X509Certificate cert;
-        
-        //X509Certificate2Collection collection = new X509Certificate2Collection();
-        //collection.Import(certPath, certPass, X509KeyStorageFlags.PersistKeySet);
 
         static List<Test> tests;
 
@@ -28,9 +25,6 @@ namespace ConsoleApplication1{
         static int seconds;
 
         static StreamWriter results;
-
-		static string path = @"Results";
-
 
         static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
 
@@ -61,10 +55,6 @@ namespace ConsoleApplication1{
             {
                 Console.WriteLine("Could not initialize SLL certificate");
             }
-			if (!Directory.Exists(path)) 
-			{
-				Directory.CreateDirectory(path);
-			}
 
             FileStream stream;
 

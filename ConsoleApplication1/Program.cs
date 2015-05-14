@@ -48,6 +48,11 @@ namespace ConsoleApplication1{
 
         public static async Task buildTests(List<Test> uTests)
         {
+
+
+            //System.Threading.Thread.Sleep(5000);
+
+
             //Init globals
             try
             {
@@ -208,7 +213,8 @@ namespace ConsoleApplication1{
             // ... Use HttpClient.
             try
             {
-                WebRequestHandler handler = new WebRequestHandler();
+
+				WebRequestHandlerWithClientcertificates handler = new WebRequestHandlerWithClientcertificates();
                 handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.GetAsync(qUri.AbsoluteUri))
@@ -220,7 +226,7 @@ namespace ConsoleApplication1{
             }
             catch (Exception e)
             {
-                Console.WriteLine("GET request failed.");
+				Console.WriteLine("GET request failed: " + e.ToString());
                 Console.WriteLine("URL: " + qUri.ToString());
                 Console.WriteLine(e);
                 return new KeyValuePair<JObject, string>(null, null);
@@ -233,7 +239,8 @@ namespace ConsoleApplication1{
             try
             {
                 // ... Use HttpClient.
-                WebRequestHandler handler = new WebRequestHandler();
+
+				WebRequestHandlerWithClientcertificates handler = new WebRequestHandlerWithClientcertificates();
                 handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 {
@@ -271,7 +278,7 @@ namespace ConsoleApplication1{
             try
             {
                 // ... Use HttpClient.
-                WebRequestHandler handler = new WebRequestHandler();
+				WebRequestHandlerWithClientcertificates handler = new WebRequestHandlerWithClientcertificates();
                 handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.PutAsync(qUri, contentToPut))
@@ -298,7 +305,7 @@ namespace ConsoleApplication1{
             try
             {
                 // ... Use HttpClient.
-                WebRequestHandler handler = new WebRequestHandler();
+				WebRequestHandlerWithClientcertificates handler = new WebRequestHandlerWithClientcertificates();
                 handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.DeleteAsync(qUri))

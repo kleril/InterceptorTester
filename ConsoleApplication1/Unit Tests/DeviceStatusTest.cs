@@ -203,6 +203,13 @@ namespace ConsoleApplication1
             List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
 
+			await Program.buildTests(tests);
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+
 		}
 	}
 }

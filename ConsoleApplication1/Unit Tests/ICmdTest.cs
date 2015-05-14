@@ -14,6 +14,8 @@ namespace ConsoleApplication1
         static Uri testServer = ServerUris.getLatest();
 
         static float avgTime = -1;
+        static float minTime = 9999999999999;
+        static float maxTime = -1;
         static int reps = 1;
 
         static StreamWriter results;
@@ -31,7 +33,9 @@ namespace ConsoleApplication1
         [TestFixtureTearDown]
         public void tearDown()
         {
-            results.WriteLine("Final Average Time: " + avgTime);
+            results.WriteLine("Average Time: " + avgTime);
+            results.WriteLine("Minimum Time: " + minTime);
+            results.WriteLine("Maximum Time: " + maxTime);
             results.Close();
         }
 
@@ -62,9 +66,16 @@ namespace ConsoleApplication1
                 avgTime = (avgTime * (reps - 1) / reps) + (time / reps);
             }
             reps += 1;
+            if (time < minTime)
+            {
+                minTime = time;
+            }
+            if (time > maxTime)
+            {
+                maxTime = time;
+            }
 
             results.WriteLine("Test Time: " + time);
-            results.WriteLine("Running Average Time: " + avgTime);
 
             foreach (Test nextTest in Program.getTests())
             {

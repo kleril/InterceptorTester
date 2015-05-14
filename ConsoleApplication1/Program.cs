@@ -103,8 +103,6 @@ namespace ConsoleApplication1{
             {
 				results.WriteLine("Test: " + nextTest.ToString() + " " + nextTest.getTestName());
                 await runTest(nextTest);
-
-
             }
 
             //Shut 'er down!
@@ -220,10 +218,11 @@ namespace ConsoleApplication1{
                     return new KeyValuePair<JObject, string>(jResponse, content);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("GET request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
+                Console.WriteLine(e);
                 return new KeyValuePair<JObject, string>(null, null);
             }
         }
@@ -256,11 +255,12 @@ namespace ConsoleApplication1{
                 }
                 return new KeyValuePair<JObject, string>(null, null);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("POST request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
                 Console.WriteLine("Content: " + contentToPush.ToString());
+                Console.WriteLine(e);
                 return new KeyValuePair<JObject, string>(null, null);
             }
         }
@@ -282,11 +282,12 @@ namespace ConsoleApplication1{
                 }
                 
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("PUT request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
                 Console.WriteLine("Content: " + contentToPut.ToString());
+                Console.WriteLine(e);
                 return new KeyValuePair<JObject, string>(null, null);
             }
         }
@@ -307,10 +308,11 @@ namespace ConsoleApplication1{
                     return new KeyValuePair<JObject, string>(jResponse, content);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("DELETE request failed.");
                 Console.WriteLine("URL: " + qUri.ToString());
+                Console.WriteLine(e);
                 return new KeyValuePair<JObject, string>(null,null);
             }
         }

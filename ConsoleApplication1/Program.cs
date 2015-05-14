@@ -74,7 +74,7 @@ namespace ConsoleApplication1{
                 }
                 else
                 {
-                    stream = File.Open(outputFile, FileMode.CreateNew);
+                    stream = File.Create(outputFile);
                     Console.WriteLine("Streaming into new file");
                 }
 

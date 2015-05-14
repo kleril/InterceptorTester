@@ -13,7 +13,7 @@ namespace ConsoleApplication1{
 
     class Program
     {
-        static string certPath = "../../data/unittestcert.pfx";
+        static string certPath = "../../Data/unittestcert.pfx";
         static string certPass = "unittest";
 
         // Create a collection object and populate it using the PFX file
@@ -26,12 +26,15 @@ namespace ConsoleApplication1{
 
         static StreamWriter results;
 
-        static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
+		static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
+
+
 
         public static void Main()
         {
             Console.WriteLine("Try giving the program some actual tests to run.");
             //Valid
+			/*
             ICmd validICmd = new ICmd(ServerUris.getLatestSecure(), ValidSerialNumbers.getAll()[0]);
 
             Test validTest = new Test(validICmd);
@@ -40,6 +43,7 @@ namespace ConsoleApplication1{
 
             List<Test> tests = new List<Test>();
             tests.Add(validTest);
+            */
 
 			buildTests(tests);
         }
@@ -51,13 +55,16 @@ namespace ConsoleApplication1{
             {
                 cert = new X509Certificate(certPath, certPass);
                 Console.WriteLine("SLL certificate created successfully");
-            }
-            catch(Exception)
+
+				cert = new X509Certificate(certPath, certPass);
+
+			}
+			catch(Exception)
             {
                 Console.WriteLine("Could not initialize SLL certificate");
             }
 
-            FileStream stream;
+			FileStream stream;
 
             if (File.Exists(outputFile))
             {
@@ -67,7 +74,9 @@ namespace ConsoleApplication1{
             {
                 stream = File.Open(outputFile, FileMode.CreateNew);
             }
-            results = new StreamWriter(stream);
+
+
+			results = new StreamWriter(stream);
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
             Console.WriteLine("Setup Complete! Running tests.");

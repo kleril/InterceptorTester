@@ -50,6 +50,7 @@ namespace ConsoleApplication1{
             try
             {
                 cert = new X509Certificate(certPath, certPass);
+                Console.WriteLine("SLL certificate created successfully");
             }
             catch(Exception)
             {
@@ -69,6 +70,7 @@ namespace ConsoleApplication1{
             results = new StreamWriter(stream);
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
+            Console.WriteLine("Setup Complete! Running tests.");
             
             //Setup vars
             seconds = 0;

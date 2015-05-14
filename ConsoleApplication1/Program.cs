@@ -50,7 +50,6 @@ namespace ConsoleApplication1{
 
         public static async Task buildTests(List<Test> uTests)
         {
-            System.Threading.Thread.Sleep(500);
             //Init globals
             try
             {
@@ -84,6 +83,8 @@ namespace ConsoleApplication1{
             }
             catch (IOException e)
             {
+                results = new StreamWriter("../../../logs/OSXtestResults" + DateTime.Now.ToFileTime() + ".txt");
+
                 Console.WriteLine("Could not initialize logging");
                 Console.WriteLine(e);
             }

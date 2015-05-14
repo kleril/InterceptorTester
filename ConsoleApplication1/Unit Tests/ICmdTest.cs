@@ -21,6 +21,7 @@ namespace ConsoleApplication1
         static float minTime = 9999999999999;
         static float maxTime = -1;
         static int reps = 1;
+        public static int maxReps = 50;
 
         static StreamWriter results;
 
@@ -45,7 +46,7 @@ namespace ConsoleApplication1
             results.Close();
         }
 
-        [Test, Repeat(50)]
+        [Test, Repeat(maxReps)]
         public async Task performanceTest()
         {
             System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
@@ -92,8 +93,11 @@ namespace ConsoleApplication1
                 Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
 
-            Assert.LessOrEqual(avgTime, 400);
-            Assert.LessOrEqual(avgTime, 1000);
+            if (reps == maxReps+1)
+            {
+                Assert.LessOrEqual(avgTime, 900);
+                Console.Write("Response time is OK");
+            }
         }
 
         public async Task ValidSerial()

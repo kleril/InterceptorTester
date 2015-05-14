@@ -70,10 +70,12 @@ namespace ConsoleApplication1{
                 if (File.Exists(outputFile))
                 {
                     stream = File.Open(outputFile, FileMode.Append);
+                    Console.WriteLine("Streaming into append mode");
                 }
                 else
                 {
                     stream = File.Open(outputFile, FileMode.CreateNew);
+                    Console.WriteLine("Streaming into new file");
                 }
 
 

@@ -28,8 +28,6 @@ namespace ConsoleApplication1{
 
 		static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
 
-
-
         public static void Main()
         {
             Console.WriteLine("Try giving the program some actual tests to run.");
@@ -55,9 +53,6 @@ namespace ConsoleApplication1{
             {
                 cert = new X509Certificate(certPath, certPass);
                 Console.WriteLine("SLL certificate created successfully");
-
-				cert = new X509Certificate(certPath, certPass);
-
 			}
 			catch(Exception)
             {

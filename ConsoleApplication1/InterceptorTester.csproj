@@ -177,7 +177,7 @@
     <Compile Include="Unit Tests\DeviceSettingsTest.cs" />
     <Compile Include="Unit Tests\DeviceStatusTest.cs" />
     <Compile Include="Unit Tests\DeviceScanTest.cs" />
-    <Compile Include="HTTP\HTTPHander.cs" />
+    <Compile Include="HTTP\HTTPHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

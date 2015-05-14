@@ -12,9 +12,48 @@ namespace ConsoleApplication1
     {
         static Uri testServer = ServerUris.getLatest();
 
-		[Test]
+        static float avgTime = -1;
+        static int reps = 1;
+
+        [Test, Repeat(50)]
+        public async Task performanceTest()
+        {
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+
+            ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
+
+            Test validTest = new Test(validICmd);
+            validTest.setTestName("ValidSerial");
+
+
+            List<Test> tests = new List<Test>();
+            tests.Add(validTest);
+
+            timer.Start();
+            await Program.buildTests(tests);
+            timer.Stop();
+            int time = timer.Elapsed.Milliseconds;
+            if (avgTime < 0)
+            {
+                avgTime = time;
+            }
+            else
+            {
+                avgTime = (avgTime * (reps - 1) / reps) + (time / reps);
+            }
+            reps += 1;
+
+            foreach (Test nextTest in Program.getTests())
+            {
+                Assert.LessOrEqual(avgTime, 400);
+                Assert.LessOrEqual(avgTime, 1000);
+            }
+
+        }
+
         public async Task ValidSerial()
         {
+            
             //Valid
             ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
 

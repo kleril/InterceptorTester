@@ -65,18 +65,25 @@ namespace ConsoleApplication1{
             }
 
 			FileStream stream;
-
-            if (File.Exists(outputFile))
+            try
             {
-                stream = File.Open(outputFile, FileMode.Append);
+                if (File.Exists(outputFile))
+                {
+                    stream = File.Open(outputFile, FileMode.Append);
+                }
+                else
+                {
+                    stream = File.Open(outputFile, FileMode.CreateNew);
+                }
+
+
+                results = new StreamWriter(stream);
             }
-            else
+            catch (IOException e)
             {
-                stream = File.Open(outputFile, FileMode.CreateNew);
+                Console.WriteLine("Could not initialize logging");
+                Console.WriteLine(e);
             }
-
-
-			results = new StreamWriter(stream);
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
             Console.WriteLine("Setup Complete! Running tests.");

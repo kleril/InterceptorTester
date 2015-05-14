@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -14,6 +15,25 @@ namespace ConsoleApplication1
 
         static float avgTime = -1;
         static int reps = 1;
+
+        static StreamWriter results;
+
+        static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
+
+        [TestFixtureSetUp]
+        public void setup()
+        {
+            FileStream stream;
+            stream = File.Create(outputFile);
+            results = new StreamWriter(stream);
+        }
+
+        [TestFixtureTearDown]
+        public void tearDown()
+        {
+            results.WriteLine("Final Average Time: " + avgTime);
+            results.Close();
+        }
 
         [Test, Repeat(50)]
         public async Task performanceTest()
@@ -43,12 +63,16 @@ namespace ConsoleApplication1
             }
             reps += 1;
 
+            results.WriteLine("Test Time: " + time);
+            results.WriteLine("Running Average Time: " + avgTime);
+
             foreach (Test nextTest in Program.getTests())
             {
-                Assert.LessOrEqual(avgTime, 400);
-                Assert.LessOrEqual(avgTime, 1000);
+                Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
             }
 
+            Assert.LessOrEqual(avgTime, 400);
+            Assert.LessOrEqual(avgTime, 1000);
         }
 
         public async Task ValidSerial()

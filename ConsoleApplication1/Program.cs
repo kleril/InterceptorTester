@@ -50,6 +50,7 @@ namespace ConsoleApplication1{
 
         public static async Task buildTests(List<Test> uTests)
         {
+            System.Threading.Thread.Sleep(500);
             //Init globals
             try
             {

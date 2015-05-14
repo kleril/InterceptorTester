@@ -13,6 +13,10 @@ namespace ConsoleApplication1
     {
         static Uri testServer = ServerUris.getLatest();
 
+		static int lessThan900 = 0;
+
+		static float percentage;
+
         static float avgTime = -1;
         static float minTime = 9999999999999;
         static float maxTime = -1;
@@ -33,7 +37,9 @@ namespace ConsoleApplication1
         [TestFixtureTearDown]
         public void tearDown()
         {
-            results.WriteLine("Average Time: " + avgTime);
+			percentage = (lessThan900 / 50) * 100;
+			results.WriteLine (percentage + "% of the tests take less then 900 mms");
+			results.WriteLine("Average Time: " + avgTime);
             results.WriteLine("Minimum Time: " + minTime);
             results.WriteLine("Maximum Time: " + maxTime);
             results.Close();
@@ -74,6 +80,10 @@ namespace ConsoleApplication1
             {
                 maxTime = time;
             }
+			if (time < 900) 
+			{
+				lessThan900++;
+			}
 
             results.WriteLine("Test Time: " + time);
 

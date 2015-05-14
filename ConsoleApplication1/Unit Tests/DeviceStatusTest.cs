@@ -12,7 +12,10 @@ namespace ConsoleApplication1
 	{
         Uri server = ServerUris.getLatest();
 
-        [Test]
+
+		[Test]
+
+
 		public async Task ValidSerial()
 		{
             DeviceStatusJSON status = new DeviceStatusJSON();
@@ -42,8 +45,11 @@ namespace ConsoleApplication1
 			statusTest.setTestName("ValidSerial");
 
 
-            List<Test> tests = new List<Test>();
-			tests.Add(statusTest);
+			List<Test> tests = new List<Test>();
+			//for (int i = 0; i < 1000; i++) 
+			//{
+				tests.Add (statusTest);
+			//}
 			
 			await Program.buildTests(tests);
 
@@ -52,6 +58,7 @@ namespace ConsoleApplication1
 				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
 			}
 		}
+
 
         [Test]
         public async Task InvalidSerial()

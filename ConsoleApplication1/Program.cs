@@ -8,12 +8,13 @@ using System.Timers;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml;
 
 namespace ConsoleApplication1{
 
     class Program
     {
-        static string certPath = "../../Data/unittestcert.pfx";
+		static string certPath = "../../Data/unittestcert.pfx";
         static string certPass = "unittest";
 
         // Create a collection object and populate it using the PFX file
@@ -30,7 +31,8 @@ namespace ConsoleApplication1{
 
         public static void Main()
         {
-            Console.WriteLine("Try giving the program some actual tests to run.");
+
+			Console.WriteLine("Try giving the program some actual tests to run.");
             //Valid
 			/*
             ICmd validICmd = new ICmd(ServerUris.getLatestSecure(), ValidSerialNumbers.getAll()[0]);

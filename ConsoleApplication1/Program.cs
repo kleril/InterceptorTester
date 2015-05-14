@@ -18,13 +18,14 @@ namespace ConsoleApplication1{
 
         // Create a collection object and populate it using the PFX file
         static X509Certificate cert;
+        
 
         static List<Test> tests;
 
         static Timer time;
         static int seconds;
 
-        static StreamWriter results;
+		static StreamWriter results;
 
 		static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
 
@@ -45,18 +46,23 @@ namespace ConsoleApplication1{
             tests.Add(validTest);
             */
 
+
 			buildTests(tests);
         }
 
         public static async Task buildTests(List<Test> uTests)
         {
+<<<<<<< Updated upstream
+=======
+            //System.Threading.Thread.Sleep(5000);
+>>>>>>> Stashed changes
             //Init globals
             try
             {
                 cert = new X509Certificate(certPath, certPass);
                 Console.WriteLine("SLL certificate created successfully");
 
-				cert = new X509Certificate(certPath, certPass);
+				//cert = new X509Certificate(certPath, certPass);
 
 			}
 			catch(Exception)
@@ -67,7 +73,7 @@ namespace ConsoleApplication1{
 			FileStream stream;
             try
             {
-                if (File.Exists(outputFile))
+				if (File.Exists(outputFile))
                 {
                     stream = File.Open(outputFile, FileMode.Append);
                     Console.WriteLine("Streaming into append mode");
@@ -81,13 +87,16 @@ namespace ConsoleApplication1{
 
                 results = new StreamWriter(stream);
             }
-            catch (IOException e)
+            catch (Exception e)
             {
                 results = new StreamWriter("../../../logs/OSXtestResults" + DateTime.Now.ToFileTime() + ".txt");
 
                 Console.WriteLine("Could not initialize logging");
                 Console.WriteLine(e);
             }
+
+
+
             tests = new List<Test>();
             results.WriteLine("Starting Tests! Current time: " + DateTime.Now.ToString());
             Console.WriteLine("Setup Complete! Running tests.");
@@ -215,7 +224,7 @@ namespace ConsoleApplication1{
             // ... Use HttpClient.
             try
             {
-                WebRequestHandler handler = new WebRequestHandler();
+				var handler = new WebRequestHandler();
                 handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.GetAsync(qUri.AbsoluteUri))
@@ -239,8 +248,8 @@ namespace ConsoleApplication1{
             try
             {
                 // ... Use HttpClient.
-                WebRequestHandler handler = new WebRequestHandler();
-                handler.ClientCertificates.Add(cert);
+				WebRequestHandler handler = new WebRequestHandler();
+                //handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 {
                     client.DefaultRequestHeaders.Accept.Clear();
@@ -277,7 +286,7 @@ namespace ConsoleApplication1{
             {
                 // ... Use HttpClient.
                 WebRequestHandler handler = new WebRequestHandler();
-                handler.ClientCertificates.Add(cert);
+                //handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.PutAsync(qUri, contentToPut))
                 {
@@ -303,7 +312,7 @@ namespace ConsoleApplication1{
             {
                 // ... Use HttpClient.
                 WebRequestHandler handler = new WebRequestHandler();
-                handler.ClientCertificates.Add(cert);
+                //handler.ClientCertificates.Add(cert);
                 using (HttpClient client = new HttpClient(handler))
                 using (HttpResponseMessage response = await client.DeleteAsync(qUri))
                 {

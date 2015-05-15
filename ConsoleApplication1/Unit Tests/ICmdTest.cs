@@ -42,9 +42,9 @@ namespace ConsoleApplication1
         {
 			int index = (maxReps * 95 / 100) - 1;
 			int percentile = data[index];
-			results.WriteLine ("95% of the tests take less than " + percentile + "ms");
+			results.WriteLine("95% of the tests take less than " + percentile + "ms");
 			percentage = (lessThan900 / maxReps) * 100;
-			results.WriteLine (percentage + "% of the tests take less than 900ms");
+			results.WriteLine(percentage + "% of the tests take less than 900ms");
 			results.WriteLine("Average Time: " + avgTime);
             results.WriteLine("Minimum Time: " + minTime);
             results.WriteLine("Maximum Time: " + maxTime);
@@ -77,7 +77,7 @@ namespace ConsoleApplication1
             {
                 avgTime = (avgTime * (reps - 1) / reps) + (time / reps);
             }
-			data [reps - 1] = time;
+			data[reps - 1] = time;
 
             reps += 1;
             if (time < minTime)

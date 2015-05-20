@@ -166,6 +166,7 @@ namespace ConsoleApplication1{
             }
         }
 
+        //TODOIF: Tweak console output to be a little clearer. Console is made redundant by logs, but it could be useful.
         static async Task testType (Test currentTest)
         {
             KeyValuePair<JObject, string> result;

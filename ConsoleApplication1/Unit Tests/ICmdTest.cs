@@ -30,7 +30,6 @@ namespace ConsoleApplication1
 
 
         static StreamWriter results;
-
 		/*
 		static Excel.Application xlsFile;
 
@@ -42,6 +41,7 @@ namespace ConsoleApplication1
 		*/
 
         static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
+
 
 		//static string xlsPath = "../../../logs/xlsOutput" + DateTime.Now.ToFileTime () + ".xls";
 
@@ -77,12 +77,12 @@ namespace ConsoleApplication1
         {
 			int index = (maxReps * 95 / 100) - 1;
 			int percentile = data[index];
-			results.WriteLine("95% of the tests take less than " + percentile + "ms");
+			results.WriteLine("95% of the tests take less than (ms)," + percentile);
 			percentage = (lessThan900 / maxReps) * 100;
-			results.WriteLine(percentage + "% of the tests take less than 900ms");
-			results.WriteLine("Average Time: " + avgTime);
-            results.WriteLine("Minimum Time: " + minTime);
-            results.WriteLine("Maximum Time: " + maxTime);
+            results.WriteLine("% of tests take less than 900ms," + percentage);
+			results.WriteLine("Average Time," + avgTime);
+            results.WriteLine("Minimum Time," + minTime);
+            results.WriteLine("Maximum Time," + maxTime);
             results.Close();
 
 			/*
@@ -151,7 +151,7 @@ namespace ConsoleApplication1
 				lessThan900++;
 			}
 
-            results.WriteLine("Test Time: " + time);
+            results.WriteLine("Test Time," + time);
 
 
             foreach (Test nextTest in Program.getTests())

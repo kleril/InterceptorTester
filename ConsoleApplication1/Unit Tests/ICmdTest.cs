@@ -28,12 +28,10 @@ namespace ConsoleApplication1
 
 
         static StreamWriter results;
-<<<<<<< Updated upstream
-		
 
         static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
-=======
 
+		/*
 		static Excel.Application xlsFile;
 
 		static Excel.Workbook workBook;
@@ -41,14 +39,13 @@ namespace ConsoleApplication1
 		static Excel.Worksheet workSheet;
 
 		object misValue = System.Reflection.Missing.Value;
+		*/
+		
+
+        //static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
 
 
-        static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
-
-
-		static string xlsPath = "../../../logs/xlsOutput" + DateTime.Now.ToFileTime () + ".xls";
->>>>>>> Stashed changes
-
+		//static string xlsPath = "../../../logs/xlsOutput" + DateTime.Now.ToFileTime () + ".xls";
 
         [TestFixtureSetUp]
         public void setup()
@@ -56,10 +53,8 @@ namespace ConsoleApplication1
             FileStream stream;
             stream = File.Create(outputFile);
             results = new StreamWriter(stream);
-<<<<<<< Updated upstream
-=======
 
-
+			/*
 			try
 			{
 				results.WriteLine ("!!!!!!!!!!!!!!!!!!!!!!!!hey");
@@ -73,10 +68,8 @@ namespace ConsoleApplication1
 			{
 				results.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!" + e);
 			}
-
+			*/
 				
-
->>>>>>> Stashed changes
         }
 
         [TestFixtureTearDown]
@@ -84,17 +77,15 @@ namespace ConsoleApplication1
         {
 			int index = (maxReps * 95 / 100) - 1;
 			int percentile = data[index];
-			results.WriteLine("95% of the tests take less than (ms)," + percentile);
+			results.WriteLine("95% of the tests take less than " + percentile + "ms");
 			percentage = (lessThan900 / maxReps) * 100;
-            results.WriteLine(percentage + "% of tests take less than 900ms," + percentage);
+            results.WriteLine(percentage + "% of tests take less than 900ms");
 			results.WriteLine("Average Time," + avgTime);
             results.WriteLine("Minimum Time," + minTime);
             results.WriteLine("Maximum Time," + maxTime);
             results.Close();
-<<<<<<< Updated upstream
-=======
 
-
+			/*
 			try
 			{
 				workSheet.Cells[1, 1].Value = "Average Time";
@@ -114,10 +105,9 @@ namespace ConsoleApplication1
 			catch (Exception e) 
 			{
 			}
+			*/
 
-
->>>>>>> Stashed changes
-        }
+		}
 
         [Test, Repeat(maxReps)]
         public async Task performanceTest()

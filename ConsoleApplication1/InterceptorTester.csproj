@@ -221,71 +221,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="bin\.DS_Store" />
-    <None Include="bin\Debug\.DS_Store" />
-    <None Include="bin\Debug\ConsoleApplication1.exe" />
-    <None Include="bin\Debug\ConsoleApplication1.exe.config" />
-    <None Include="bin\Debug\ConsoleApplication1.exe.mdb" />
-    <None Include="bin\Debug\ExcelApi.dll" />
-    <None Include="bin\Debug\Microsoft.Office.Project.Schema.dll" />
-    <None Include="bin\Debug\Microsoft.Office.Project.Server.Administration.dll" />
-    <None Include="bin\Debug\Microsoft.Office.Project.Server.Library.dll" />
-    <None Include="bin\Debug\Microsoft.Office.Project.Server.PWA.dll" />
-    <None Include="bin\Debug\Microsoft.Office365.Discovery.dll" />
-    <None Include="bin\Debug\Microsoft.UnitTestFramework.Extensions.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.CoreUtility.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Language.Intellisense.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Language.StandardClassification.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Platform.VSEditor.Interop.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Platform.VSEditor.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Project.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Services.Client.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Services.Common.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Services.WebApi.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Text.Data.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Text.Internal.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Text.Logic.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Text.UI.Wpf.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.Text.UI.dll" />
-    <None Include="bin\Debug\Microsoft.VisualStudio.UI.Text.Wpf.KeyProcessor.Implementation.dll" />
-    <None Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
-    <None Include="bin\Debug\NetOffice.dll" />
-    <None Include="bin\Debug\Newtonsoft.Json.dll" />
-    <None Include="bin\Debug\Nito.AsyncEx.UnitTests.MSTest.dll" />
-    <None Include="bin\Debug\OfficeApi.dll" />
-    <None Include="bin\Debug\Spire.Common.dll" />
-    <None Include="bin\Debug\Spire.License.dll" />
-    <None Include="bin\Debug\Spire.Pdf.dll" />
-    <None Include="bin\Debug\Spire.XLS.dll" />
-    <None Include="bin\Debug\StandaloneUndo.dll" />
-    <None Include="bin\Debug\System.Net.Http.Extensions.dll" />
-    <None Include="bin\Debug\System.Net.Http.Formatting.dll" />
-    <None Include="bin\Debug\System.Net.Http.Primitives.dll" />
-    <None Include="bin\Debug\System.Web.Helpers.dll" />
-    <None Include="bin\Debug\System.Web.Http.WebHost.dll" />
-    <None Include="bin\Debug\System.Web.Http.dll" />
-    <None Include="bin\Debug\System.Web.Mvc.dll" />
-    <None Include="bin\Debug\System.Web.Razor.dll" />
-    <None Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
-    <None Include="bin\Debug\System.Web.WebPages.Razor.dll" />
-    <None Include="bin\Debug\System.Web.WebPages.dll" />
-    <None Include="bin\Debug\VBIDEApi.dll" />
-    <None Include="bin\Debug\Xamarin.Forms.Core.dll" />
-    <None Include="bin\Debug\Xamarin.Forms.Platform.dll" />
-    <None Include="bin\Debug\Xamarin.Forms.Xaml.dll" />
-    <None Include="bin\Debug\nunit-results.xml" />
-    <None Include="bin\Debug\nunit.framework.dll" />
-    <None Include="bin\Debug\testResults130759365409420680.csv" />
-    <None Include="bin\Debug\testResults130759365509265740.csv" />
-    <None Include="bin\Debug\testResults130759366171585660.csv" />
-    <None Include="bin\Debug\testResults130759366327732150.csv" />
-    <None Include="bin\Debug\testResults130759367392338110.csv" />
-    <None Include="bin\Debug\testResults130759375787370600.csv" />
-    <None Include="bin\Debug\testResults130759376351099450.csv" />
-    <None Include="bin\Debug\testResults130759379343068250.csv" />
-    <None Include="bin\Debug\testResults130759966801404450.csv" />
-    <None Include="bin\Debug\testResults130759969592711660.csv" />
-    <None Include="bin\Debug\testResults130759982250491500.csv" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -313,7 +248,4 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
-  <ItemGroup>
-    <Folder Include="bin\" />
-  </ItemGroup>
 </Project>

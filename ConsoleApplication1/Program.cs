@@ -45,6 +45,20 @@ namespace ConsoleApplication1{
             tests.Add(validTest);
             */
 
+			//try
+			//{
+				XmlDocument doc = new XmlDocument();
+				XmlNode docNode = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+				doc.AppendChild(docNode);
+				doc.Save("nunit-results.xml");
+				Console.WriteLine("!!!!!!!!!!!!yeah");
+			//}
+			//catch (Exception e) 
+			//{
+			//	Console.WriteLine ("!!!!!!!!!!!" + e);
+			//}
+
+
 			buildTests(tests);
         }
 

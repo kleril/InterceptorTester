@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.IO;
-using NetOffice.ExcelApi.Enums;
-using Excel = NetOffice.ExcelApi;
+//using NetOffice.ExcelApi.Enums;
+//using Excel = NetOffice.ExcelApi;
 
 namespace ConsoleApplication1
 {

@@ -8,7 +8,6 @@ using System.Timers;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using System.Xml;
 
 namespace ConsoleApplication1{
 

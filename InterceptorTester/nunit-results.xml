@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="bin/Debug/InterceptorTester.dll" total="0" failures="0" not-run="39" date="2015-05-22" time="11:50:39">
+  <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Desktop/InterceptorTester/InterceptorTester" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />
+  <culture-info current-culture="en-CA" current-uiculture="en-CA" />
+  <test-suite name="bin/Debug/InterceptorTester.dll" success="True" time="0.076" asserts="0">
+    <results>
+      <test-suite name="ConsoleApplication1" success="True" time="0.073" asserts="0">
+        <results>
+          <test-suite name="DeviceBackupTest" success="True" time="0.023" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method BadSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method EmptySerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidBackupItems's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSingleBackupItem's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="False">
+                <reason>
+                  <message><![CDATA[Method NoBackupItems's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="False">
+                <reason>
+                  <message><![CDATA[Method NotSpecialDynCode's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method NullSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="False">
+                <reason>
+                  <message><![CDATA[Method SpecialDynCode's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSingleBackupItem's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite name="DeviceScanTest" success="True" time="0.013" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method EmptySerialDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method EmptySerialSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSerialDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSerialSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSingleScanDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSingleScanSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method LOValidScansDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method LOValidScansSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method NullSerialDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method NullSerialSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidCH's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidScansSimDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSingleScanDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSingleScanSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValInvalScansDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValInvalScansSimDyn's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValInvalScansSimple's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite name="DeviceSettingsTest" success="True" time="0.000" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method NoSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite name="DeviceStatusTest" success="True" time="0.000" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="False">
+                <reason>
+                  <message><![CDATA[Method AlertDataStore's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method EmptySerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method NullSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite name="ICmdTest" success="True" time="0.022" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method InvalidSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="False">
+                <reason>
+                  <message><![CDATA[Method MissingSerial's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="False">
+                <reason>
+                  <message><![CDATA[Method NoQuery's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+              <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="False">
+                <reason>
+                  <message><![CDATA[Method performanceTest's signature is not correct: it must return void.]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

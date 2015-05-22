@@ -1104,8 +1104,7 @@ namespace ConsoleApplication1
 
 		}
 	}
-
-
+		
 	[TestFixture()]
 	public class ICmdTest
 	{
@@ -1127,16 +1126,6 @@ namespace ConsoleApplication1
 
 		static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
 
-		/*
-		static Excel.Application xlsFile;
-
-		static Excel.Workbook workBook;
-
-		static Excel.Worksheet workSheet;
-
-		object misValue = System.Reflection.Missing.Value;
-		*/
-
 
 		//static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
 
@@ -1149,22 +1138,6 @@ namespace ConsoleApplication1
 			FileStream stream;
 			stream = File.Create(outputFile);
 			results = new StreamWriter(stream);
-
-			/*
-			try
-			{
-				results.WriteLine ("!!!!!!!!!!!!!!!!!!!!!!!!hey");
-				xlsFile = new Excel.Application();
-				workBook = xlsFile.Workbooks.Add(misValue);
-				workSheet = (Excel.Worksheet)workBook.ActiveSheet;
-				workSheet.Cells[1, 1].Value = "ICmd Performance Test";
-
-			}
-			catch (Exception e) 
-			{
-				results.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!" + e);
-			}
-			*/
 
 		}
 
@@ -1180,28 +1153,6 @@ namespace ConsoleApplication1
 			results.WriteLine("Minimum Time," + minTime);
 			results.WriteLine("Maximum Time," + maxTime);
 			results.Close();
-
-			/*
-			try
-			{
-				workSheet.Cells[1, 1].Value = "Average Time";
-				workSheet.Cells[1, 2].Value = avgTime;
-				workSheet.Cells[2, 1].Value = "Maximum Time";
-				workSheet.Cells[2, 2].Value = maxTime;
-				workSheet.Cells[3, 1].Value = "Minimum Time";
-				workSheet.Cells[3, 2].Value = minTime;
-				workSheet.Cells[4, 1].Value = "95 Percentile";
-				workSheet.Cells[4, 2].Value = percentile;
-
-
-				workBook.SaveAs(xlsPath, misValue, misValue, misValue, false, false);
-				workBook.Close(true, misValue, misValue);
-				xlsFile.Quit();
-			}
-			catch (Exception e) 
-			{
-			}
-			*/
 
 		}
 

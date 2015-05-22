@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="bin/Debug/nunit.framework.dll" total="0" failures="0" not-run="0" date="2015-05-22" time="11:34:45">
+  <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Documents/InterceptorTester/ConsoleApplication1" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />
+  <culture-info current-culture="en-CA" current-uiculture="en-CA" />
+  <test-suite name="bin/Debug/nunit.framework.dll" success="True" time="0.001" asserts="0">
+    <results />
+  </test-suite>
+</test-results>

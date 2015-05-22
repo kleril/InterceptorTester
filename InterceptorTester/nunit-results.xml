@@ -1,201 +1,165 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="bin/Debug/InterceptorTester.dll" total="0" failures="0" not-run="35" date="2015-05-22" time="12:41:33">
+<test-results name="bin/Debug/InterceptorTester.dll" total="39" failures="8" not-run="0" date="2015-05-22" time="14:11:36">
   <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Documents/InterceptorTester/InterceptorTester" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />
   <culture-info current-culture="en-CA" current-uiculture="en-CA" />
-  <test-suite name="bin/Debug/InterceptorTester.dll" success="True" time="0.070" asserts="0">
+  <test-suite name="bin/Debug/InterceptorTester.dll" success="False" time="6.050" asserts="0">
     <results>
-      <test-suite name="ConsoleApplication1" success="True" time="0.067" asserts="0">
+      <test-suite name="ConsoleApplication1" success="False" time="6.048" asserts="0">
         <results>
-          <test-suite name="DeviceBackupTest" success="True" time="0.022" asserts="0">
+          <test-suite name="DeviceBackupTest" success="False" time="1.915" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method BadSerial's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="True" success="True" time="0.563" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="True" success="True" time="0.105" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="True" success="False" time="0.135" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidBackupItems () [0x000c9] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:133
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method EmptySerial's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="True" success="False" time="0.176" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem () [0x000ab] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:102
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidBackupItems's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="True" success="True" time="0.160" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="True" success="True" time="0.146" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="True" success="False" time="0.123" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.NullSerial () [0x000b3] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:247
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSingleBackupItem's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="True" success="True" time="0.124" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="True" success="True" time="0.141" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="True" success="True" time="0.154" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceScanTest" success="False" time="2.775" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="True" success="True" time="0.125" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="True" success="True" time="0.113" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="True" success="True" time="0.118" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="True" success="True" time="0.138" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="True" success="True" time="0.130" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="True" success="True" time="0.139" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="True" success="True" time="0.162" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="True" success="True" time="0.143" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="True" success="False" time="0.135" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialDyn () [0x00091] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:696
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="False">
-                <reason>
-                  <message><![CDATA[Method NoBackupItems's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="True" success="False" time="0.103" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialSimple () [0x00091] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:480
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="False">
-                <reason>
-                  <message><![CDATA[Method NotSpecialDynCode's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="True" success="True" time="0.463" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="True" success="True" time="0.170" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="True" success="True" time="0.140" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="True" success="True" time="0.143" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="True" success="True" time="0.175" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="True" success="True" time="0.185" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="True" success="True" time="0.155" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceSettingsTest" success="True" time="0.384" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="True" success="True" time="0.111" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="True" success="True" time="0.121" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="True" success="True" time="0.150" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceStatusTest" success="False" time="0.436" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="True" success="False" time="0.094" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.AlertDataStore () [0x00137] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:1102
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method NullSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="False">
-                <reason>
-                  <message><![CDATA[Method SpecialDynCode's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSingleBackupItem's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="True" success="True" time="0.083" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="True" success="True" time="0.081" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="True" success="True" time="0.089" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="True" success="False" time="0.074" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.ValidSerial () [0x00142] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:943
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
             </results>
           </test-suite>
-          <test-suite name="DeviceScanTest" success="True" time="0.014" asserts="0">
+          <test-suite name="ICmdTest" success="False" time="0.511" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method EmptySerialDyn's signature is not correct: it must return void.]]></message>
-                </reason>
+              <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="True" success="True" time="0.130" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="True" success="False" time="0.132" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.ICmdTest.MissingSerial () [0x00079] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:1273
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method EmptySerialSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSerialDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSerialSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSingleScanDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSingleScanSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method LOValidScansDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method LOValidScansSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method NullSerialDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method NullSerialSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidCH's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidScansSimDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSingleScanDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSingleScanSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValInvalScansDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValInvalScansSimDyn's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValInvalScansSimple's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-            </results>
-          </test-suite>
-          <test-suite name="DeviceSettingsTest" success="True" time="0.002" asserts="0">
-            <results>
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method NoSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-            </results>
-          </test-suite>
-          <test-suite name="DeviceStatusTest" success="True" time="0.005" asserts="0">
-            <results>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="False">
-                <reason>
-                  <message><![CDATA[Method AlertDataStore's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method EmptySerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method InvalidSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method NullSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="False">
-                <reason>
-                  <message><![CDATA[Method ValidSerial's signature is not correct: it must return void.]]></message>
-                </reason>
-              </test-case>
+              <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="True" success="True" time="0.084" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="True" success="True" time="0.149" asserts="1" />
             </results>
           </test-suite>
         </results>

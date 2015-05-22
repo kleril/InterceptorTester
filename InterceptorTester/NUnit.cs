@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.IO;
+using System.Configuration;
 
 namespace ConsoleApplication1
 {
@@ -1131,6 +1132,21 @@ namespace ConsoleApplication1
 
 
 		//static string xlsPath = "../../../logs/xlsOutput" + DateTime.Now.ToFileTime () + ".xls";
+
+        [Test()]
+        public void appConfigTest()
+        {
+            string connectionString = "";
+            try
+            {
+                connectionString = ConfigurationManager.ConnectionStrings["TestString"].ConnectionString;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            Assert.AreEqual("String-a-ding-ding", connectionString);
+        }
 
 		[TestFixtureSetUp()]
 		public void setup()

@@ -50,20 +50,16 @@ namespace ConsoleApplication1{
 
         public static async Task buildTests(List<Test> uTests)
         {
-
-
-            //System.Threading.Thread.Sleep(5000);
-
-
             //Init globals
             try
             {
                 cert = new X509Certificate(certPath, certPass);
                 Console.WriteLine("SLL certificate created successfully");
 			}
-			catch(Exception)
+			catch(Exception e)
             {
                 Console.WriteLine("Could not initialize SLL certificate");
+                Console.WriteLine(e.ToString());
             }
 
 			FileStream stream;

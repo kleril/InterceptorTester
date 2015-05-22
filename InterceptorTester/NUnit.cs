@@ -5,17 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.IO;
+using Nito.AsyncEx;
 
 namespace ConsoleApplication1
 {
 	[TestFixture()]
 	public class DeviceBackupTest
 	{
+
 		static Uri testServer = ServerUris.getLatest();
 
 		[Test()]
 		// Valid Serial
-		public async Task ValidSerial()
+		public void ValidSerial()
 		{
 			BackupItem[] items = new BackupItem[3];
 			items[0] = getBackupItem(1);
@@ -36,7 +38,7 @@ namespace ConsoleApplication1
 			backupTest.setTestName("ValidSerial");
 			List<Test> tests = new List<Test>();
 			tests.Add(backupTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -46,7 +48,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Valid Single Backup Item
-		public async Task ValidSingleBackupItem()
+		public void ValidSingleBackupItem()
 		{
 			BackupItem[] items = new BackupItem[1];
 			items[0] = getBackupItem(1);
@@ -65,7 +67,7 @@ namespace ConsoleApplication1
 			backupTest.setTestName("ValidSingleBackupItem");
 			List<Test> tests = new List<Test>();
 			tests.Add(backupTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -75,10 +77,8 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Invalid Single Backup Item
-		public async Task InvalidSingleBackupItem()
+		public void InvalidSingleBackupItem()
 		{
-
-
 			BackupItem failItem = new BackupItem();
 
 			BackupItem[] failItems = new BackupItem[1];
@@ -95,7 +95,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(failingTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -105,7 +105,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Muliple Backup Items with Invalid Backup Item in Them
-		public async Task InvalidBackupItems()
+		public void InvalidBackupItems()
 		{
 			BackupItem failItem = new BackupItem();
 
@@ -126,7 +126,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(failingTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -136,7 +136,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Invalid Serial Number
-		public async Task BadSerial()
+		public void BadSerial()
 		{
 			BackupItem[] items = new BackupItem[3];
 			items[0] = getBackupItem(1);
@@ -155,7 +155,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -165,7 +165,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Backup Items
-		public async Task NoBackupItems()
+		public void NoBackupItems()
 		{
 			BackupItem[] items = new BackupItem[0];
 
@@ -181,7 +181,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(emptyTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -191,7 +191,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Input with Serial Number as ""
-		public async Task EmptySerial()
+		public void EmptySerial()
 		{
 			BackupItem[] items = new BackupItem[3];
 			items[0] = getBackupItem(1);
@@ -210,7 +210,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -221,7 +221,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Input with Null Serial Number
-		public async Task NullSerial()
+		public void NullSerial()
 		{
 			BackupItem[] items = new BackupItem[3];
 			items[0] = getBackupItem(1);
@@ -240,7 +240,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -250,7 +250,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Scan Code being a Special Dynamic Code
-		public async Task SpecialDynCode()
+		public void SpecialDynCode()
 		{
 			BackupItem[] items = new BackupItem[1];
 			items[0] = new BackupItem();
@@ -271,7 +271,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -282,7 +282,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Scan Code being a Dynamic Code and Not Special
-		public async Task NotSpecialDynCode()
+		public void NotSpecialDynCode()
 		{
 			BackupItem[] items = new BackupItem[1];
 			items[0] = new BackupItem();
@@ -303,7 +303,7 @@ namespace ConsoleApplication1
 
 			List<Test> tests = new List<Test>();
 			tests.Add(serialTest);
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -351,7 +351,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Valid Single Scan
-		public async Task ValidSingleScanSimple()
+		public void ValidSingleScanSimple()
 		{
 
 			DeviceScanJSON testJson = new DeviceScanJSON ();
@@ -367,7 +367,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -377,7 +377,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Invalid Single Scan
-		public async Task InvalidSingleScanSimple()
+		public void InvalidSingleScanSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll()[1];
@@ -393,7 +393,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -403,7 +403,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Bad Serial
-		public async Task InvalidSerialSimple()
+		public void InvalidSerialSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = "BAD SERIAL";
@@ -419,7 +419,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -429,7 +429,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Serial(Empty String)
-		public async Task EmptySerialSimple()
+		public void EmptySerialSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = "";
@@ -445,7 +445,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -457,7 +457,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Serial(Null)
-		public async Task NullSerialSimple()
+		public void NullSerialSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = null;
@@ -473,7 +473,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -483,7 +483,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// List of Valid Scans
-		public async Task LOValidScansSimple()
+		public void LOValidScansSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll()[1];
@@ -504,7 +504,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -514,7 +514,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Mixed of Valid/Invalid Scans
-		public async Task ValInvalScansSimple()
+		public void ValInvalScansSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll()[1];
@@ -535,7 +535,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(scanTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -547,7 +547,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Valid Single Scan
-		public async Task ValidSingleScanDyn()
+		public void ValidSingleScanDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -563,7 +563,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) 
 			{
@@ -573,7 +573,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Valid Call Home Scan
-		public async Task ValidCH()
+		public void ValidCH()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -589,7 +589,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -598,7 +598,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Invalid Scan Data
-		public async Task InvalidSingleScanDyn()
+		public void InvalidSingleScanDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -614,7 +614,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -623,7 +623,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Bad Serial
-		public async Task InvalidSerialDyn()
+		public void InvalidSerialDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = "BADSERIAL";
@@ -639,7 +639,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -649,7 +649,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Serial (Empty Sting)
-		public async Task EmptySerialDyn()
+		public void EmptySerialDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = "";
@@ -665,7 +665,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -674,7 +674,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Serial (Null)
-		public async Task NullSerialDyn()
+		public void NullSerialDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = null;
@@ -690,7 +690,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -699,7 +699,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// List of Valid Scans
-		public async Task LOValidScansDyn()
+		public void LOValidScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -720,7 +720,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -729,7 +729,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Mixed of Valid/Invalid Scans
-		public async Task ValInvalScansDyn()
+		public void ValInvalScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -750,7 +750,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -763,7 +763,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// List of Valid Simple and Dynamic Code Scans 
-		public async Task ValidScansSimDyn()
+		public void ValidScansSimDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -784,7 +784,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -793,7 +793,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Mixed of Valid and Invalid Scans
-		public async Task ValInvalScansSimDyn()
+		public void ValInvalScansSimDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
 			testJson.i = ValidSerialNumbers.getAll () [1];
@@ -814,7 +814,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test> ();
 			tests.Add (scanTest);
 
-			await Program.buildTests (tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests()) {
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
@@ -829,7 +829,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Valid Serial
-		public async Task ValidSerial() 
+		public void ValidSerial() 
 		{
 			DeviceSetting dSetting1 = new DeviceSetting(testServer, ValidSerialNumbers.getAll()[0]);
 
@@ -840,7 +840,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(ValidSerial);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -850,7 +850,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// Invalid Serial
-		public async Task InvalidSerial() 
+		public void InvalidSerial() 
 		{
 			DeviceSetting dSetting2 = new DeviceSetting(testServer, "BADSERIAL");
 
@@ -861,7 +861,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(BadSerial);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -871,7 +871,7 @@ namespace ConsoleApplication1
 
 		[Test()]
 		// No Serial
-		public async Task NoSerial() 
+		public void NoSerial() 
 		{
 			DeviceSetting dSetting3 = new DeviceSetting(testServer, null);
 
@@ -882,7 +882,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(NoSerial);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -901,7 +901,7 @@ namespace ConsoleApplication1
 		[Test()]
 
 
-		public async Task ValidSerial()
+		public void ValidSerial()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
 			status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
@@ -936,7 +936,7 @@ namespace ConsoleApplication1
 			tests.Add (statusTest);
 			//}
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -946,7 +946,7 @@ namespace ConsoleApplication1
 
 
 		[Test()]
-		public async Task InvalidSerial()
+		public void InvalidSerial()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
 			status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
@@ -977,7 +977,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -986,7 +986,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task EmptySerial()
+		public void EmptySerial()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
 			status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
@@ -1016,7 +1016,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -1025,7 +1025,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task NullSerial()
+		public void NullSerial()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
 			status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
@@ -1055,7 +1055,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -1064,7 +1064,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task AlertDataStore()
+		public void AlertDataStore()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
 			status.bkupURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup";
@@ -1095,7 +1095,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(statusTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -1157,7 +1157,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test(), Repeat(maxReps)]
-		public async Task performanceTest()
+		public void performanceTest()
 		{
 			System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
 
@@ -1171,7 +1171,7 @@ namespace ConsoleApplication1
 			tests.Add(validTest);
 
 			timer.Start();
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 			timer.Stop();
 			int time = timer.Elapsed.Milliseconds;
 			if (avgTime < 0)
@@ -1213,7 +1213,7 @@ namespace ConsoleApplication1
 			}
 		}
 
-		public async Task ValidSerial()
+		public void ValidSerial()
 		{
 
 			//Valid
@@ -1226,7 +1226,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(validTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -1235,7 +1235,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task InvalidSerial()
+		public void InvalidSerial()
 		{
 			//Invalid
 			ICmd invalidICmd = new ICmd(testServer, "BORSHT");
@@ -1245,7 +1245,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(invalidTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 			foreach (Test nextTest in Program.getTests())
 			{
 				Console.WriteLine(nextTest.getOperation().getUri());
@@ -1254,7 +1254,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task MissingSerial()
+		public void MissingSerial()
 		{
 			//Missing
 			ICmd missingICmd = new ICmd(testServer, null);
@@ -1265,7 +1265,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(missingTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{
@@ -1275,7 +1275,7 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
-		public async Task NoQuery()
+		public void NoQuery()
 		{
 			//Missing
 			ICmd missingICmd = new ICmd(testServer, null);
@@ -1287,7 +1287,7 @@ namespace ConsoleApplication1
 			List<Test> tests = new List<Test>();
 			tests.Add(missingTest);
 
-			await Program.buildTests(tests);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
 
 			foreach (Test nextTest in Program.getTests())
 			{

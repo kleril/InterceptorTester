@@ -16,6 +16,7 @@ namespace ConsoleApplication1
         //Globals
         static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
         static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
 		[Test()]
 		// Valid Serial
@@ -146,7 +147,7 @@ namespace ConsoleApplication1
 			items[2] = getBackupItem(3);
 
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
-			serialJson.i = "INVALIDSERIAL";
+			serialJson.i = invalidSerial;
 			serialJson.s = 6;
 			serialJson.b = items;
 
@@ -348,6 +349,7 @@ namespace ConsoleApplication1
     {
         static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
         static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
 		// simple scan code
 
@@ -631,7 +633,7 @@ namespace ConsoleApplication1
 		public void InvalidSerialDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = "BADSERIAL";
+			testJson.i = invalidSerial;
 			testJson.d = "~20/90210|";
 			testJson.b = null;
 			testJson.s = 4;
@@ -832,6 +834,7 @@ namespace ConsoleApplication1
     {
         static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
         static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
 		[Test()]
 		// Valid Serial
@@ -858,7 +861,7 @@ namespace ConsoleApplication1
 		// Invalid Serial
 		public void InvalidSerial() 
 		{
-			DeviceSetting dSetting2 = new DeviceSetting(testServer, "BADSERIAL");
+			DeviceSetting dSetting2 = new DeviceSetting(testServer, invalidSerial);
 
 			Test BadSerial = new Test(dSetting2);
 			BadSerial.setTestName("BadSerial");
@@ -903,6 +906,7 @@ namespace ConsoleApplication1
     {
         static Uri server = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
         static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
 		[Test()]
 		public void ValidSerial()
@@ -965,7 +969,7 @@ namespace ConsoleApplication1
 			err[1] = "wasd";
 			err[2] = "qwerty";
 			status.errorLog = err;
-			status.intSerial = "DOOT DOOT";
+			status.intSerial = invalidSerial;
 			status.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
 			status.requestTimeoutValue = "8000";
 			status.revId = "52987";
@@ -1114,6 +1118,7 @@ namespace ConsoleApplication1
     {
         static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
         static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
 		static float lessThan900 = 0;
 
@@ -1130,21 +1135,6 @@ namespace ConsoleApplication1
 		static StreamWriter results;
 
 		static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
-
-        [Test()]
-        public void appConfigTest()
-        {
-            string connectionString = "";
-            try
-            {
-                connectionString = ConfigurationManager.ConnectionStrings["TestString"].ConnectionString;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            Assert.AreEqual("String-a-ding-ding", connectionString);
-        }
 
 		[TestFixtureSetUp()]
 		public void setup()
@@ -1252,7 +1242,7 @@ namespace ConsoleApplication1
 		public void InvalidSerial()
 		{
 			//Invalid
-			ICmd invalidICmd = new ICmd(testServer, "BORSHT");
+			ICmd invalidICmd = new ICmd(testServer, invalidSerial);
 			Test invalidTest = new Test(invalidICmd);
 			invalidTest.setTestName("BadSerial");
 

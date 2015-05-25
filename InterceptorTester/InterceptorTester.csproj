@@ -74,7 +74,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\ConfigurationSections\ConfigURL.cs" />
     <Compile Include="NUnit.cs" />
     <Compile Include="API Operations\APIOperation.cs" />
     <Compile Include="API Operations\DeviceBackup.cs" />
@@ -146,6 +145,6 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <ItemGroup>
-    <Folder Include="bin\" />
+    <Folder Include="Data\ConfigurationSections\" />
   </ItemGroup>
 </Project>

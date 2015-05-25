@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ConfigurationSections\ConfigURL.cs" />
     <Compile Include="NUnit.cs" />
     <Compile Include="API Operations\APIOperation.cs" />
     <Compile Include="API Operations\DeviceBackup.cs" />

@@ -13,8 +13,9 @@ namespace ConsoleApplication1
 	[TestFixture()]
 	public class DeviceBackupTest
 	{
-
-		static Uri testServer = ServerUris.getLatest();
+        //Globals
+        static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
 
 		[Test()]
 		// Valid Serial
@@ -27,7 +28,7 @@ namespace ConsoleApplication1
 
 			//BackupJSon
 			DeviceBackupJSON json = new DeviceBackupJSON();
-			json.i = ValidSerialNumbers.getAll()[1];
+            json.i = validSerial;
 			json.s = 4;
 			json.b = items;
 
@@ -56,7 +57,7 @@ namespace ConsoleApplication1
 
 			//BackupJSon
 			DeviceBackupJSON json = new DeviceBackupJSON();
-			json.i = ValidSerialNumbers.getAll()[1];
+            json.i = validSerial;
 			json.s = 4;
 			json.b = items;
 
@@ -86,7 +87,7 @@ namespace ConsoleApplication1
 			failItems[0] = failItem;
 
 			DeviceBackupJSON failJson = new DeviceBackupJSON();
-			failJson.i = ValidSerialNumbers.getAll()[1];
+            failJson.i = validSerial;
 			failJson.s = 5;
 			failJson.b = failItems;
 
@@ -117,7 +118,7 @@ namespace ConsoleApplication1
 			failItems[3] = getBackupItem(3);
 
 			DeviceBackupJSON failJson = new DeviceBackupJSON();
-			failJson.i = ValidSerialNumbers.getAll()[1];
+            failJson.i = validSerial;
 			failJson.s = 5;
 			failJson.b = failItems;
 
@@ -171,7 +172,7 @@ namespace ConsoleApplication1
 			BackupItem[] items = new BackupItem[0];
 
 			DeviceBackupJSON emptyJson = new DeviceBackupJSON();
-			emptyJson.i = ValidSerialNumbers.getAll()[0];
+            emptyJson.i = validSerial;
 			emptyJson.s = 8;
 			emptyJson.b = items;
 
@@ -263,7 +264,7 @@ namespace ConsoleApplication1
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
 			serialJson.s = 6;
 			serialJson.b = items;
-			serialJson.i = ValidSerialNumbers.getAll()[1];
+            serialJson.i = validSerial;
 
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
@@ -295,7 +296,7 @@ namespace ConsoleApplication1
 			DeviceBackupJSON serialJson = new DeviceBackupJSON();
 			serialJson.s = 6;
 			serialJson.b = items;
-			serialJson.i = ValidSerialNumbers.getAll()[1];
+            serialJson.i = validSerial;
 
 			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
 
@@ -344,9 +345,9 @@ namespace ConsoleApplication1
 
 	[TestFixture()]
 	public class DeviceScanTest
-	{
-		static Uri testServer = ServerUris.getLatest();
-
+    {
+        static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
 
 		// simple scan code
 
@@ -356,7 +357,7 @@ namespace ConsoleApplication1
 		{
 
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll()[1];
+            testJson.i = validSerial;
 			testJson.d = "1289472198573";
 			testJson.b = null;
 			testJson.s = 4;
@@ -380,8 +381,11 @@ namespace ConsoleApplication1
 		// Invalid Single Scan
 		public void InvalidSingleScanSimple()
 		{
+            //TODO: Given when then comments
+           // var getThing = appconfig.get(invalidScanData);
+
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll()[1];
+            testJson.i = validSerial;
 			testJson.d = "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm";
 			testJson.b = null;
 			testJson.s = 4;
@@ -487,7 +491,7 @@ namespace ConsoleApplication1
 		public void LOValidScansSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll()[1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "0";
@@ -518,7 +522,7 @@ namespace ConsoleApplication1
 		public void ValInvalScansSimple()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll()[1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "0";
@@ -551,7 +555,7 @@ namespace ConsoleApplication1
 		public void ValidSingleScanDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = "~20/90210|";
 			testJson.b = null;
 			testJson.s = 4;
@@ -577,7 +581,7 @@ namespace ConsoleApplication1
 		public void ValidCH()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = "~21/*CH*055577520928";
 			testJson.b = null;
 			testJson.s = 4;
@@ -602,7 +606,7 @@ namespace ConsoleApplication1
 		public void InvalidSingleScanDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = "~20|noendingbar";
 			testJson.b = null;
 			testJson.s = 4;
@@ -703,7 +707,7 @@ namespace ConsoleApplication1
 		public void LOValidScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData[0] = "~20/0|";
@@ -733,7 +737,7 @@ namespace ConsoleApplication1
 		public void ValInvalScansDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "~20/0|";
@@ -767,7 +771,7 @@ namespace ConsoleApplication1
 		public void ValidScansSimDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "~20/0|";
@@ -797,7 +801,7 @@ namespace ConsoleApplication1
 		public void ValInvalScansSimDyn()
 		{
 			DeviceScanJSON testJson = new DeviceScanJSON ();
-			testJson.i = ValidSerialNumbers.getAll () [1];
+			testJson.i = validSerial;
 			testJson.d = null;
 			string[] scanData = new string[4];
 			scanData [0] = "~20/0|";
@@ -825,14 +829,15 @@ namespace ConsoleApplication1
 
 	[TestFixture()]
 	public class DeviceSettingsTest
-	{
-		static Uri testServer = ServerUris.getLatest();
+    {
+        static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
 
 		[Test()]
 		// Valid Serial
 		public void ValidSerial() 
 		{
-			DeviceSetting dSetting1 = new DeviceSetting(testServer, ValidSerialNumbers.getAll()[0]);
+			DeviceSetting dSetting1 = new DeviceSetting(testServer, validSerial);
 
 			Test ValidSerial = new Test(dSetting1);
 			ValidSerial.setTestName("ValidSerial");
@@ -895,13 +900,11 @@ namespace ConsoleApplication1
 
 	[TestFixture()]
 	public class DeviceStatusTest
-	{
-		Uri server = ServerUris.getLatest();
-
+    {
+        static Uri server = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
 
 		[Test()]
-
-
 		public void ValidSerial()
 		{
 			DeviceStatusJSON status = new DeviceStatusJSON();
@@ -918,7 +921,7 @@ namespace ConsoleApplication1
 			err[2] = "qwerty";
 			status.dynCodeFormat = err;
 			status.errorLog = err;
-			status.intSerial = ValidSerialNumbers.getAll()[1];
+            status.intSerial = validSerial;
 			status.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
 			status.requestTimeoutValue = "8000";
 			status.revId = "52987";
@@ -1080,7 +1083,7 @@ namespace ConsoleApplication1
 			err[1] = "wasd";
 			err[2] = "qwerty";
 			status.errorLog = err;
-			status.intSerial = ValidSerialNumbers.getAll()[0];
+			status.intSerial = validSerial;
 			status.reportURL = "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus";
 			status.requestTimeoutValue = "8000";
 			status.revId = "52987";
@@ -1108,8 +1111,9 @@ namespace ConsoleApplication1
 		
 	[TestFixture()]
 	public class ICmdTest
-	{
-		static Uri testServer = ServerUris.getLatest();
+    {
+        static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
 
 		static float lessThan900 = 0;
 
@@ -1177,7 +1181,7 @@ namespace ConsoleApplication1
 		{
 			System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
 
-			ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
+			ICmd validICmd = new ICmd(testServer, validSerial);
 
 			Test validTest = new Test(validICmd);
 			validTest.setTestName("ValidSerial");
@@ -1233,7 +1237,7 @@ namespace ConsoleApplication1
 		{
 
 			//Valid
-			ICmd validICmd = new ICmd(testServer, ValidSerialNumbers.getAll()[0]);
+			ICmd validICmd = new ICmd(testServer, validSerial);
 
 			Test validTest = new Test(validICmd);
 			validTest.setTestName("ValidSerial");

@@ -133,6 +133,7 @@
     <None Include="bin\Debug\System.Web.Http.dll" />
     <None Include="bin\Debug\nunit.extensions.dll" />
     <None Include="bin\Debug\nunit.framework.dll" />
+    <None Include="InterceptorTester.dll" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\bin\Debug\Testing.nunit" total="39" errors="0" failures="8" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-05-25" time="15:09:02">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="TIM_COMPUTER" user="Tim" user-domain="Tim_Computer" />
+  <culture-info current-culture="en-CA" current-uiculture="en-US" />
+  <test-suite type="Project" name="C:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\bin\Debug\Testing.nunit" executed="True" result="Failure" success="False" time="30.055" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\bin\Debug\InterceptorTester.dll" executed="True" result="Failure" success="False" time="29.985" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ConsoleApplication1" executed="True" result="Failure" success="False" time="29.984" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="DeviceBackupTest" executed="True" result="Failure" success="False" time="9.409" asserts="0">
+                <results>
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="True" result="Success" success="True" time="5.640" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="True" result="Success" success="True" time="0.245" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="True" result="Failure" success="False" time="0.360" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidBackupItems() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 136
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="True" result="Failure" success="False" time="0.267" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 105
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="True" result="Success" success="True" time="0.269" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="True" result="Success" success="True" time="0.238" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="True" result="Failure" success="False" time="0.245" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.NullSerial() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 250
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="True" result="Success" success="True" time="0.250" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="True" result="Success" success="True" time="0.257" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="True" result="Success" success="True" time="0.245" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="DeviceScanTest" executed="True" result="Failure" success="False" time="5.630" asserts="0">
+                <results>
+                  <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="True" result="Success" success="True" time="0.261" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="True" result="Success" success="True" time="0.233" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="True" result="Success" success="True" time="0.225" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="True" result="Success" success="True" time="0.220" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="True" result="Success" success="True" time="0.310" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="True" result="Success" success="True" time="0.252" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="True" result="Success" success="True" time="0.324" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="True" result="Success" success="True" time="0.526" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="True" result="Failure" success="False" time="0.253" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialDyn() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 703
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="True" result="Failure" success="False" time="0.272" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialSimple() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 487
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="True" result="Success" success="True" time="0.494" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="True" result="Success" success="True" time="0.307" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="True" result="Success" success="True" time="0.292" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="True" result="Success" success="True" time="0.270" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="True" result="Success" success="True" time="0.343" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="True" result="Success" success="True" time="0.347" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="True" result="Success" success="True" time="0.308" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="DeviceSettingsTest" executed="True" result="Success" success="True" time="0.793" asserts="0">
+                <results>
+                  <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="True" result="Success" success="True" time="0.279" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="True" result="Success" success="True" time="0.206" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="True" result="Success" success="True" time="0.261" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="DeviceStatusTest" executed="True" result="Failure" success="False" time="1.460" asserts="0">
+                <results>
+                  <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="True" result="Failure" success="False" time="0.292" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.AlertDataStore() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 1110
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="True" result="Success" success="True" time="0.295" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="True" result="Success" success="True" time="0.232" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="True" result="Success" success="True" time="0.235" asserts="1" />
+                  <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="True" result="Failure" success="False" time="0.251" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.ValidSerial() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 951
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ICmdTest" executed="True" result="Failure" success="False" time="12.568" asserts="0">
+                <results>
+                  <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="True" result="Success" success="True" time="0.303" asserts="1" />
+                  <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="True" result="Failure" success="False" time="0.305" asserts="1">
+                    <failure>
+                      <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                      <stack-trace><![CDATA[at ConsoleApplication1.ICmdTest.MissingSerial() in c:\Users\Tim\Documents\Visual Studio 2013\Projects\InterceptorTester\InterceptorTester\NUnit.cs:line 1287
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="True" result="Success" success="True" time="0.174" asserts="1" />
+                  <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="True" result="Success" success="True" time="11.667" asserts="2">
+                    <properties>
+                      <property name="Repeat" value="50" />
+                    </properties>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

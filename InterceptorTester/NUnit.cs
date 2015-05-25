@@ -1133,8 +1133,11 @@ namespace ConsoleApplication1
 
 
 		static StreamWriter results;
+		static StreamWriter results1;
 
 		static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
+
+		static string outputFile1 = "../../../logs/performance.csv";
 
 		[TestFixtureSetUp()]
 		public void setup()
@@ -1143,6 +1146,10 @@ namespace ConsoleApplication1
 			stream = File.Create(outputFile);
 			results = new StreamWriter(stream);
 
+			FileStream stream1;
+			stream1 = File.Create (outputFile1);
+			results1 = new StreamWriter (stream1);
+			results1.WriteLine ();
 		}
 
 		[TestFixtureTearDown()]
@@ -1157,6 +1164,7 @@ namespace ConsoleApplication1
 			results.WriteLine("Minimum Time," + minTime);
 			results.WriteLine("Maximum Time," + maxTime);
 			results.Close();
+			results1.Close ();
 
 		}
 
@@ -1203,6 +1211,8 @@ namespace ConsoleApplication1
 			}
 
 			results.WriteLine("Test Time," + time);
+
+			results1.WriteLine (time);
 
 
 			foreach (Test nextTest in Program.getTests())

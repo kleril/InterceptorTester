@@ -1139,6 +1139,8 @@ namespace ConsoleApplication1
 
 		static string outputFile1 = "../../../logs/performance.csv";
 
+
+		/*
 		[TestFixtureSetUp()]
 		public void setup()
 		{
@@ -1166,64 +1168,72 @@ namespace ConsoleApplication1
 			results1.Close();
 
 		}
+		*/
 
-		[Test(), Repeat(maxReps)]
+		[Test()]
 		public void performanceTest()
 		{
-			System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+			FileStream stream;
+			stream = File.Create(outputFile);
+			results = new StreamWriter(stream);
 
-			ICmd validICmd = new ICmd(testServer, validSerial);
+			FileStream stream1;
+			stream1 = File.Create (outputFile1);
+			results1 = new StreamWriter (stream1);
 
-			Test validTest = new Test(validICmd);
-			validTest.setTestName("ValidSerial");
-
-
-			List<Test> tests = new List<Test>();
-			tests.Add(validTest);
-
-			timer.Start();
-			AsyncContext.Run(async() => await Program.buildTests(tests));
-			timer.Stop();
-			int time = timer.Elapsed.Milliseconds;
-			if (avgTime < 0)
+			for (int i = 0; i < maxReps; i++)
 			{
-				avgTime = time;
-			}
-			else
-			{
-				avgTime = (avgTime * (reps - 1) / reps) + (time / reps);
-			}
-			data[reps - 1] = time;
+				System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch ();
 
-			reps += 1;
-			if (time < minTime)
-			{
-				minTime = time;
-			}
-			if (time > maxTime)
-			{
-				maxTime = time;
-			}
-			if (time < 900) 
-			{
-				lessThan900++;
-			}
+				ICmd validICmd = new ICmd (testServer, validSerial);
 
-			results.WriteLine("Test Time," + time);
-
-			results1.WriteLine (time);
+				Test validTest = new Test (validICmd);
+				validTest.setTestName ("ValidSerial");
 
 
-			foreach (Test nextTest in Program.getTests())
-			{
-				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
-			}
+				List<Test> tests = new List<Test> ();
+				tests.Add (validTest);
 
-			if (reps == maxReps+1)
-			{
-				Assert.LessOrEqual(avgTime, 900);
-				Console.Write("Response time is OK");
+				timer.Start ();
+				AsyncContext.Run (async() => await Program.buildTests (tests));
+				timer.Stop ();
+				int time = timer.Elapsed.Milliseconds;
+				/*
+				if (avgTime < 0) {
+					avgTime = time;
+				} else {
+					avgTime = (avgTime * (reps - 1) / reps) + (time / reps);
+				}
+				data [reps - 1] = time;
+
+				reps += 1;
+				if (time < minTime) {
+					minTime = time;
+				}
+				if (time > maxTime) {
+					maxTime = time;
+				}
+				if (time < 900) {
+					lessThan900++;
+				}
+				*/
+
+				results.WriteLine ("Test Time," + time);
+
+				results1.WriteLine (time);
+
+
+				foreach (Test nextTest in Program.getTests()) {
+					Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
+				}
+
+				/*if (reps == maxReps + 1) {
+					Assert.LessOrEqual (avgTime, 900);
+					Console.Write ("Response time is OK");
+				}*/
 			}
+			results.Close ();
+			results1.Close ();
 		}
 
 		public void ValidSerial()

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="bin/Debug/InterceptorTester.dll" total="39" failures="8" not-run="0" date="2015-05-25" time="14:06:06">
+  <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Documents/InterceptorTester/InterceptorTester" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />
+  <culture-info current-culture="en-CA" current-uiculture="en-CA" />
+  <test-suite name="bin/Debug/InterceptorTester.dll" success="False" time="6.162" asserts="0">
+    <results>
+      <test-suite name="ConsoleApplication1" success="False" time="6.159" asserts="0">
+        <results>
+          <test-suite name="DeviceBackupTest" success="False" time="2.118" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="True" success="True" time="0.615" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="True" success="True" time="0.151" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="True" success="False" time="0.153" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidBackupItems () [0x000c3] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:136
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="True" success="False" time="0.142" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "201"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem () [0x000a5] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:105
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="True" success="True" time="0.112" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="True" success="True" time="0.181" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="True" success="False" time="0.100" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceBackupTest.NullSerial () [0x000b3] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:250
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="True" success="True" time="0.190" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="True" success="True" time="0.143" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="True" success="True" time="0.214" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceScanTest" success="False" time="2.832" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="True" success="True" time="0.112" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="True" success="True" time="0.106" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="True" success="True" time="0.101" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="True" success="True" time="0.111" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="True" success="True" time="0.166" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="True" success="True" time="0.128" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="True" success="True" time="0.179" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="True" success="True" time="0.188" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="True" success="False" time="0.101" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialDyn () [0x00091] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:703
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="True" success="False" time="0.099" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceScanTest.NullSerialSimple () [0x00091] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:487
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="True" success="True" time="0.502" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="True" success="True" time="0.173" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="True" success="True" time="0.139" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="True" success="True" time="0.120" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="True" success="True" time="0.175" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="True" success="True" time="0.245" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="True" success="True" time="0.151" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceSettingsTest" success="True" time="0.322" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="True" success="True" time="0.101" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="True" success="True" time="0.093" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="True" success="True" time="0.124" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="DeviceStatusTest" success="False" time="0.408" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="True" success="False" time="0.086" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.AlertDataStore () [0x00130] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:1110
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="True" success="True" time="0.080" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="True" success="True" time="0.073" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="True" success="True" time="0.078" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="True" success="False" time="0.078" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "201"
+  But was:  "400"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.DeviceStatusTest.ValidSerial () [0x0013b] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:951
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite name="ICmdTest" success="False" time="0.453" asserts="0">
+            <results>
+              <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="True" success="True" time="0.104" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="True" success="False" time="0.118" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
+  Expected: "400"
+  But was:  "500"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at ConsoleApplication1.ICmdTest.MissingSerial () [0x00079] in /Users/linai/Documents/InterceptorTester/InterceptorTester/NUnit.cs:1287
+at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/mono20150427-94385-ls9w7r/mono-4.0.1/mcs/class/corlib/System.Reflection/MonoMethod.cs:230
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="True" success="True" time="0.074" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="True" success="True" time="0.142" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

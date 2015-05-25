@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+ga agggg v<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
 <test-results name="bin/Debug/InterceptorTester.dll" total="40" failures="8" not-run="0" date="2015-05-25" time="10:14:23">
   <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Documents/InterceptorTester/InterceptorTester" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />

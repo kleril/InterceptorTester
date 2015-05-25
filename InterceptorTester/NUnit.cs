@@ -1149,7 +1149,6 @@ namespace ConsoleApplication1
 			FileStream stream1;
 			stream1 = File.Create (outputFile1);
 			results1 = new StreamWriter (stream1);
-			results1.WriteLine ();
 		}
 
 		[TestFixtureTearDown()]
@@ -1164,7 +1163,7 @@ namespace ConsoleApplication1
 			results.WriteLine("Minimum Time," + minTime);
 			results.WriteLine("Maximum Time," + maxTime);
 			results.Close();
-			results1.Close ();
+			results1.Close();
 
 		}
 

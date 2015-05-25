@@ -1131,12 +1131,6 @@ namespace ConsoleApplication1
 
 		static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
 
-
-		//static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".txt";
-
-
-		//static string xlsPath = "../../../logs/xlsOutput" + DateTime.Now.ToFileTime () + ".xls";
-
         [Test()]
         public void appConfigTest()
         {

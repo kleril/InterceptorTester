@@ -218,8 +218,7 @@ pip-log.txt
 ####################################
 #Don't upload a million test results
 ####################################
-*.csv
-logs/
+logs/testResults*
 *.userprefs
 *.exe
 *.xls#

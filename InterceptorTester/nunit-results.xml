@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="bin/Debug/InterceptorTester.dll" total="40" failures="8" not-run="0" date="2015-05-25" time="09:38:32">
+<test-results name="bin/Debug/InterceptorTester.dll" total="40" failures="8" not-run="0" date="2015-05-25" time="10:14:23">
   <environment nunit-version="2.4.8.0" clr-version="4.0.30319.17020" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/linai/Documents/InterceptorTester/InterceptorTester" machine-name="Lins-MacBook-Air.local" user="linai" user-domain="Lins-MacBook-Air.local" />
   <culture-info current-culture="en-CA" current-uiculture="en-CA" />
-  <test-suite name="bin/Debug/InterceptorTester.dll" success="False" time="19.740" asserts="0">
+  <test-suite name="bin/Debug/InterceptorTester.dll" success="False" time="5.973" asserts="0">
     <results>
-      <test-suite name="ConsoleApplication1" success="False" time="19.738" asserts="0">
+      <test-suite name="ConsoleApplication1" success="False" time="5.970" asserts="0">
         <results>
-          <test-suite name="DeviceBackupTest" success="False" time="3.105" asserts="0">
+          <test-suite name="DeviceBackupTest" success="False" time="1.987" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="True" success="True" time="1.000" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="True" success="True" time="0.338" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="True" success="False" time="0.185" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceBackupTest.BadSerial" executed="True" success="True" time="0.630" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.EmptySerial" executed="True" success="True" time="0.102" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidBackupItems" executed="True" success="False" time="0.146" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -24,7 +24,7 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="True" success="False" time="0.188" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceBackupTest.InvalidSingleBackupItem" executed="True" success="False" time="0.153" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -37,9 +37,9 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="True" success="True" time="0.155" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="True" success="True" time="0.243" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="True" success="False" time="0.189" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NoBackupItems" executed="True" success="True" time="0.144" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NotSpecialDynCode" executed="True" success="True" time="0.139" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.NullSerial" executed="True" success="False" time="0.125" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -52,22 +52,22 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="True" success="True" time="0.209" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="True" success="True" time="0.345" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="True" success="True" time="0.154" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.SpecialDynCode" executed="True" success="True" time="0.177" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSerial" executed="True" success="True" time="0.154" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceBackupTest.ValidSingleBackupItem" executed="True" success="True" time="0.131" asserts="1" />
             </results>
           </test-suite>
-          <test-suite name="DeviceScanTest" success="False" time="4.632" asserts="0">
+          <test-suite name="DeviceScanTest" success="False" time="2.689" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="True" success="True" time="0.114" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="True" success="True" time="0.202" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="True" success="True" time="0.199" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="True" success="True" time="0.146" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="True" success="True" time="0.181" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="True" success="True" time="0.153" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="True" success="True" time="0.209" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="True" success="True" time="0.490" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="True" success="False" time="0.139" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialDyn" executed="True" success="True" time="0.106" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.EmptySerialSimple" executed="True" success="True" time="0.102" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialDyn" executed="True" success="True" time="0.136" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSerialSimple" executed="True" success="True" time="0.097" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanDyn" executed="True" success="True" time="0.137" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.InvalidSingleScanSimple" executed="True" success="True" time="0.162" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansDyn" executed="True" success="True" time="0.246" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.LOValidScansSimple" executed="True" success="True" time="0.152" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialDyn" executed="True" success="False" time="0.107" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -80,7 +80,7 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="True" success="False" time="0.103" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceScanTest.NullSerialSimple" executed="True" success="False" time="0.090" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -93,25 +93,25 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="True" success="True" time="0.736" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="True" success="True" time="0.378" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="True" success="True" time="0.244" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="True" success="True" time="0.218" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="True" success="True" time="0.223" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="True" success="True" time="0.332" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="True" success="True" time="0.527" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidCH" executed="True" success="True" time="0.354" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidScansSimDyn" executed="True" success="True" time="0.176" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanDyn" executed="True" success="True" time="0.127" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValidSingleScanSimple" executed="True" success="True" time="0.131" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansDyn" executed="True" success="True" time="0.169" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimDyn" executed="True" success="True" time="0.203" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceScanTest.ValInvalScansSimple" executed="True" success="True" time="0.157" asserts="1" />
             </results>
           </test-suite>
-          <test-suite name="DeviceSettingsTest" success="True" time="0.571" asserts="0">
+          <test-suite name="DeviceSettingsTest" success="True" time="0.350" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="True" success="True" time="0.189" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="True" success="True" time="0.199" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="True" success="True" time="0.180" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.InvalidSerial" executed="True" success="True" time="0.098" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.NoSerial" executed="True" success="True" time="0.103" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceSettingsTest.ValidSerial" executed="True" success="True" time="0.147" asserts="1" />
             </results>
           </test-suite>
-          <test-suite name="DeviceStatusTest" success="False" time="1.501" asserts="0">
+          <test-suite name="DeviceStatusTest" success="False" time="0.461" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="True" success="False" time="0.146" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceStatusTest.AlertDataStore" executed="True" success="False" time="0.080" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "201"
@@ -124,10 +124,10 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="True" success="True" time="0.115" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="True" success="True" time="0.791" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="True" success="True" time="0.245" asserts="1" />
-              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="True" success="False" time="0.190" asserts="1">
+              <test-case name="ConsoleApplication1.DeviceStatusTest.EmptySerial" executed="True" success="True" time="0.074" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.InvalidSerial" executed="True" success="True" time="0.080" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.NullSerial" executed="True" success="True" time="0.079" asserts="1" />
+              <test-case name="ConsoleApplication1.DeviceStatusTest.ValidSerial" executed="True" success="False" time="0.134" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "201"
@@ -142,11 +142,11 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
               </test-case>
             </results>
           </test-suite>
-          <test-suite name="ICmdTest" success="False" time="9.902" asserts="0">
+          <test-suite name="ICmdTest" success="False" time="0.451" asserts="0">
             <results>
-              <test-case name="ConsoleApplication1.ICmdTest.appConfigTest" executed="True" success="True" time="0.003" asserts="1" />
-              <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="True" success="True" time="0.139" asserts="1" />
-              <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="True" success="False" time="0.164" asserts="1">
+              <test-case name="ConsoleApplication1.ICmdTest.appConfigTest" executed="True" success="True" time="0.004" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.InvalidSerial" executed="True" success="True" time="0.101" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.MissingSerial" executed="True" success="False" time="0.118" asserts="1">
                 <failure>
                   <message><![CDATA[  String lengths are both 3. Strings differ at index 0.
   Expected: "400"
@@ -159,8 +159,8 @@ at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAt
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="True" success="True" time="0.141" asserts="1" />
-              <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="True" success="True" time="9.438" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.NoQuery" executed="True" success="True" time="0.073" asserts="1" />
+              <test-case name="ConsoleApplication1.ICmdTest.performanceTest" executed="True" success="True" time="0.140" asserts="1" />
             </results>
           </test-suite>
         </results>

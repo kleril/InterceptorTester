@@ -115,6 +115,24 @@
     <None Include="App.config" />
     <None Include="nunit-results.xml" />
     <None Include="InterceptorTester.dll" />
+    <None Include="bin\.DS_Store" />
+    <None Include="bin\Debug\.DS_Store" />
+    <None Include="bin\Debug\InterceptorTester.dll" />
+    <None Include="bin\Debug\InterceptorTester.dll.config" />
+    <None Include="bin\Debug\InterceptorTester.dll.mdb" />
+    <None Include="bin\Debug\Json.dll" />
+    <None Include="bin\Debug\Microsoft.Office365.Discovery.dll" />
+    <None Include="bin\Debug\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\Nito.AsyncEx.Concurrent.dll" />
+    <None Include="bin\Debug\Nito.AsyncEx.Enlightenment.dll" />
+    <None Include="bin\Debug\Nito.AsyncEx.dll" />
+    <None Include="bin\Debug\System.Net.Http.Extensions.dll" />
+    <None Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <None Include="bin\Debug\System.Net.Http.Primitives.dll" />
+    <None Include="bin\Debug\System.Web.Http.WebHost.dll" />
+    <None Include="bin\Debug\System.Web.Http.dll" />
+    <None Include="bin\Debug\nunit.extensions.dll" />
+    <None Include="bin\Debug\nunit.framework.dll" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -128,5 +146,6 @@
   </Target>
   <ItemGroup>
     <Folder Include="Data\ConfigurationSections\" />
+    <Folder Include="bin\" />
   </ItemGroup>
 </Project>

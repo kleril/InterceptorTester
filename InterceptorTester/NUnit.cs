@@ -1135,7 +1135,7 @@ namespace ConsoleApplication1
 		static StreamWriter results;
 		static StreamWriter results1;
 
-		static string outputFile = "../../../logs/performanceTest" + DateTime.Now.ToFileTime() + ".csv";
+		static string outputFile = "../../../logs/performanceTest.csv";
 
 		static string outputFile1 = "../../../logs/performance.csv";
 

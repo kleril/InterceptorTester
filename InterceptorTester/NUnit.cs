@@ -381,6 +381,54 @@ namespace ConsoleApplication1
 		}
 
 		[Test()]
+		public void UTF8ScanCode()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = validSerial;
+			testJson.d = "¿ÀÁÂÆÐ123òü";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("UTF8ScanCode");
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			AsyncContext.Run(async() => await Program.buildTests(tests));
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}            
+		}
+
+		[Test()]
+		public void ASCIIScanCode()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = validSerial;
+			testJson.d = "!\"#&)(";
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan(testServer, testJson);
+
+			Test scanTest = new Test(testDScan);
+			scanTest.setTestName("ASCIIScanCode");
+
+			List<Test> tests = new List<Test>();
+			tests.Add(scanTest);
+
+			AsyncContext.Run(async() => await Program.buildTests(tests));
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}            
+		}
+
+		[Test()]
 		// Invalid Single Scan
 		public void InvalidSingleScanSimple()
 		{

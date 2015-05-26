@@ -1126,8 +1126,8 @@ namespace ConsoleApplication1
 		static float minTime = 9999999999999;
 		static float maxTime = -1;
 		static int reps = 1;
-		public const int maxReps = 50;
-		static int[] data = new int[maxReps];
+		public int maxReps;
+		//static int[] data = new int[maxReps];
 
 
 		static StreamWriter results;
@@ -1150,14 +1150,14 @@ namespace ConsoleApplication1
                 testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
                 validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
                 invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
-                /*
-                testRunsString = ConfigurationManager.ConnectionStrings["PerformanceTestRuns"].ConnectionString;
-                try { timesToRunTests = int.Parse(testRunsString); }
+
+                string testRunsString = ConfigurationManager.ConnectionStrings["TimesToRunTests"].ConnectionString;
+                try { maxReps = int.Parse(testRunsString); }
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
                     Console.WriteLine("Chances are your appconfig is misconfigured. Double check that performanceTestRuns is an integer and try again.");
-                }*/
+                }
             }
             catch (Exception e)
             {

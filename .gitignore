@@ -231,3 +231,4 @@ logs/*
 ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb
 InterceptorTester.VisualState.xml
 TestResult.xml
+logs/performance.csv

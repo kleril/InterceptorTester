@@ -72,6 +72,7 @@
     <Reference Include="Nito.AsyncEx.Enlightenment">
       <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NUnit.cs" />
@@ -114,7 +115,6 @@
     <None Include="HTTP\.DS_Store" />
     <None Include="App.config" />
     <None Include="nunit-results.xml" />
-    <None Include="InterceptorTester.dll" />
     <None Include="bin\.DS_Store" />
     <None Include="bin\Debug\.DS_Store" />
     <None Include="bin\Debug\InterceptorTester.dll" />

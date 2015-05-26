@@ -48,60 +48,8 @@ namespace ConsoleApplication1{
 
 			buildTests(tests);
 
-
-
-			try
-			{
-				FileStream fsOut = File.Create("../../../results.zip");
-				ZipOutputStream zipStream = new ZipOutputStream(fsOut);
-
-				ZipEntry entry0 = new ZipEntry(Path.GetFileName("../../../logs/testRsults.txt"));
-				ZipEntry entry1 = new ZipEntry(Path.GetFileName("../../../logs/performanceTest.csv"));
-				ZipEntry entry2 = new ZipEntry(Path.GetFileName("../../../results.xml"));
-
-				zipStream.PutNextEntry (entry0);
-				zipStream.PutNextEntry (entry1);
-				zipStream.PutNextEntry (entry2);
-
-				zipStream.Close ();
-
-			}
-			catch(Exception e)
-			{
-				Console.WriteLine (e);
-			}
-
         }
-		/*
-		public static void CompressLogs(string path, ZipOutputStream zipStream)
-		{
-			string[] files = Directory.GetFiles(path);
 
-			foreach (string filename in files) {
-
-				FileInfo fi = new FileInfo(filename);
-
-				string entryName = filename; // Makes the name in zip based on the folder
-				entryName = ZipEntry.CleanName(entryName); // Removes drive from name and fixes slash direction
-				ZipEntry newEntry = new ZipEntry(entryName);
-				newEntry.DateTime = fi.LastWriteTime; // Note the zip format stores 2 second granularity
-
-				newEntry.Size = fi.Length;
-
-				zipStream.PutNextEntry(newEntry);
-
-				byte[ ] buffer = new byte[4096];
-				using (FileStream streamReader = File.OpenRead(filename)) {
-					StreamUtils.Copy(streamReader, zipStream, buffer);
-				}
-				zipStream.CloseEntry();
-			}
-			string[ ] folders = Directory.GetDirectories(path);
-			foreach (string folder in folders) {
-				CompressLogs(folder, zipStream);
-			}
-		}
-*/
         public static async Task buildTests(List<Test> uTests)
         {
             //Init globals

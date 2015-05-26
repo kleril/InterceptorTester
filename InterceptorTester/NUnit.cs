@@ -1117,7 +1117,7 @@ namespace ConsoleApplication1
 	[TestFixture()]
 	public class ICmdTest
     {
-        
+        /*
 		static float lessThan900 = 0;
 
 		static float percentage;
@@ -1126,6 +1126,7 @@ namespace ConsoleApplication1
 		static float minTime = 9999999999999;
 		static float maxTime = -1;
 		static int reps = 1;
+		*/
 		public int maxReps;
 		//static int[] data = new int[maxReps];
 

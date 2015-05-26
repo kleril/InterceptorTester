@@ -8,6 +8,8 @@ using System.Timers;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using ICSharpCode.SharpZipLib.Zip;
+using ICSharpCode.SharpZipLib.Core;
 
 namespace ConsoleApplication1{
 
@@ -26,7 +28,7 @@ namespace ConsoleApplication1{
 
         static StreamWriter results;
 
-		static string outputFile = "../../../logs/testResults" + DateTime.Now.ToFileTime() + ".txt";
+		static string outputFile = "../../../logs/testResults.txt";
 
         public static void Main()
         {
@@ -44,8 +46,8 @@ namespace ConsoleApplication1{
             tests.Add(validTest);
             */
 
-
 			buildTests(tests);
+
         }
 
         public static async Task buildTests(List<Test> uTests)

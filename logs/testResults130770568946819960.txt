@@ -1,0 +1,9957 @@
+Starting Tests! Current time: 25/05/2015 3:48:14 PM
+Test: DeviceBackup BadSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:20 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "400"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceBackup BadSerial
+Input JSON:
+{
+  "i": "THISISANINVALIDSERIAL",
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    },
+    {
+      "d": "534235721",
+      "s": 442,
+      "t": "2015-05-11T02:04:28.216",
+      "c": false
+    },
+    {
+      "d": "892535",
+      "s": 442,
+      "t": "2015-05-11T02:04:25.142",
+      "c": false
+    }
+  ],
+  "s": 6
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 400
+Actual result: 400
+Time elapsed: 38s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:19 PM
+Test: DeviceBackup EmptySerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:22 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "379"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceBackup EmptySerial
+Input JSON:
+{
+  "i": "",
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    },
+    {
+      "d": "534235721",
+      "s": 442,
+      "t": "2015-05-11T02:04:28.216",
+      "c": false
+    },
+    {
+      "d": "892535",
+      "s": 442,
+      "t": "2015-05-11T02:04:25.142",
+      "c": false
+    }
+  ],
+  "s": 6
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 400
+Actual result: 400
+Time elapsed: 2s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:19 PM
+Test: DeviceBackup InvalidBackupItems
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:22 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "491"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup InvalidBackupItems
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    },
+    {
+      "d": "534235721",
+      "s": 442,
+      "t": "2015-05-11T02:04:28.216",
+      "c": false
+    },
+    {
+      "d": null,
+      "s": 0,
+      "t": "0001-01-01T00:00:00",
+      "c": null
+    },
+    {
+      "d": "892535",
+      "s": 442,
+      "t": "2015-05-11T02:04:25.142",
+      "c": false
+    }
+  ],
+  "s": 5
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 400
+Actual result: 201
+Time elapsed: 4s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:19 PM
+Test: DeviceBackup InvalidSingleBackupItem
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:22 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "153"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup InvalidSingleBackupItem
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": null,
+      "s": 0,
+      "t": "0001-01-01T00:00:00",
+      "c": null
+    }
+  ],
+  "s": 5
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 400
+Actual result: 201
+Time elapsed: 6s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:20 PM
+Test: DeviceBackup NoBackupItems
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:22 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "50"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup NoBackupItems
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [],
+  "s": 8
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 201
+Actual result: 201
+Time elapsed: 6s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:20 PM
+Test: DeviceBackup NotSpecialDynCode
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:23 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "168"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup NotSpecialDynCode
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": "~20/12345|",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    }
+  ],
+  "s": 6
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 201
+Actual result: 201
+Time elapsed: 11s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:20 PM
+Test: DeviceBackup NullSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 500,
+  "ReasonPhrase": "Internal Server Error",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:23 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "381"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceBackup NullSerial
+Input JSON:
+{
+  "i": null,
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    },
+    {
+      "d": "534235721",
+      "s": 442,
+      "t": "2015-05-11T02:04:28.216",
+      "c": false
+    },
+    {
+      "d": "892535",
+      "s": 442,
+      "t": "2015-05-11T02:04:25.142",
+      "c": false
+    }
+  ],
+  "s": 6
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 400
+Actual result: 500
+Time elapsed: 7s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:20 PM
+Test: DeviceBackup SpecialDynCode
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:23 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "175"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup SpecialDynCode
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": "~123~status=ssid|",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    }
+  ],
+  "s": 6
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 201
+Actual result: 201
+Time elapsed: 12s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceBackup ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:23 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "391"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup ValidSerial
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    },
+    {
+      "d": "534235721",
+      "s": 442,
+      "t": "2015-05-11T02:04:28.216",
+      "c": false
+    },
+    {
+      "d": "892535",
+      "s": 442,
+      "t": "2015-05-11T02:04:25.142",
+      "c": false
+    }
+  ],
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 201
+Actual result: 201
+Time elapsed: 10s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceBackup ValidSingleBackupItem
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:23 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "166"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceBackup/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceBackup ValidSingleBackupItem
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    {
+      "d": "12566132",
+      "s": 442,
+      "t": "2015-05-11T02:04:22.295",
+      "c": false
+    }
+  ],
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceBackup/
+Expected result: 201
+Actual result: 201
+Time elapsed: 12s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceScan EmptySerialDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:24 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "62"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan EmptySerialDyn
+Input JSON:
+{
+  "i": "",
+  "b": null,
+  "d": "~20/90210|",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 400
+Time elapsed: 13s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceScan EmptySerialSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:24 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "65"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan EmptySerialSimple
+Input JSON:
+{
+  "i": "",
+  "b": null,
+  "d": "1289472198573",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 400
+Time elapsed: 14s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceScan InvalidSerialDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:24 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "83"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan InvalidSerialDyn
+Input JSON:
+{
+  "i": "THISISANINVALIDSERIAL",
+  "b": null,
+  "d": "~20/90210|",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 400
+Time elapsed: 12s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:21 PM
+Test: DeviceScan InvalidSerialSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:24 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "75"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan InvalidSerialSimple
+Input JSON:
+{
+  "i": "BAD SERIAL",
+  "b": null,
+  "d": "1289472198573",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 400
+Time elapsed: 16s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:22 PM
+Test: DeviceScan InvalidSingleScanDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:24 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "79"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan InvalidSingleScanDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": null,
+  "d": "~20|noendingbar",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 27s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:22 PM
+Test: DeviceScan InvalidSingleScanSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:25 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "194"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan InvalidSingleScanSimple
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": null,
+  "d": "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 26s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:22 PM
+Test: DeviceScan LOValidScansDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:25 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "127"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan LOValidScansDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "~20/0|",
+    "~20/1|",
+    "~20/2|",
+    "~20/3|"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 34s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:23 PM
+Test: DeviceScan LOValidScansSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:25 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "107"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan LOValidScansSimple
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 25s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:23 PM
+Test: DeviceScan NullSerialDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 500,
+  "ReasonPhrase": "Internal Server Error",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:25 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "64"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan NullSerialDyn
+Input JSON:
+{
+  "i": null,
+  "b": null,
+  "d": "~20/90210|",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 500
+Time elapsed: 16s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:23 PM
+Test: DeviceScan NullSerialSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 500,
+  "ReasonPhrase": "Internal Server Error",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:25 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "67"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceScan NullSerialSimple
+Input JSON:
+{
+  "i": null,
+  "b": null,
+  "d": "1289472198573",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 400
+Actual result: 500
+Time elapsed: 22s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:23 PM
+Test: DeviceScan ValidCH
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "20"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:26 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "84"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, {"r":"055577420928"}]
+Summary:
+Current test: DeviceScan ValidCH
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": null,
+  "d": "~21/*CH*055577520928",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 62s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:24 PM
+Test: DeviceScan ValidScansSimDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:26 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "133"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValidScansSimDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "~20/0|",
+    "123456789",
+    "~20/2|",
+    "987654321"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 36s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:24 PM
+Test: DeviceScan ValidSingleScanDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:26 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "74"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValidSingleScanDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": null,
+  "d": "~20/90210|",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 27s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:24 PM
+Test: DeviceScan ValidSingleScanSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:26 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "77"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValidSingleScanSimple
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": null,
+  "d": "1289472198573",
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 37s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:24 PM
+Test: DeviceScan ValInvalScansDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:26 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "136"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValInvalScansDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "~20/0|",
+    "~20/noendingbar",
+    "~20/2|",
+    "~20/3|"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 36s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:25 PM
+Test: DeviceScan ValInvalScansSimDyn
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "263"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValInvalScansSimDyn
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "~20/0|",
+    "123456789",
+    "~20/noendingbar",
+    "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 41s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:25 PM
+Test: DeviceScan ValInvalScansSimple
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 201,
+  "ReasonPhrase": "Created",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "236"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceScan/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, ]
+Summary:
+Current test: DeviceScan ValInvalScansSimple
+Input JSON:
+{
+  "i": "D05FB84F1606",
+  "b": [
+    "0",
+    "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm",
+    "2",
+    "3"
+  ],
+  "d": null,
+  "s": 4
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceScan/
+Expected result: 201
+Actual result: 201
+Time elapsed: 39s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:25 PM
+Test: DeviceSetting BadSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=THISISANINVALIDSERIAL",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceSetting BadSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=THISISANINVALIDSERIAL
+Expected result: 400
+Actual result: 400
+Time elapsed: 29s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:25 PM
+Test: DeviceSetting NoSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceSetting NoSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=
+Expected result: 400
+Actual result: 400
+Time elapsed: 20s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:25 PM
+Test: DeviceSetting ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "661"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, {"startURL":"http://cozumotesttls.cloudapp.net:80/api/DeviceSetting","reportURL":"http://cozumotesttls.cloudapp.net:80/api/DeviceStatus","scanURL":"http://cozumotesttls.cloudapp.net:80/api/DeviceScan","bkupURL":"http://cozumotesttls.cloudapp.net:80/api/DeviceBackup","cmdURL":"http://cozumotesttls.cloudapp.net:80/api/ICmd","capture":"1","captureMode":"1","requestTimeoutValue":"2000","callHomeTimeoutMode":"0","callHomeTimeoutData":"testdata","dynCodeFormat":["~*[1,12]/*[1,63]|","~server/redemption|","~#[1,12](/*[1,14])[1,3]|"],"errorLog":"False","wpaPSK":"cozumo123","ssid":"demo","cmdChkInt":"15","cTime":"2015-05-25T19:48:28.5743108+00:00","seqNum":"834"}]
+Summary:
+Current test: DeviceSetting ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceSetting/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 38s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: DeviceStatus AlertDataStore
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:27 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "698"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceStatus/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceStatus AlertDataStore
+Input JSON:
+{
+  "intSerial": "D05FB84F1606",
+  "seqNum": "87",
+  "startURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting",
+  "reportURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus",
+  "scanURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceScan",
+  "bkupURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup",
+  "cmdURL": "http://cozumotesttls.cloudapp.net:80/api/iCmd",
+  "capture": "1",
+  "captureMode": "1",
+  "requestTimeoutValue": "8000",
+  "callHomeTimeoutMode": "0",
+  "callHomeTimeoutData": null,
+  "dynCodeFormat": null,
+  "cmdChkInt": "1",
+  "revId": "52987",
+  "errorLog": [
+    "<timestamp>///900///bypassmode",
+    "wasd",
+    "qwerty"
+  ]
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceStatus/
+Expected result: 201
+Actual result: 400
+Time elapsed: 34s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: DeviceStatus EmptySerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "660"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceStatus/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceStatus EmptySerial
+Input JSON:
+{
+  "intSerial": null,
+  "seqNum": "87",
+  "startURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting",
+  "reportURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus",
+  "scanURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceScan",
+  "bkupURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup",
+  "cmdURL": "http://cozumotesttls.cloudapp.net:80/api/iCmd",
+  "capture": "1",
+  "captureMode": "1",
+  "requestTimeoutValue": "8000",
+  "callHomeTimeoutMode": "0",
+  "callHomeTimeoutData": "",
+  "dynCodeFormat": null,
+  "cmdChkInt": "1",
+  "revId": "52987",
+  "errorLog": [
+    "asdf",
+    "wasd",
+    "qwerty"
+  ]
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceStatus/
+Expected result: 400
+Actual result: 400
+Time elapsed: 27s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: DeviceStatus BadSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "681"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceStatus/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceStatus BadSerial
+Input JSON:
+{
+  "intSerial": "THISISANINVALIDSERIAL",
+  "seqNum": "87",
+  "startURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting",
+  "reportURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus",
+  "scanURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceScan",
+  "bkupURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup",
+  "cmdURL": "http://cozumotesttls.cloudapp.net:80/api/iCmd",
+  "capture": "1",
+  "captureMode": "1",
+  "requestTimeoutValue": "8000",
+  "callHomeTimeoutMode": "0",
+  "callHomeTimeoutData": null,
+  "dynCodeFormat": null,
+  "cmdChkInt": "1",
+  "revId": "52987",
+  "errorLog": [
+    "asdf",
+    "wasd",
+    "qwerty"
+  ]
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceStatus/
+Expected result: 400
+Actual result: 400
+Time elapsed: 26s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: DeviceStatus NullSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "662"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceStatus/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceStatus NullSerial
+Input JSON:
+{
+  "intSerial": null,
+  "seqNum": "87",
+  "startURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting",
+  "reportURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus",
+  "scanURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceScan",
+  "bkupURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup",
+  "cmdURL": "http://cozumotesttls.cloudapp.net:80/api/iCmd",
+  "capture": "1",
+  "captureMode": "1",
+  "requestTimeoutValue": "8000",
+  "callHomeTimeoutMode": "0",
+  "callHomeTimeoutData": null,
+  "dynCodeFormat": null,
+  "cmdChkInt": "1",
+  "revId": "52987",
+  "errorLog": [
+    "asdf",
+    "wasd",
+    "qwerty"
+  ]
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceStatus/
+Expected result: 400
+Actual result: 400
+Time elapsed: 31s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: DeviceStatus ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": {
+      "Headers": [
+        {
+          "Key": "Content-Type",
+          "Value": [
+            "application/json; charset=utf-8"
+          ]
+        },
+        {
+          "Key": "Content-Length",
+          "Value": [
+            "712"
+          ]
+        }
+      ]
+    },
+    "Method": {
+      "Method": "POST"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/DeviceStatus/",
+    "Headers": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      }
+    ],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: DeviceStatus ValidSerial
+Input JSON:
+{
+  "intSerial": "D05FB84F1606",
+  "seqNum": "87",
+  "startURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceSetting",
+  "reportURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceStatus",
+  "scanURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceScan",
+  "bkupURL": "http://cozumotesttls.cloudapp.net:80/api/DeviceBackup",
+  "cmdURL": "http://cozumotesttls.cloudapp.net:80/api/iCmd",
+  "capture": "1",
+  "captureMode": "1",
+  "requestTimeoutValue": "8000",
+  "callHomeTimeoutMode": "0",
+  "callHomeTimeoutData": "",
+  "dynCodeFormat": [
+    "asdf",
+    "wasd",
+    "qwerty"
+  ],
+  "cmdChkInt": "1",
+  "revId": "52987",
+  "errorLog": [
+    "asdf",
+    "wasd",
+    "qwerty"
+  ]
+}
+Input URI: http://cozumotesttls.cloudapp.net/api/DeviceStatus/
+Expected result: 201
+Actual result: 400
+Time elapsed: 27s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:26 PM
+Test: iCmd BadSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "0"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 400,
+  "ReasonPhrase": "Bad Request",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=THISISANINVALIDSERIAL",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, ]
+Summary:
+Current test: iCmd BadSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=THISISANINVALIDSERIAL
+Expected result: 400
+Actual result: 400
+Time elapsed: 26s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd EmptySerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "6401"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 500,
+  "ReasonPhrase": "Internal Server Error",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, {"e":{"Errors":[{"source":".Net SqlClient Data Provider","number":8178,"state":1,"errorClass":16,"server":"zdv0o26czf.database.windows.net","message":"The parameterized query '(@IntSerial varchar(12))SELECT InterceptorType FROM dbo.tblInter' expects the parameter '@IntSerial', which was not supplied.","procedure":"","lineNumber":0,"win32ErrorCode":0}],"ClientConnectionId":"4b12f4c1-cf00-438c-9b7a-c0e618d70713","ClassName":"System.Data.SqlClient.SqlException","Message":"The parameterized query '(@IntSerial varchar(12))SELECT InterceptorType FROM dbo.tblInter' expects the parameter '@IntSerial', which was not supplied.","Data":{"HelpLink.ProdName":"Microsoft SQL Server","HelpLink.ProdVer":"11.00.9230","HelpLink.EvtSrc":"MSSQLServer","HelpLink.EvtID":"8178","HelpLink.BaseHelpUrl":"http://go.microsoft.com/fwlink","HelpLink.LinkId":"20476"},"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   at System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)\r\n   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)\r\n   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)\r\n   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()\r\n   at Cozumo.AuthenticationAndAuthorization.Dao.LegacyAuthenticationDao.GetInterceptorCredentials(IDbCommand command, IEntityKey key)\r\n   at Cozumo.Common.DB.DbUtils.WrapInTransaction[T,TO](Func`1 connectionFactory, Func`3 func, T item)\r\n   at Cozumo.AuthenticationAndAuthorization.Dao.LegacyAuthenticationDao.GetInterceptorCredentials(IEntityKey key)\r\n   at Cozumo.AuthenticationAndAuthorization.Dao.LegacyAuthenticationDao.GetCredentials(String correlationId, IEntityKey key)\r\n   at Cozumo.AuthenticationAndAuthorization.LegacyAuthenticator.Authenticate(String correlationId, IAuthenticationRequest request, IAuthenticationContext requestContext)\r\n   at Cozumo.AuthenticationAndAuthorization.ObjectCacheAuthenticationManager.Authenticate(String correlationId, IAuthenticationRequest request, IAuthenticationContext requestContext)\r\n   at Cozumo.AuthenticationAndAuthorization.LegacyAuthAndAuthService.Authorize(String correlationId, IAuthenticationRequest request, IAuthenticationContext authenticationContext, String action, IImmutableSet`1 objectIds, IAuthorizationContext authorizationContext)\r\n   at AuthAndAuthRoutes.AuthAndAuthRoute.RunRoute(IEsbMessage message)\r\n   at AuthAndAuthRoutes.AuthAndAuthRoute.Send(IEsbMessage message)\r\n   at Cozumo.Common.Esb.LocalService.Send(String routeName, IEsbMessage message)\r\n   at Cozumo.Common.Esb.LocalService.Send(String sourceCorrelation, String routeName, IEsbMessage message)\r\n   at Cozumo.Esb.Routes.AuthorizationUtils.AuthorizeAndGetInterceptorId(IEsbService esbService, ISystemEventDao systemEventDao, String correlationId, String action, CredentialPayloadWrapper payload)\r\n   at Cozumo.Esb.Routes.InterceptorCmdRoute.<RunRoute>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()\r\n   at Cozumo.Esb.Routes.InterceptorCmdRoute.<SendAsync>d__7.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()\r\n   at Cozumo.Common.Esb.LocalService.<SendAsync>d__0.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()\r\n   at Cozumo.Common.Esb.LocalService.<SendAsync>d__7.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()\r\n   at Cozumo.Interceptor.API.Controllers.ICmdController.<GetICmdDetails>d__3.MoveNext() in d:\\a\\src\\WebRole1\\Controllers\\ICmdController.cs:line 85","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nOnError\nSystem.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.SqlClient.SqlConnection\nVoid OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])","HResult":-2146232060,"Source":".Net SqlClient Data Provider","WatsonBuckets":null}}]
+Summary:
+Current test: iCmd EmptySerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=
+Expected result: 400
+Actual result: 500
+Time elapsed: 36s
+Test result: Fail
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd NoQuery
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "115"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 404,
+  "ReasonPhrase": "Not Found",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:28 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": false
+}, {"Message":"No HTTP resource was found that matches the request URI 'http://cozumotesttls.cloudapp.net/api/iCmd'."}]
+Summary:
+Current test: iCmd NoQuery
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd
+Expected result: 404
+Actual result: 404
+Time elapsed: 22s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 34s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 48s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 48s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:27 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 41s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 57s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:30 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 50s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 72s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 46s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 51s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:28 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 54s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:29 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 52s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:29 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:31 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 70s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:29 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 47s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:29 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 46s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:29 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 65s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:30 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 60s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:30 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 51s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:30 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:32 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 55s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:30 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 67s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:30 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 55s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 62s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 52s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 52s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:33 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 53s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 63s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:31 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 51s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 52s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 63s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 74s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:34 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 52s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 70s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:32 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 78s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 62s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 67s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 70s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:35 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 93s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 74s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:33 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 73s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 60s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 80s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 78s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 75s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:36 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 76s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:34 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:37 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 89s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:35 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:37 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 92s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:35 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:37 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 91s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:35 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:37 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 76s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:35 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:37 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 134s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:36 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:38 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 82s
+Test result: Pass
+
+Starting Tests! Current time: 25/05/2015 3:48:36 PM
+Test: iCmd ValidSerial
+Raw test results:
+[{
+  "Version": {
+    "Major": 1,
+    "Minor": 1,
+    "Build": -1,
+    "Revision": -1,
+    "MajorRevision": -1,
+    "MinorRevision": -1
+  },
+  "Content": {
+    "Headers": [
+      {
+        "Key": "Content-Length",
+        "Value": [
+          "1"
+        ]
+      },
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      },
+      {
+        "Key": "Expires",
+        "Value": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  "StatusCode": 200,
+  "ReasonPhrase": "OK",
+  "Headers": [
+    {
+      "Key": "Pragma",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Cache-Control",
+      "Value": [
+        "no-cache"
+      ]
+    },
+    {
+      "Key": "Date",
+      "Value": [
+        "Mon, 25 May 2015 19:48:38 GMT"
+      ]
+    },
+    {
+      "Key": "Server",
+      "Value": [
+        "Microsoft-IIS/8.0"
+      ]
+    },
+    {
+      "Key": "X-AspNet-Version",
+      "Value": [
+        "4.0.30319"
+      ]
+    },
+    {
+      "Key": "X-Powered-By",
+      "Value": [
+        "ASP.NET"
+      ]
+    }
+  ],
+  "RequestMessage": {
+    "Version": {
+      "Major": 1,
+      "Minor": 1,
+      "Build": -1,
+      "Revision": -1,
+      "MajorRevision": -1,
+      "MinorRevision": -1
+    },
+    "Content": null,
+    "Method": {
+      "Method": "GET"
+    },
+    "RequestUri": "http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606",
+    "Headers": [],
+    "Properties": {}
+  },
+  "IsSuccessStatusCode": true
+}, 0]
+Summary:
+Current test: iCmd ValidSerial
+Input JSON:
+No JSON attached to this operation
+Input URI: http://cozumotesttls.cloudapp.net/api/iCmd/?i=D05FB84F1606
+Expected result: 200
+Actual result: 200
+Time elapsed: 98s
+Test result: Pass
+

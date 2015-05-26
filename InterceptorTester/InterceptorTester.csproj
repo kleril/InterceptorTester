@@ -73,6 +73,9 @@
       <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NUnit.cs" />
@@ -114,7 +117,6 @@
     <None Include="Data\unittestcert.pfx" />
     <None Include="HTTP\.DS_Store" />
     <None Include="App.config" />
-    <None Include="nunit-results.xml" />
     <None Include="bin\.DS_Store" />
     <None Include="bin\Debug\.DS_Store" />
     <None Include="bin\Debug\InterceptorTester.dll" />

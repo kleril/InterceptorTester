@@ -1175,7 +1175,7 @@ namespace ConsoleApplication1
 		
 
 		[Test()]
-		public void performanceTest()
+		public void PerformanceTest()
 		{
 			FileStream stream;
 			stream = File.Create(outputFile);

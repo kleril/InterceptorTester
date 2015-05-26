@@ -1175,7 +1175,7 @@ namespace ConsoleApplication1
 		
 
 		[Test()]
-		public void performanceTest()
+		public void PerformanceTest()
 		{
 			FileStream stream;
 			stream = File.Create(outputFile);
@@ -1186,7 +1186,7 @@ namespace ConsoleApplication1
 			results1 = new StreamWriter (stream1);
 
 			for (int i = 0; i < maxReps; i++)
-			{
+
 				System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch ();
 
 				ICmd validICmd = new ICmd (testServer, validSerial);

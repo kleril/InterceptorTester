@@ -219,7 +219,7 @@ pip-log.txt
 #Don't upload a million test results
 ####################################
 *.csv
-*/logs/*
+logs/
 *.userprefs
 *.exe
 *.xls#
@@ -230,5 +230,3 @@ pip-log.txt
 *.ConsoleApplication1/obj/Debug/ConsoleApplication1.exe
 *.ConsoleApplication1/obj/Debug/ConsoleApplication1.exe
 ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb
-InterceptorTester.VisualState.xml
-TestResult.xml

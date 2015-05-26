@@ -117,7 +117,6 @@
     <None Include="Data\unittestcert.pfx" />
     <None Include="HTTP\.DS_Store" />
     <None Include="App.config" />
-    <None Include="nunit-results.xml" />
     <None Include="bin\.DS_Store" />
     <None Include="bin\Debug\.DS_Store" />
     <None Include="bin\Debug\InterceptorTester.dll" />

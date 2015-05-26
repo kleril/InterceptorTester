@@ -1116,10 +1116,7 @@ namespace ConsoleApplication1
 	[TestFixture()]
 	public class ICmdTest
     {
-        static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
-        static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
-        static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
-
+        
 		static float lessThan900 = 0;
 
 		static float percentage;
@@ -1140,35 +1137,41 @@ namespace ConsoleApplication1
 		static string outputFile1 = "../../../logs/performance.csv";
 
 
-		/*
+        static Uri testServer;
+        static string validSerial;
+        static string invalidSerial;
+
 		[TestFixtureSetUp()]
 		public void setup()
 		{
-			FileStream stream;
-			stream = File.Create(outputFile);
-			results = new StreamWriter(stream);
-
-			FileStream stream1;
-			stream1 = File.Create (outputFile1);
-			results1 = new StreamWriter (stream1);
+		    try
+            {
+                testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+                validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+                invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
+                /*
+                testRunsString = ConfigurationManager.ConnectionStrings["PerformanceTestRuns"].ConnectionString;
+                try { timesToRunTests = int.Parse(testRunsString); }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    Console.WriteLine("Chances are your appconfig is misconfigured. Double check that performanceTestRuns is an integer and try again.");
+                }*/
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 		}
 
+        /*
 		[TestFixtureTearDown()]
 		public void tearDown()
 		{
-			int index = (maxReps * 95 / 100) - 1;
-			int percentile = data[index];
-			results.WriteLine("95% of the tests take less than " + percentile + "ms");
-			percentage = (lessThan900 / maxReps) * 100;
-			results.WriteLine(percentage + "% of tests take less than 900ms");
-			results.WriteLine("Average Time," + avgTime);
-			results.WriteLine("Minimum Time," + minTime);
-			results.WriteLine("Maximum Time," + maxTime);
-			results.Close();
-			results1.Close();
-
+			
 		}
-		*/
+        */
+		
 
 		[Test()]
 		public void performanceTest()

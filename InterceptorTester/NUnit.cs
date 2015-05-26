@@ -7,6 +7,7 @@ using NUnit.Framework;
 using System.IO;
 using System.Configuration;
 using Nito.AsyncEx;
+using System.IO.Compression;
 
 namespace ConsoleApplication1
 {

@@ -315,6 +315,39 @@ namespace ConsoleApplication1
 			}
 		}
 
+		[Test()]
+		// Multiple valid backup items with simple and dyn code
+		public void ValidBackupItemsSimDyn()
+		{
+			BackupItem[] items = new BackupItem[2];
+			items[0] = new BackupItem();
+			items[0].d = "~20/12345|";
+			items[0].s = 442;
+			items[0].t = new DateTime(2015, 5, 11, 2, 4, 22, 295);
+			items[0].c = false;
+
+			items[1] = getBackupItem(1);
+
+			DeviceBackupJSON serialJson = new DeviceBackupJSON();
+			serialJson.s = 6;
+			serialJson.b = items;
+			serialJson.i = validSerial;
+
+			DeviceBackup serialOperation = new DeviceBackup(testServer, serialJson);
+
+			Test serialTest = new Test(serialOperation);
+			serialTest.setTestName("ValidBackupItemsSimDyn");
+
+			List<Test> tests = new List<Test>();
+			tests.Add(serialTest);
+			AsyncContext.Run(async() => await Program.buildTests(tests));
+
+			foreach (Test nextTest in Program.getTests())
+			{
+				Assert.AreEqual(nextTest.getExpectedResult(), nextTest.getActualResult());
+			}
+		}
+
 
 		//TODO: Do this in a cleaner way
 		public BackupItem getBackupItem(int i)
@@ -876,6 +909,33 @@ namespace ConsoleApplication1
 				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
 			}
 		}
+
+		[Test()]
+		// No scan data
+		public void NoScanData()
+		{
+			DeviceScanJSON testJson = new DeviceScanJSON ();
+			testJson.i = validSerial;
+			testJson.d = null;
+			testJson.b = null;
+			testJson.s = 4;
+			DeviceScan testDScan = new DeviceScan (testServer, testJson);
+
+			Test scanTest = new Test (testDScan);
+			scanTest.setTestName("NoScanData");
+
+
+			List<Test> tests = new List<Test> ();
+			tests.Add (scanTest);
+
+			AsyncContext.Run(async() => await Program.buildTests(tests));
+
+			foreach (Test nextTest in Program.getTests()) {
+				Assert.AreEqual (nextTest.getExpectedResult (), nextTest.getActualResult ());
+			}
+		}
+
+
 	}
 
 	[TestFixture()]
@@ -1187,10 +1247,11 @@ namespace ConsoleApplication1
 		static string outputFile1 = "../../../logs/performance.csv";
 
 
-        static Uri testServer;
-        static string validSerial;
-        static string invalidSerial;
+		static Uri testServer = new Uri(ConfigurationManager.ConnectionStrings["Server"].ConnectionString);
+		static string validSerial = ConfigurationManager.ConnectionStrings["ValidSerial"].ConnectionString;
+		static string invalidSerial = ConfigurationManager.ConnectionStrings["InvalidSerial"].ConnectionString;
 
+		/*
 		[TestFixtureSetUp()]
 		public void setup()
 		{
@@ -1222,7 +1283,7 @@ namespace ConsoleApplication1
 		}
         */
 		
-
+		/*
 		[Test()]
 		public void PerformanceTest()
 		{
@@ -1271,6 +1332,7 @@ namespace ConsoleApplication1
 				}
 				*/
 
+				/*
 				results.WriteLine ("Test Time," + time);
 
 				results1.WriteLine (time);
@@ -1284,11 +1346,14 @@ namespace ConsoleApplication1
 					Assert.LessOrEqual (avgTime, 900);
 					Console.Write ("Response time is OK");
 				}*/
+			/*
 			}
 			results.Close ();
 			results1.Close ();
 		}
+		*/
 
+		[Test()]
 		public void ValidSerial()
 		{
 

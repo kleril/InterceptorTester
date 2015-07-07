@@ -5,7 +5,6 @@
 *.pydevproject
 .project
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak
@@ -43,12 +42,9 @@ local.properties
 
 # Build results
 
-[Dd]ebug/
 [Rr]elease/
 x64/
 build/
-[Bb]in/
-[Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -58,7 +54,6 @@ build/
 *_p.c
 *.ilk
 *.meta
-*.obj
 *.pch
 *.pdb
 *.pgc
@@ -218,12 +213,8 @@ pip-log.txt
 ####################################
 #Don't upload a million test results
 ####################################
-*.csv
-logs/
-*.userprefs
-*.exe
+
 *.xls#
-*.exe
 *ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
 *.ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
 *.ConsoleApplication1/bin/Debug/ConsoleApplication1.exe
